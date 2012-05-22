@@ -1,0 +1,10 @@
+<root>
+	<app>
+		<name>timetime</name>
+		<organization>wirelust</organization>
+		<version>
+			<major>1</major>
+			<minor>0</minor>
+		</version>
+	</app>
+</root>

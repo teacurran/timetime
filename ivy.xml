@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ivy-module version="2.0"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+
+	<info organisation="${app.organization}" module="${app.name}"
+		  status="release">
+	</info>
+
+	<configurations>
+		<conf name="provided" visibility="public"
+			  description="this is much like compile, but indicates you expect the JDK or a container to provide it. It is only available on the compilation classpath, and is not transitive."/>
+		<conf name="compile" visibility="public"
+			  description="this is the compile scope. Compile dependencies are available in all classpaths."/>
+		<conf name="test" visibility="public"
+			  description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the test compilation and execution phases."/>
+		<conf name="tools" visibility="public"
+			  description="this scope indicates that the dependency is not required for normal use of the application, and is only available for the build phases (ant builds)."/>
+	</configurations>
+
+	<publications>
+		<artifact name="${app.name}" type="jar" ext="jar" conf="compile"/>
+	</publications>
+
+	<dependencies>
+
+		<!--                       -->
+		<!-- PROVIDED              -->
+		<!--                       -->
+
+		<!-- JEE 6 -->
+		<!--
+			we don't want to use the javaee-api because we may get this when we run the export-schema task
+				java.lang.reflect.InvocationTargetException
+				java.lang.ClassFormatError: Absent Code attribute in method that is not native or abstract in class file javax/validation/constraints/Pattern$Flag
+			The Jboss-javaee-6.0 spec should be used instead
+		-->
+		<!--
+		<dependency org="javax" name="javaee-api"
+					rev="6.0" conf="provided->default"/>
+		-->
+		<dependency org="org.jboss.spec" name="jboss-javaee6-specs-bom"
+					rev="1.0.1.Final" conf="provided->default"/>
+		<dependency org="org.jboss.spec" name="jboss-javaee-6.0"
+					rev="1.0.0.Final" conf="provided->default"/>
+
+		<!-- Hibernate -->
+		<!--
+		<dependency org="org.hibernate" name="hibernate-core" rev="3.6.1.Final"
+					conf="provided->default"/>
+		-->
+		<!--annotations has been rolled into core
+        <dependency org="org.hibernate" name="hibernate-annotations"
+            rev="3.5.6-Final" conf="provided->default" />
+        -->
+		<!--
+		<dependency org="org.hibernate" name="hibernate-entitymanager"
+					rev="3.6.2.Final" conf="provided->default"/>
+		<dependency org="org.hibernate" name="hibernate-validator"
+					rev="4.0.0.GA" conf="provided->default"/>
+		-->
+
+		<!-- Misc -->
+		<dependency org="log4j" name="log4j" rev="1.2.14"
+					conf="provided->default"/>
+
+		<!-- Mysql Connector -->
+		<dependency org="mysql" name="mysql-connector-java" rev="5.1.13"
+					conf="provided->default"/>
+
+		<dependency org="javax.xml.ws" name="jaxws-api" rev="2.1"
+					conf="provided->default"/>
+
+		<!--              -->
+		<!-- COMPILE      -->
+		<!--              -->
+
+		<!-- Hibernate -->
+		<dependency org="org.hibernate" name="hibernate-entitymanager"
+					rev="3.6.2.Final" conf="compile->default"/>
+		<dependency org="org.hibernate" name="hibernate-search"
+					rev="3.2.1.Final" conf="compile->default"/>
+		<dependency org="org.hibernate" name="hibernate-validator"
+					rev="4.2.0.Final" conf="compile->default" transitive="false"/>
+
+		<!-- Commons -->
+		<dependency org="commons-beanutils" name="commons-beanutils" rev="1.8.0" force="true" conf="compile->compile(*),master(*)"/>
+		<dependency org="commons-io" name="commons-io" rev="1.4"
+			conf="compile->*" />
+
+		<!-- Seam -->
+		<dependency org="org.jboss.seam.persistence"
+					name="seam-persistence"
+					rev="3.0.0.Final" conf="compile->default" transitive="false"/>
+		<dependency org="org.jboss.seam.faces"
+					name="seam-faces"
+					rev="3.0.0.Final" conf="compile->default" transitive="false"/>
+		<dependency org="org.jboss.seam.solder"
+					name="seam-solder"
+					rev="3.0.0.Final" conf="compile->default" transitive="false"/>
+		<dependency org="org.jboss.seam.catch"
+					name="seam-catch"
+					rev="3.0.0.Final" conf="compile->default" transitive="false" />
+		<dependency org="org.jboss.seam.servlet"
+					name="seam-servlet"
+					rev="3.0.0.Final" conf="compile->default" transitive="false" />
+		<dependency org="org.jboss.seam.config"
+					name="seam-config-xml"
+					rev="3.0.0.Final" conf="compile->default" transitive="false" />
+		<dependency org="org.jboss.seam.international"
+					name="seam-international"
+					rev="3.0.0.Final" conf="compile->default" transitive="false" />
+		<dependency org="org.jboss.seam.international"
+					name="seam-international"
+					rev="3.0.0.Final" conf="compile->default" transitive="false" />
+		<!-- doesn't seem to work with provided version of hibernate, look into this
+		<dependency org="org.jboss.seam.validation"
+					name="seam-validation"
+					rev="3.0.0.Final" conf="compile->default" transitive="false" />
+		-->
+		<!--
+		<dependency org="org.jboss.seam.remoting"
+					name="seam-remoting"
+					rev="3.0.0.Final" conf="compile->default" transitive="false" />
+		<dependency org="org.jboss.seam.rest"
+					name="seam-rest-api"
+					rev="3.0.0.Final" conf="compile->default" transitive="false" />
+		-->
+
+		<!-- Seam - not released -->
+		<!-- Seam - cron -->
+		<!--
+		<dependency org="org.jboss.seam.cron" name="seam-cron"
+					conf="compile->default"
+					rev="3.0.0.Alpha1"/>
+		<dependency org="org.jboss.seam.cron" name="seam-cron-api"
+					conf="compile->default"
+					rev="3.0.0.Alpha1"/>
+		<dependency org="org.jboss.seam.cron" name="seam-cron-asynchronous-quartz"
+					conf="compile->default"
+					rev="3.0.0.Alpha1"/>
+		<dependency org="org.jboss.seam.cron" name="seam-cron-impl"
+					conf="compile->default"
+					rev="3.0.0.Alpha1"/>
+		<dependency org="org.jboss.seam.cron" name="seam-cron-scheduling-quartz"
+					conf="compile->default"
+					rev="3.0.0.Alpha1"/>
+		<dependency org="org.jboss.seam.cron" name="seam-cron-spi"
+					conf="compile->default"
+					rev="3.0.0.Alpha1"/>
+		-->
+
+		<!-- Seam - mail -->
+		<dependency org="org.jboss.seam.mail" name="seam-mail-core-impl"
+					rev="3.0.0-SNAPSHOT" conf="compile->default" transitive="false" changing="true"/>
+		<dependency org="org.jboss.seam.mail" name="seam-mail-core-api"
+					rev="3.0.0-SNAPSHOT" conf="compile->default" transitive="false" changing="true"/>
+		<dependency org="org.jboss.seam.mail" name="seam-mail-render-impl"
+					rev="3.0.0-SNAPSHOT" conf="compile->default" transitive="false" changing="true"/>
+		<dependency org="org.jboss.seam.render" name="seam-render"
+					rev="1.0.0.Alpha3" conf="compile->default" transitive="false" changing="true"/>
+
+		<!-- Seam - Render -->
+		<dependency org="org.jboss.seam.render" name="seam-render"
+					rev="1.0.0.Alpha3" conf="compile->default" transitive="true" changing="true"/>
+
+
+		<!-- used in ream remoting -->
+		<!--
+		<dependency org="org.jboss.seam.conversation" name="seam-conversation-weld"
+					rev="3.0.0.CR1" conf="compile->default" transitive="false"/>
+		<dependency org="org.jboss.seam.conversation" name="seam-conversation-spi"
+					rev="3.0.0.CR1" conf="compile->default" transitive="false"/>
+		-->
+
+		<!-- Used for naming strategy -->
+		<dependency org="net.java.dev.inflector" name="inflector" rev="0.7.0"
+					conf="compile->default"/>
+
+		<!-- Primefaces  -->
+		<dependency org="org.primefaces.themes" name="cupertino" rev="1.0.0"
+					conf="compile->default" transitive="false"/>
+
+		<!-- Prettyfaces  (URL Rewriter)-->
+		<dependency org="com.ocpsoft" name="prettyfaces-jsf2" rev="3.0.1"
+			conf="compile->default" />
+		<dependency org="com.ocpsoft" name="ocpsoft-pretty-time" rev="1.0.6"
+			conf="compile->default" />
+
+
+		<!--Envers/Ehcache-->
+		<dependency org="org.hibernate" name="hibernate-envers"
+					rev="3.6.1.Final" conf="compile->default" transitive="false"/>
+		<dependency org="net.sf.ehcache" name="ehcache" rev="2.4.3"
+					conf="compile->default" transitive="false"/>
+
+		<!-- Misc -->
+		<dependency org="joda-time" name="joda-time" rev="1.6"
+					conf="compile->default" transitive="false"/>
+		<dependency org="backport-util-concurrent" name="backport-util-concurrent" rev="3.1"
+					conf="compile->default" transitive="false"/>
+		<dependency org="org.apache.poi" name="poi" rev="3.7"
+					conf="compile->default" transitive="false"/>
+		<dependency org="com.lowagie" name="itext" rev="2.1.7"
+					conf="compile->default" transitive="false"/>
+		<dependency org="com.google.inject" name="guice" rev="2.0"
+			conf="compile->master" />
+
+		<!-- Restlet - For Development -->
+		<!--
+		<dependency org="org.restlet.jee" name="org.restlet" rev="2.0.1"
+			conf="compile->default" />
+		<dependency org="org.restlet.jee" name="org.restlet.ext.httpclient"
+			rev="2.0.1" conf="compile->default" />
+		<dependency org="org.restlet.jee" name="org.restlet.ext.servlet"
+			rev="2.0.1" conf="compile->default" />
+		-->
+		<!--
+		<dependency org="org.restlet.jee" name="org.restlet.ext.jaxb"
+			rev="2.0.1" conf="compile->default" />
+		-->
+		<!--
+		<dependency org="aopalliance" name="aopalliance"
+			rev="1.0" conf="compile->default" />
+		-->
+
+		<!--         -->
+		<!-- TESTING -->
+		<!--         -->
+		<dependency org="junit" name="junit" rev="4.8.2" conf="test->default"/>
+		<dependency org="org.jboss.arquillian" name="arquillian-junit" rev="1.0.0.Alpha5" conf="test->default"/>
+		<dependency org="org.jboss.as" name="jboss-as-arquillian-container-managed" rev="7.0.1.Final" conf="test->default"/>
+
+		<!--       -->
+		<!-- TOOLS -->
+		<!--       -->
+		<dependency org="org.jboss.tattletale" name="tattletale-ant"
+					rev="1.1.0.Final" conf="tools->runtime"/>
+		<dependency org="org.hibernate" name="hibernate-tools" rev="3.2.4.GA"
+					conf="tools->default"/>
+		<dependency org="org.slf4j" name="slf4j-api" rev="1.5.10"
+					conf="tools->default"/>
+		<dependency org="org.slf4j" name="slf4j-log4j12" rev="1.6.0"
+					conf="tools->default"/>
+
+	</dependencies>
+
+</ivy-module>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ivysettings>
+	<settings defaultResolver="default" />
+	<caches
+		artifactPattern="[organisation]/[module]/[type]s/[artifact]-[revision](-[classifier]).[ext]" />
+
+	<resolvers>
+		<chain name="default" returnFirst="true" dual="true">
+
+			<!-- JBoss -->
+			<ibiblio name="jboss-nexus" m2compatible="true"
+					 root="https://repository.jboss.org/nexus/content/groups/developer/"
+					 pattern="[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
+
+			<ibiblio name="jboss-nexus-public" m2compatible="true"
+					 root="https://repository.jboss.org/nexus/content/groups/public"
+					 pattern="[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
+
+			<ibiblio name="jboss-legacy" m2compatible="true"
+					 root="http://repository.jboss.org/maven2"
+					 pattern="[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
+
+			<!-- Java.net -->
+			<ibiblio name="java.net" m2compatible="true"
+					root="http://download.java.net/maven/2/" />
+
+			<ibiblio name="repo1-maven-org" root="http://repo1.maven.org/maven2" m2compatible="true"/>
+			<ibiblio name="repo2-maven-org" root="http://repo2.maven.org/maven2" m2compatible="true"/>
+
+			<!-- Atlassian -->
+			<ibiblio name="atlassian" m2compatible="true"
+					 root="https://maven.atlassian.com/public-snapshot"
+					 pattern="[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
+
+			<!--
+			<ibiblio name="restlet" root="http://maven.restlet.org" m2compatible="true"/>
+			<ibiblio name="codehaus" m2compatible="true" root="http://repository.codehaus.org"/>
+			<ibiblio name="java-net" m2compatible="true" root="http://download.java.net/maven/2"/>
+			<ibiblio name="ibiblio" root="http://mirrors.ibiblio.org/pub/mirrors/maven2" m2compatible="true"/>
+			-->
+
+			<packager name="roundup" buildRoot="${user.home}/.ivy2/packager/build" resourceCache="${user.home}/.ivy2/packager/cache">
+				<ivy pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/ivy.xml"/>
+				<artifact pattern="http://ivyroundup.googlecode.com/svn/trunk/repo/modules/[organisation]/[module]/[revision]/packager.xml"/>
+			</packager>
+
+			<!-- Springsource Exclusive Ivy Repository -->
+			<!--
+			<url name="com.springsource.repository.bundles.release">
+				<ivy pattern="http://repository.springsource.com/ivy/bundles/release/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]" />
+				<artifact pattern="http://repository.springsource.com/ivy/bundles/release/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]" />
+			</url>
+			<url name="com.springsource.repository.bundles.external">
+				<ivy pattern="http://repository.springsource.com/ivy/bundles/external/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]" />
+				<artifact pattern="http://repository.springsource.com/ivy/bundles/external/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]" />
+			</url>
+			-->
+
+			<!-- OCPSoft - PrettyFaces-->
+			<ibiblio name="ocpsoft" m2compatible="true"
+								 root="http://ocpsoft.com/repository"
+								 pattern="[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
+
+			<!-- Prime Faces -->
+			<ibiblio name="primefaces" m2compatible="true"
+				root="http://repository.prime.com.tr"
+				pattern="[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
+
+
+		</chain>
+	</resolvers>
+
+</ivysettings>
