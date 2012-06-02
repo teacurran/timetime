@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="ivy - test">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib/ivy/test" />
+      <root url="file://$PROJECT_DIR$/lib/ivy/test" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/lib/ivy/test" />
+      <root url="file://$PROJECT_DIR$/lib/ivy/test" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/lib/ivy/test" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/ivy/test" recursive="false" type="SOURCES" />
+  </library>
+</component>

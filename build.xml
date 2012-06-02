@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<project basedir="." default="package" name="timetime"
+	xmlns:ivy="antlib:org.apache.ivy.ant">
+
+	<!-- Load environment properties -->
+	<property environment="env" />
+
+	<dirname property="basepath.dir" file="build.xml"/>
+
+	<!-- Define source structure -->
+	<property name="src.dir" value="src" />
+	<property name="src.resources.dir" value="resources" />
+	<property name="test.dir" value="test/java" />
+	<property name="conf.dir" value="conf" />
+	<property name="conf.classes" value="classes" />
+	<property name="db.dir" value="db" />
+
+	<property name="build.dir" value="build" />
+	<property name="dist.dir" value="dist" />
+	<property name="dist.exploded.dir" value="${dist.dir}/exploded" />
+	<property name="dist.report.dir" value="${dist.dir}/report" />
+	<property name="dist.test.dir" value="${dist.dir}/test" />
+	<property name="dist.war" value="${dist.dir}/${dist.target}.war" />
+	<property name="lib.dir" value="lib" />
+	<property name="lib.compile.dir" value="${lib.dir}/compile" />
+	<property name="lib.tools.dir" value="${lib.dir}/tools" />
+	<property name="test.src.dir" value="test/java" />
+	<property name="test.resources.dir" value="test/resources" />
+	<property name="web.dir" value="web" />
+	<property name="web.meta-inf.dir" value="${web.dir}/META-INF" />
+	<property name="web.web-inf.dir" value="${web.dir}/WEB-INF" />
+	<property name="web.web-inf.classes.dir" value="${web.web-inf.dir}/classes" />
+	<property name="web.web-inf.lib.dir" value="${web.web-inf.dir}/lib" />
+
+	<!-- Ivy Settings -->
+	<property name="lib.ivy.dir" value="lib/ivy" />
+	<property name="lib.ivy.provided.dir" value="${lib.ivy.dir}/provided" />
+	<property name="lib.ivy.compile.dir" value="${lib.ivy.dir}/compile" />
+	<property name="lib.ivy.test.dir" value="${lib.ivy.dir}/test" />
+	<property name="lib.ivy.tools.dir" value="${lib.ivy.dir}/tools" />
+
+	<!-- Load application properties -->
+	<xmlproperty keepRoot="false"
+		file="${conf.dir}/application.properties.xml" />
+
+	<!-- Load build automation properties -->
+	<property file="build-number.txt" />
+
+	<!-- Load local target override properties -->
+	<property file="local.build.properties" />
+
+	<!-- Define compile settings -->
+	<property name="debuglevel" value="source,lines,vars" />
+	<property name="target" value="1.6" />
+	<property name="source" value="1.6" />
+
+	<path id="project.provided.classpath">
+		<fileset dir="${lib.ivy.provided.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<!-- Load application properties -->
+	<xmlproperty keepRoot="false"
+		file="${conf.dir}/application.properties.xml" />
+
+	<property name="dist.target" value="${app.name}" />
+
+	<property name="app.version" value="${app.version.major}.${app.version.minor}" />
+
+	<condition property="IsExplodedWar">
+		<isset property="exploded.war.deploy" />
+	</condition>
+
+	<!-- -->
+	<!-- Ivy Targets -->
+	<!-- -->
+
+	<!-- The following path definition and taskdef declaration ensures that
+		ivy.lib from this project is used and no additional user configuration for
+		downloading ivy is required -->
+	<path id="ivy.lib.path">
+		<fileset dir="${lib.tools.dir}" includes="ivy-2.2.0.jar" />
+	</path>
+	<taskdef resource="org/apache/ivy/ant/antlib.xml" uri="antlib:org.apache.ivy.ant"
+		classpathref="ivy.lib.path" />
+
+	<target name="ivy-setup">
+		<ivy:settings file="ivysettings.xml" />
+
+		<!-- Make sure the target directories exist -->
+		<mkdir dir="${lib.ivy.provided.dir}" />
+		<mkdir dir="${lib.ivy.compile.dir}" />
+		<mkdir dir="${lib.ivy.tools.dir}" />
+	</target>
+
+	<!-- retreive dependencies with ivy and copy to lib/[conf] in project workspace -->
+	<target name="ivy-resolve" description="resolves dependencies and downloads
+		jars"
+		depends="ivy-setup">
+		<ivy:retrieve sync="true" conf="*" type="jar,bundle" pattern="${lib.ivy.dir}/[conf]/[artifact]-[revision].[ext]"/>
+	</target>
+
+	<!-- generates a report of dependencies -->
+	<target name="ivy-report" depends="ivy-resolve"
+		description="generate a dependency
+		report">
+		<ivy:report todir="${dist.report.dir}" />
+	</target>
+
+	<!-- "Clean the ivy cache" -->
+	<target name="ivy-clean">
+		<!-- <ivy:cleancache /> -->
+		<delete dir="${lib.ivy.dir}" />
+	</target>
+
+	<!-- -->
+	<!-- Core targets -->
+	<!-- -->
+
+	<target name="clean" description="clean-up the build environment">
+
+		<!-- Does not do an ivy clean since those jars should pull updated copies
+			if they change. -->
+
+		<!-- Clean the build and distibution directories -->
+		<delete dir="${build.dir}" />
+		<delete dir="${dist.dir}" />
+		<delete dir="${web.web-inf.lib.dir}" />
+		<delete dir="${web.web-inf.classes.dir}" />
+	</target>
+
+	<target name="configure" description="initialize the build configuration">
+
+		<!-- Set the default build mode (if no build mode has been set) -->
+		<property name="build.mode" value="development" />
+
+		<!-- Define the distribution properties -->
+		<property name="dist.context" value="${app.name}" />
+
+		<property name="dist.target"
+			value="${dist.context}-${build.mode}-${app.version.major}.${app.version.minor}-${build.number}" />
+
+		<!-- Load the database properties -->
+		<xmlproperty keepRoot="false" semanticAttributes="true"
+			file="${conf.dir}/${build.mode}/db.properties.xml" />
+
+		<path id="application.provided.classpath">
+			<fileset dir="${lib.ivy.provided.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+		</path>
+
+		<path id="application.jdbc.classpath">
+			<pathelement location="${lib.ivy.provided.dir}/mysql-connector-java-5.1.13.jar" />
+		</path>
+
+		<path id="application.compile.classpath">
+			<fileset dir="${lib.ivy.compile.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${lib.ivy.provided.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${lib.compile.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+		</path>
+
+		<path id="application.test.classpath">
+			<fileset dir="${lib.ivy.test.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+		</path>
+
+		<path id="application.tools.classpath">
+			<fileset dir="${lib.ivy.tools.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${lib.tools.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+		</path>
+
+		<!-- Import additional tasks -->
+		<path id="hibernatetool.classpath">
+			<fileset dir="${lib.tools.dir}/hibernate">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${lib.ivy.provided.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+		</path>
+
+		<taskdef name="hibernatetool" classname="org.hibernate.tool.ant.EnversHibernateToolTask"
+			classpathref="hibernatetool.classpath" />
+
+		<taskdef name="report" classname="org.jboss.tattletale.ant.ReportTask"
+			classpathref="application.tools.classpath" />
+
+		<!-- See http://java.sogeti.nl/JavaBlog/tag/apache-ant-classloaders/ -->
+		<taskdef resource="net/jtools/classloadertask/antlib.xml"
+			classpath="${lib.tools.dir}/ant-classloadertask.jar" />
+
+	</target>
+
+
+	<target name="compile" description="compile source" depends="configure">
+
+		<!-- Compile the java source -->
+		<mkdir dir="${web.web-inf.classes.dir}" />
+		<javac debug="true" debuglevel="${debuglevel}" destdir="${web.web-inf.classes.dir}"
+			source="${source}" target="${target}">
+			<src path="${src.dir}" />
+			<classpath refid="application.compile.classpath" />
+		</javac>
+
+	</target>
+
+	<target name="compile-and-hotdeploy" description="compiles and pushes the class files to exploded war, useful for hotdeploy
+		in conjunction with JRebel"
+		depends="compile">
+
+		<antcall target="deploy-dev-jboss-resources" />
+
+    </target>
+
+	<target name="assemble" depends="compile" description="assemble application components but do not compile">
+
+		<!-- Initialize the mode-specific application configuration -->
+		<copy overwrite="true" includeemptydirs="false"
+			todir="${web.web-inf.classes.dir}">
+			<fileset dir="${conf.dir}/${build.mode}/${conf.classes}">
+				<include name="**/*" />
+			</fileset>
+		</copy>
+
+		<copy overwrite="true" includeemptydirs="false"
+			todir="${web.web-inf.classes.dir}">
+			<fileset dir="${src.dir}">
+				<include name="**/*.properties"/>
+				<exclude name="**/*.java"/>
+				<exclude name="**/*.template"/>
+				<exclude name="**/*.class"/>
+			</fileset>
+		</copy>
+
+		<!-- Initialize local build configuration -->
+		<property name="local.mail.recipient" value="null@approachingpi.com" />
+		<property name="local.host" value="127.0.0.1:8080" />
+		<property name="local.context.root" value="127.0.0.1:8080" />
+		<property name="local.context" value="" />
+
+		<replace dir="${web.web-inf.classes.dir}" summary="true">
+			<include name="*.properties" />
+			<include name="*.xml" />
+			<replacefilter token="@local.mail.recipient@" value="${local.mail.recipient}" />
+			<replacefilter token="@local.host@" value="${local.host}" />
+			<replacefilter token="@local.context.root@" value="${local.context.root}" />
+			<replacefilter token="@local.context@" value="${local.context}" />
+
+			<replacefilter token="@rebel.compiled.classpath@" value="${basepath.dir}/${web.web-inf.classes.dir}" />
+			<replacefilter token="@rebel.web.root@" value="${basepath.dir}/${web.dir}" />
+
+		</replace>
+
+		<!-- Populate the runtime libraries -->
+		<mkdir dir="${web.web-inf.lib.dir}" />
+		<copy includeemptydirs="false" todir="${web.web-inf.lib.dir}">
+			<fileset dir="${lib.ivy.compile.dir}/">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${lib.compile.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+			<!-- Flatten the resulting path structure -->
+			<flattenmapper />
+		</copy>
+
+		<!-- Generate the status page -->
+		<copy overwrite="true" file="${src.dir}/status.properties.template"
+			tofile="${web.web-inf.classes.dir}/status.properties" />
+
+		<replace file="${web.web-inf.classes.dir}/status.properties">
+			<replacefilter token="@version.major@" value="${app.version.major}" />
+			<replacefilter token="@version.minor@" value="${app.version.minor}" />
+			<replacefilter token="@build.mode@" value="${build.mode}" />
+			<replacefilter token="@build.number@" value="${build.number}" />
+		</replace>
+
+	</target>
+
+	<target name="package-unclean-view" description="package distribution"
+		depends="configure">
+
+		<copy todir="${dist.exploded.dir}/${dist.target}.war">
+			<fileset dir="${web.dir}">
+				<exclude name="**/*.template" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="package" description="package distribution"
+		depends="clean, assemble">
+
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${dist.exploded.dir}/${dist.target}.war" />
+		<copy todir="${dist.exploded.dir}/${dist.target}.war">
+			<fileset dir="${web.dir}">
+				<include name="*/**" />
+				<exclude name="**/*.template" />
+			</fileset>
+		</copy>
+
+		<zip file="${dist.dir}/${dist.target}.war">
+			<fileset dir="${dist.exploded.dir}/${dist.target}.war">
+				<include name="*/**" />
+			</fileset>
+		</zip>
+
+
+	</target>
+
+	<!-- -->
+	<!-- Generation targets -->
+	<!-- -->
+
+	<target name="report-tattletale" depends="configure">
+
+		<!-- Clean the generated report -->
+		<delete dir="${dist.report.dir}" />
+
+		<!-- Generate the tattletale report -->
+		<mkdir dir="${dist.report.dir}" />
+		<report source="${web.web-inf.lib.dir}" destination="${dist.report.dir}" />
+
+	</target>
+
+	<!-- -->
+	<!-- Schema targets -->
+	<!-- -->
+
+	<target name="export-schema"
+		description="export the schema using the current
+		JPA configuration"
+		depends="package">
+
+		<!-- Initialize the classpath -->
+		<path id="export-schema.classpath">
+			<pathelement path="${web.web-inf.classes.dir}" />
+			<fileset dir="${web.web-inf.lib.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${lib.ivy.provided.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${lib.tools.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+		</path>
+
+		<!-- Export the database schema -->
+		<mkdir dir="${dist.dir}" />
+
+		<hibernatetool destdir="${dist.dir}">
+			<jpaconfiguration persistenceunit="localconnection" />
+			<classpath refid="export-schema.classpath" />
+			<hbm2ddl drop="false" create="true" export="false"
+				outputfilename="${db.source.localconnection.schema}-ddl.sql" delimiter=";"
+				format="true" />
+		</hibernatetool>
+
+		<!-- Populate the database scripts -->
+		<copy todir="${dist.dir}">
+			<fileset dir="${db.dir}">
+				<include name="${db.source.localconnection.schema}-*" />
+			</fileset>
+		</copy>
+
+	</target>
+
+	<target name="seed-schema"
+		description="seed the exported schema using
+		the current JPA configuration"
+		depends="export-schema">
+
+		<!-- Drop and create the target schema -->
+		<sql driver="${db.source.localconnection.driver}" url="${db.source.localconnection.url_base}"
+			userid="${db.source.localconnection.username}" password="${db.source.localconnection.password}">
+			<classpath refid="application.jdbc.classpath" />
+			<transaction>
+				DROP SCHEMA IF EXISTS `${db.source.localconnection.schema}`;
+				CREATE SCHEMA `${db.source.localconnection.schema}`;
+			</transaction>
+		</sql>
+
+		<!-- Initialize the schema -->
+		<sql driver="${db.source.localconnection.driver}" url="${db.source.localconnection.url}"
+			userid="${db.source.localconnection.username}" password="${db.source.localconnection.password}"
+			src="${dist.dir}/${db.source.localconnection.schema}-ddl.sql">
+			<classpath refid="application.jdbc.classpath" />
+		</sql>
+
+		<!-- Seed the static data -->
+		<sql driver="${db.source.localconnection.driver}" url="${db.source.localconnection.url}"
+			userid="${db.source.localconnection.username}" password="${db.source.localconnection.password}"
+			src="${dist.dir}/${db.source.localconnection.schema}-static-data.sql">
+			<classpath refid="application.jdbc.classpath" />
+		</sql>
+
+		<!-- Seed the test data -->
+		<sql driver="${db.source.localconnection.driver}" url="${db.source.localconnection.url}"
+			userid="${db.source.localconnection.username}" password="${db.source.localconnection.password}"
+			src="${dist.dir}/${db.source.localconnection.schema}-test-data.sql">
+			<classpath refid="application.jdbc.classpath" />
+		</sql>
+
+	</target>
+
+	<target name="deploy-dev-jboss" depends="package"
+		description="deploys war and ds to jboss 6 server">
+
+		<!-- Set the build mode -->
+		<property name="build.mode" value="development" />
+
+		<!-- Package the application -->
+		<antcall target="package" />
+
+		<!-- Copy Datasource to JBoss Server -->
+		<copy todir="${jboss.home}/${jboss.deploy.dir}">
+			<fileset dir="resources">
+				<include name="**/*-ds.xml" />
+			</fileset>
+		</copy>
+
+        <!-- Cleanup previous deploys -->
+		<delete dir="${jboss.home}/${jboss.deploy.dir}/${dist.target}.war" failonerror="false"/>
+		<delete file="${jboss.home}/${jboss.deploy.dir}/${dist.target}.war" failonerror="false"/>
+
+        <!-- Copy War or Exploded War to JBoss Server (depending on 'exploded.war.deploy') -->
+		<antcall target="deploy-war" />
+
+	</target>
+
+	<target name="deploy-dev-jboss-datasource" depends="package"
+		description="deploys just the datasource to jboss">
+
+		<!-- Set the build mode -->
+		<property name="build.mode" value="development" />
+
+		<!-- Package the application -->
+		<antcall target="package" />
+
+		<!-- Copy Datasource to JBoss Server -->
+		<copy todir="${jboss.home}/${jboss.deploy.dir}">
+			<fileset dir="resources">
+				<include name="**/*-ds.xml" />
+			</fileset>
+		</copy>
+
+	</target>
+
+	<target name="as7-deploy" depends="package" description="deploys the exploded archive to jboss as7">
+		<copy todir="${jboss.as7.home}/${jboss.as7.deploy.dir}">
+			<fileset dir="${dist.exploded.dir}">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+		<touch file="${jboss.as7.home}/${jboss.as7.deploy.dir}/${dist.target}.war.dodeploy" />
+	</target>
+	<target name="as7-write-deploy-marker">
+		<touch file="${jboss.as7.home}/${jboss.as7.deploy.dir}/${dist.target}.war.dodeploy" />
+	</target>
+
+</project>

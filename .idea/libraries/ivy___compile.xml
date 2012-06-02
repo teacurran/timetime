@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="ivy - compile">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib/ivy/compile" />
+      <root url="file://$PROJECT_DIR$/lib/ivy/compile" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/ivy/compile" recursive="false" />
+  </library>
+</component>
