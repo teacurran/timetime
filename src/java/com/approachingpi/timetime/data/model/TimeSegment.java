@@ -27,10 +27,19 @@ public class TimeSegment implements java.io.Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
+	@ManyToOne
 	private Task task;
+
+	@ManyToOne
 	private Account account;
+
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date dateStart;
+
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date dateReported;
+
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date dateEnd;
 
 	public TimeSegment() {
@@ -49,9 +58,6 @@ public class TimeSegment implements java.io.Serializable {
 		this.dateEnd = dateEnd;
 	}
 
-	@Id
-	@GeneratedValue(strategy = IDENTITY)
-	@Column(name = "id", unique = true, nullable = false)
 	public Integer getId() {
 		return this.id;
 	}
@@ -60,8 +66,6 @@ public class TimeSegment implements java.io.Serializable {
 		this.id = id;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "taskId", nullable = false)
 	public Task getTask() {
 		return this.task;
 	}
@@ -70,8 +74,6 @@ public class TimeSegment implements java.io.Serializable {
 		this.task = task;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "accountId", nullable = false)
 	public Account getAccount() {
 		return this.account;
 	}
@@ -80,8 +82,6 @@ public class TimeSegment implements java.io.Serializable {
 		this.account = account;
 	}
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "dateStart", length = 19)
 	public Date getDateStart() {
 		return this.dateStart;
 	}
@@ -90,8 +90,6 @@ public class TimeSegment implements java.io.Serializable {
 		this.dateStart = dateStart;
 	}
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "dateReported", length = 19)
 	public Date getDateReported() {
 		return this.dateReported;
 	}
@@ -100,8 +98,6 @@ public class TimeSegment implements java.io.Serializable {
 		this.dateReported = dateReported;
 	}
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "dateEnd", length = 19)
 	public Date getDateEnd() {
 		return this.dateEnd;
 	}
