@@ -1,3 +1,6 @@
 lib/ivy/*
 atlassian-ide-plugin.xml
-.idea/workspace.xml
+./.idea/workspace.xml
+dist/*
+web/WEB-INF/classes/*
+web/WEB-INF/lib/*
