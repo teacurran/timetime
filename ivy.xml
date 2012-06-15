@@ -78,11 +78,13 @@
 
 		<!-- Hibernate -->
 		<dependency org="org.hibernate" name="hibernate-core"
-					rev="4.0.1.Final" conf="provided->default"/>
+					rev="4.1.4.Final" conf="provided->default"/>
 		<dependency org="org.hibernate" name="hibernate-entitymanager"
-					rev="4.0.1.Final" conf="provided->default"/>
+					rev="4.1.4.Final" conf="provided->default"/>
 		<dependency org="org.hibernate" name="hibernate-validator"
-					rev="4.2.0.Final" conf="provided->default"/>
+					rev="4.3.0.Final" conf="provided->default"/>
+		<dependency org="org.hibernate" name="hibernate-envers"
+					rev="4.1.4.Final" conf="provided->default"/>
 
 		<!-- Commons -->
 		<dependency org="commons-beanutils" name="commons-beanutils" rev="1.8.0" force="true" conf="compile->compile(*),master(*)"/>
@@ -171,12 +173,6 @@
 			conf="compile->default" />
 
 
-		<!--Envers/Ehcache-->
-		<dependency org="org.hibernate" name="hibernate-envers"
-					rev="3.6.1.Final" conf="compile->default" transitive="false"/>
-		<dependency org="net.sf.ehcache" name="ehcache" rev="2.4.3"
-					conf="compile->default" transitive="false"/>
-
 		<!-- Misc -->
 		<dependency org="joda-time" name="joda-time" rev="1.6"
 					conf="compile->default" transitive="false"/>
@@ -235,7 +231,7 @@
 		<!-- TOOLS -->
 		<!--       -->
 		<dependency org="org.jboss.tattletale" name="tattletale-ant"
-					rev="1.1.0.Final" conf="tools->runtime"/>
+					rev="1.1.2.Final" conf="tools->runtime"/>
 		<dependency org="org.hibernate" name="hibernate-tools" rev="3.2.4.GA"
 					conf="tools->default"/>
 		<dependency org="org.slf4j" name="slf4j-api" rev="1.5.10"

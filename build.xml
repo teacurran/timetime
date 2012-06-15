@@ -9,7 +9,7 @@
 	<dirname property="basepath.dir" file="build.xml"/>
 
 	<!-- Define source structure -->
-	<property name="src.dir" value="src" />
+	<property name="src.dir" value="src/java" />
 	<property name="src.resources.dir" value="resources" />
 	<property name="test.dir" value="test/java" />
 	<property name="conf.dir" value="conf" />
@@ -146,14 +146,14 @@
 		<xmlproperty keepRoot="false" semanticAttributes="true"
 			file="${conf.dir}/${build.mode}/db.properties.xml" />
 
+		<path id="application.jdbc.classpath">
+			<pathelement location="${lib.ivy.provided.dir}/mysql-connector-java-5.1.13.jar" />
+		</path>
+
 		<path id="application.provided.classpath">
 			<fileset dir="${lib.ivy.provided.dir}">
 				<include name="**/*.jar" />
 			</fileset>
-		</path>
-
-		<path id="application.jdbc.classpath">
-			<pathelement location="${lib.ivy.provided.dir}/mysql-connector-java-5.1.13.jar" />
 		</path>
 
 		<path id="application.compile.classpath">
@@ -161,9 +161,6 @@
 				<include name="**/*.jar" />
 			</fileset>
 			<fileset dir="${lib.ivy.provided.dir}">
-				<include name="**/*.jar" />
-			</fileset>
-			<fileset dir="${lib.compile.dir}">
 				<include name="**/*.jar" />
 			</fileset>
 		</path>
@@ -185,10 +182,10 @@
 
 		<!-- Import additional tasks -->
 		<path id="hibernatetool.classpath">
-			<fileset dir="${lib.tools.dir}/hibernate">
+			<fileset dir="${lib.ivy.provided.dir}">
 				<include name="**/*.jar" />
 			</fileset>
-			<fileset dir="${lib.ivy.provided.dir}">
+			<fileset dir="${lib.ivy.tools.dir}">
 				<include name="**/*.jar" />
 			</fileset>
 		</path>
@@ -230,7 +227,7 @@
 
 		<!-- Initialize the mode-specific application configuration -->
 		<copy overwrite="true" includeemptydirs="false"
-			todir="${web.web-inf.classes.dir}">
+			todir="${web.web-inf.classes.dir}" failonerror="false">
 			<fileset dir="${conf.dir}/${build.mode}/${conf.classes}">
 				<include name="**/*" />
 			</fileset>
@@ -271,15 +268,12 @@
 			<fileset dir="${lib.ivy.compile.dir}/">
 				<include name="**/*.jar" />
 			</fileset>
-			<fileset dir="${lib.compile.dir}">
-				<include name="**/*.jar" />
-			</fileset>
 			<!-- Flatten the resulting path structure -->
 			<flattenmapper />
 		</copy>
 
 		<!-- Generate the status page -->
-		<copy overwrite="true" file="${src.dir}/status.properties.template"
+		<copy overwrite="true" file="${src.dir}/status.properties"
 			tofile="${web.web-inf.classes.dir}/status.properties" />
 
 		<replace file="${web.web-inf.classes.dir}/status.properties">
