@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<f:view>
+	<h:head>
+		<title>#{i18n['application.name']}</title>
+		<link rel="stylesheet"
+			href="#{request.contextPath}/resources/css/main.css" type="text/css"
+			media="screen" />
+		<!--[if lte IE 6]>
+          <link rel="stylesheet" href="#{request.contextPath}/resources/css/legacy.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+          <![endif]-->
+		<h:outputScript name="jquery/jquery.js" library="primefaces" />
+		<script type="text/javascript" src="#{request.contextPath}/resources/scripts/main.js"></script>
+
+		<!--
+		<link type="text/css" rel="stylesheet" href="#{request.contextPath}/resources/theme/theme.css"/>
+		-->
+	</h:head>
+
+	<body>
+
+	<div id="header-restricted" class="ui-widget ui-widget-header">
+		<div class="logo"><h:link outcome="/pages/secure/home"><h:graphicImage value="/resources/img/logo.png" alt="logo" height="100" width="175"/></h:link></div>
+		<div class="title">
+			<h1><h:link outcome="/pages/secure/home" value="#{i18n['application.name']}"/></h1>
+		</div>
+	</div>
+
+	<p:messages id="messages" showDetail="false"/>
+	<ui:insert name="content" />
+
+	<ui:include src="/WEB-INF/fragments/footer.xhtml" />
+
+	</body>
+</f:view>
+</html>

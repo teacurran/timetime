@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:p="http://primefaces.org/ui">
+
+<ui:composition>
+	<h:form id="toolbarForm">
+		<p:menubar id="toolbar" autoSubmenuDisplay="true" styleClass="toolbar">
+			<p:menuitem value="#{i18n['home.title']}" icon="ui-icon ui-icon-image" url="/"/>
+
+			<p:submenu label="#{i18n['admin.menu']}" rendered="#{currentUser.admin}" id="adminSubmenu" icon="ui-icon ui-icon-gear">
+				<p:menuitem value="#{i18n['campaigns.title']}" url="/admin/campaigns"/>
+				<p:menuitem value="#{i18n['campaign_item.title']}" url="/admin/campaign_items"/>
+				<p:menuitem value="#{i18n['users.title']}" url="/admin/users"/>
+				<p:menuitem value="#{i18n['settings.title']}" url="/admin/configuration"/>
+			</p:submenu>
+		</p:menubar>
+	</h:form>
+</ui:composition>
+
+</html>
+

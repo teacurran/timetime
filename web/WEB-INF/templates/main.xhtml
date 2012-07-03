@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:p="http://primefaces.org/ui">
+<f:view contentType="text/html">
+	<ui:insert name="viewMetadata"/>
+	<h:head>
+		<title>#{i18n['application.name']}</title>
+		<link rel="shortcut icon" href="#{request.contextPath}/favicon.ico"/>
+		<h:outputScript name="jquery/jquery.js" library="primefaces" />
+		<script type="text/javascript" src="#{request.contextPath}/resources/scripts/main.js"/>
+		<link rel="stylesheet" href="#{request.contextPath}/resources/css/main.css" type="text/css"/>
+	</h:head>
+
+	<body>
+
+	<ui:include src="/WEB-INF/fragments/header.xhtml"/>
+
+	<ui:include src="/WEB-INF/fragments/toolbar.xhtml"/>
+
+	<div id="wrapper" class="wrapper clear">
+		<div id="content">
+			<p:messages id="messages" showDetail="false"/>
+			<ui:insert name="content"/>
+		</div>
+		<ui:include src="/WEB-INF/fragments/sidebar.xhtml"/>
+
+	</div>
+
+	<ui:include src="/WEB-INF/fragments/footer.xhtml"/>
+
+	<p:ajaxStatus onstart="statusDialog.show();" onsuccess="statusDialog.hide();"/>
+
+	<p:dialog modal="true" widgetVar="statusDialog" header="Status"
+			draggable="false" closable="true"
+			width="300"
+			>
+		<p:graphicImage value="/resources/img/ajaxloadingbar.gif" />
+	</p:dialog>
+
+	</body>
+</f:view>
+</html>
