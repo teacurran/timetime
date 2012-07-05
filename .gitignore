@@ -4,3 +4,6 @@ atlassian-ide-plugin.xml
 dist/*
 web/WEB-INF/classes/*
 web/WEB-INF/lib/*
+build/*
+local.build.properties
+*.DS_Store

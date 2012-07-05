@@ -633,7 +633,11 @@
       <created>1341511876810</created>
       <updated>1341511876810</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="more framework setup.">
+      <created>1341511886560</created>
+      <updated>1341511886560</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
