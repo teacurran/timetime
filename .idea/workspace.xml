@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/interceptor/Timestampable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/interceptor/TimestampableInterceptor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/META-INF/context.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jboss-deployment-structure.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/jboss-web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ivy.xml" afterPath="$PROJECT_DIR$/ivy.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ivysettings.xml" afterPath="$PROJECT_DIR$/ivysettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.iml" afterPath="$PROJECT_DIR$/main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/beans.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/beans.xml" />
     </list>
     <ignored path="timetime.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -639,7 +629,11 @@
       <created>1341351552385</created>
       <updated>1341351552385</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="more framework setup.">
+      <created>1341511876810</created>
+      <updated>1341511876810</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -710,7 +704,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added data descriptor and set-up of jsf2" />
+    <option name="LAST_COMMIT_MESSAGE" value="more framework setup." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -727,6 +721,7 @@
     <MESSAGE value="setup of model objects." />
     <MESSAGE value="build script work." />
     <MESSAGE value="added data descriptor and set-up of jsf2" />
+    <MESSAGE value="more framework setup." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
