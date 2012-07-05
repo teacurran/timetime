@@ -87,17 +87,23 @@
 					rev="4.1.4.Final" conf="provided->default"/>
 
 		<!-- Commons -->
-		<dependency org="commons-beanutils" name="commons-beanutils" rev="1.8.0" force="true" conf="compile->compile(*),master(*)"/>
+		<dependency org="commons-beanutils" name="commons-beanutils" rev="1.8.0" force="true"
+					conf="compile->compile(*),master(*)"/>
 		<dependency org="commons-io" name="commons-io" rev="1.4"
-			conf="compile->*" />
+					conf="compile->*"/>
 
 		<!-- Seam -->
 		<dependency org="org.jboss.seam.persistence"
 					name="seam-persistence"
 					rev="3.1.0.Final" conf="compile->default" transitive="false"/>
+		<dependency org="org.jboss.seam.persistence"
+					name="seam-persistence-api"
+					rev="3.1.0.Final" conf="compile->default" transitive="false"/>
 		<dependency org="org.jboss.seam.faces"
 					name="seam-faces"
 					rev="3.1.0.Final" conf="compile->default" transitive="false"/>
+		<dependency org="org.jboss.seam.faces" name="seam-faces-api"
+					rev="3.1.0.Final" conf="compile->default" transitive="true"/>
 		<dependency org="org.jboss.solder" name="solder-api"
 					rev="3.1.0.Final" conf="compile->default" transitive="true"/>
 		<dependency org="org.jboss.solder" name="solder-impl"
@@ -106,15 +112,30 @@
 					rev="3.1.0.Final" conf="compile->default" transitive="true"/>
 		<dependency org="org.jboss.seam.international"
 					name="seam-international"
-					rev="3.1.0.Final" conf="compile->default" transitive="false" />
-		<dependency org="org.jboss.seam.international"
-					name="seam-international"
-					rev="3.1.0.Final" conf="compile->default" transitive="false" />
+					rev="3.1.0.Final" conf="compile->default" transitive="false"/>
+		<dependency org="org.jboss.seam.international" name="seam-international-api"
+					rev="3.1.0.Final" conf="compile->default" transitive="false"/>
+
+		<!-- seam security required by faces -->
+		<!--
+		<dependency org="org.jboss.seam.security" name="seam-security"
+		rev="3.1.0.Final" conf="compile->compile(*),master(*),optional(*)" transitive="true" /> -->
+		<dependency org="org.jboss.seam.security" name="seam-security-api"
+		rev="3.1.0.Final" conf="compile->compile(*),master(*),optional(*)" transitive="true" />
+
+		<!--
 		<dependency org="org.jboss.seam.rest" name="seam-rest"
 					rev="3.1.0.Final" conf="compile->default"/>
+		-->
+		<!--
 		<dependency org="org.jboss.seam.remoting"
 					name="seam-remoting"
-					rev="3.1.0.Final" conf="compile->default" transitive="false" />
+					rev="3.1.0.Final" conf="compile->default" transitive="false"/>
+		-->
+		<dependency org="org.jboss.seam.transaction" name="seam-transaction-api"
+					rev="3.1.0.Final" conf="compile->default" transitive="false"/>
+		<dependency org="org.jboss.seam.transaction" name="seam-transaction"
+					rev="3.1.0.Final" conf="compile->default" transitive="false"/>
 
 		<!-- Seam - not released -->
 		<!-- Seam - cron -->
@@ -141,11 +162,11 @@
 
 		<!-- Seam - mail -->
 		<dependency org="org.jboss.seam.mail" name="seam-mail"
-			rev="3.1.0.Final" conf="compile->master(*),compile(*),optional(*)" transitive="true">
-				<exclude org="javax.servlet" name="servlet-api"/>
+					rev="3.1.0.Final" conf="compile->master(*),compile(*),optional(*)" transitive="true">
+			<exclude org="javax.servlet" name="servlet-api"/>
 		</dependency>
 		<dependency org="org.jboss.seam.mail" name="seam-mail-api"
-			rev="3.1.0.Final" conf="compile->master(*),compile(*),optional(*)" transitive="true" />
+					rev="3.1.0.Final" conf="compile->master(*),compile(*),optional(*)" transitive="true"/>
 
 		<!-- used in ream remoting -->
 		<!--
@@ -161,16 +182,16 @@
 
 		<!-- Primefaces  -->
 		<dependency org="org.primefaces" name="primefaces"
-			rev="3.3.1" conf="compile->default" transitive="false" />
+					rev="3.3.1" conf="compile->default" transitive="false"/>
 		<dependency org="org.primefaces.themes" name="cupertino"
-			rev="1.0.3" conf="compile->default" transitive="false" />
+					rev="1.0.3" conf="compile->default" transitive="false"/>
 
 
 		<!-- Prettyfaces  (URL Rewriter)-->
-		<dependency org="com.ocpsoft" name="prettyfaces-jsf2" rev="3.0.1"
-			conf="compile->default" />
-		<dependency org="com.ocpsoft" name="ocpsoft-pretty-time" rev="1.0.6"
-			conf="compile->default" />
+		<dependency org="com.ocpsoft" name="prettyfaces-jsf2" rev="3.3.3"
+					conf="compile->default"/>
+		<dependency org="org.ocpsoft.prettytime" name="prettytime" rev="1.0.8.Final"
+					conf="compile->default"/>
 
 
 		<!-- Misc -->
@@ -183,7 +204,7 @@
 		<dependency org="com.lowagie" name="itext" rev="2.1.7"
 					conf="compile->default" transitive="false"/>
 		<dependency org="com.google.inject" name="guice" rev="2.0"
-			conf="compile->master" />
+					conf="compile->master"/>
 
 		<!-- Restlet - For Development -->
 		<!--
@@ -219,12 +240,12 @@
 		<dependency org="org.jboss.arquillian" name="arquillian-bom" rev="1.0.0.Final" conf="test->default"/>
 
 		<!-- Arquillian JUnit Standalone -->
-		<dependency org="org.jboss.arquillian.junit" name="arquillian-junit-standalone" rev="1.0.0.Final" conf="test->default"/>
+		<dependency org="org.jboss.arquillian.junit" name="arquillian-junit-standalone" rev="1.0.0.Final"
+					conf="test->default"/>
 
 		<!-- Arquillian Graphene -->
-		<dependency org="org.jboss.arquillian.graphene" name="arquillian-graphene" rev="1.0.0.Final" conf="test->default"/>
-
-
+		<dependency org="org.jboss.arquillian.graphene" name="arquillian-graphene" rev="1.0.0.Final"
+					conf="test->default"/>
 
 
 		<!--       -->

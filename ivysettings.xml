@@ -58,12 +58,12 @@
 
 			<!-- OCPSoft - PrettyFaces-->
 			<ibiblio name="ocpsoft" m2compatible="true"
-								 root="http://ocpsoft.com/repository"
+								 root="http://ocpsoft.org/repository"
 								 pattern="[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
 
 			<!-- Prime Faces -->
 			<ibiblio name="primefaces" m2compatible="true"
-				root="http://repository.prime.com.tr"
+				root="http://repository.primefaces.org"
 				pattern="[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
 
 
