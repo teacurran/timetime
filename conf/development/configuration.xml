@@ -25,4 +25,7 @@
 			</main>
 		</source>
 	</db>
+	<build>
+		<number>DEV</number>
+	</build>
 </root>

@@ -44,9 +44,6 @@
 	<xmlproperty keepRoot="false"
 		file="${conf.dir}/application.properties.xml" />
 
-	<!-- Load build automation properties -->
-	<property file="build-number.txt" />
-
 	<!-- Load local target override properties -->
 	<property file="local.build.properties" />
 
