@@ -23,6 +23,9 @@
 			<!-- Java.net -->
 			<ibiblio name="java.net" m2compatible="true"
 					root="http://download.java.net/maven/2/" />
+			<ibiblio name="java.net-snapshots"
+					root="https://maven.java.net/content/repositories/snapshots/"
+					m2compatible="true"/>
 
 			<ibiblio name="repo1-maven-org" root="http://repo1.maven.org/maven2" m2compatible="true"/>
 			<ibiblio name="repo2-maven-org" root="http://repo2.maven.org/maven2" m2compatible="true"/>
@@ -66,6 +69,10 @@
 				root="http://repository.primefaces.org"
 				pattern="[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
 
+
+			<ibiblio name="itcrowd" m2compatible="true"
+				root="http://artifactory.itcrowd.pl/repo/"
+				pattern="[organisation]/[module]/[revision]/[artifact]-[revision](-[classifier]).[ext]"/>
 
 		</chain>
 	</resolvers>

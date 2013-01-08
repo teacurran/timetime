@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<ivy-module version="2.0"
-			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<ivy-module version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
 
-	<info organisation="${app.organization}" module="${app.name}"
-		  status="release">
-	</info>
+	<info organisation="${app.organization}" module="${app.name}" status="release"></info>
 
 	<configurations>
 		<conf name="provided" visibility="public"
@@ -39,10 +36,7 @@
 		<dependency org="javax" name="javaee-api"
 					rev="6.0" conf="provided->default"/>
 		-->
-		<dependency org="org.jboss.spec" name="jboss-javaee6-specs-bom"
-					rev="2.1.0.Beta1" conf="provided->default"/>
-		<dependency org="org.jboss.spec" name="jboss-javaee-6.0"
-					rev="2.1.0.Beta1" conf="provided->default"/>
+		<dependency org="org.jboss.spec" name="jboss-javaee-6.0" rev="3.0.1.Final" conf="provided->default"/>
 
 		<!-- Hibernate -->
 		<!--
@@ -61,81 +55,93 @@
 		-->
 
 		<!-- Misc -->
-		<dependency org="log4j" name="log4j" rev="1.2.14"
-					conf="provided->default"/>
+		<dependency org="log4j" name="log4j" rev="1.2.14" conf="provided->default"/>
 
 		<!-- Mysql Connector -->
-		<dependency org="mysql" name="mysql-connector-java" rev="5.1.20"
-					conf="provided->default"/>
+		<dependency org="mysql" name="mysql-connector-java" rev="5.1.20" conf="provided->default"/>
 
 		<!-- Rest / XML -->
-		<dependency org="javax.xml.ws" name="jaxws-api" rev="2.1"
-					conf="provided->default"/>
+		<dependency org="javax.xml.ws" name="jaxws-api" rev="2.1" conf="provided->default"/>
+
+		<dependency org="commons-collections" name="commons-collections" rev="3.2.1" conf="provided->default"/>
+
+		<!-- Hibernate -->
+		<dependency org="org.hibernate" name="hibernate-core" rev="4.1.4.Final" conf="provided->default"/>
+		<dependency org="org.hibernate" name="hibernate-entitymanager" rev="4.1.4.Final" conf="provided->default"/>
+		<dependency org="org.hibernate" name="hibernate-validator" rev="4.3.0.Final" conf="provided->default"/>
+		<dependency org="org.hibernate" name="hibernate-envers" rev="4.1.4.Final" conf="provided->default"/>
 
 		<!--              -->
 		<!-- COMPILE      -->
 		<!--              -->
 
-		<!-- Hibernate -->
-		<dependency org="org.hibernate" name="hibernate-core"
-					rev="4.1.4.Final" conf="provided->default"/>
-		<dependency org="org.hibernate" name="hibernate-entitymanager"
-					rev="4.1.4.Final" conf="provided->default"/>
-		<dependency org="org.hibernate" name="hibernate-validator"
-					rev="4.3.0.Final" conf="provided->default"/>
-		<dependency org="org.hibernate" name="hibernate-envers"
-					rev="4.1.4.Final" conf="provided->default"/>
+		<!-- Hibernate Search, not provided -->
+		<dependency org="org.hibernate" name="hibernate-search" rev="4.1.1.Final" conf="compile->default"
+					transitive="false"/>
+		<dependency org="org.hibernate" name="hibernate-search-analyzers" rev="4.1.1.Final" conf="compile->default"
+					transitive="false"/>
+		<dependency org="org.hibernate" name="hibernate-search-orm" rev="4.1.1.Final" conf="compile->default"
+					transitive="false"/>
+		<dependency org="org.hibernate" name="hibernate-search-engine" rev="4.1.1.Final" conf="compile->default">
+			<exclude org="org.apache.avro" name="avro"/>
+			<exclude org="org.codehaus.jackson" name="jackson-core-asl"/>
+			<exclude org="org.codehaus.jackson" name="jackson-mapper-asl"/>
+		</dependency>
+		<dependency org="org.apache.avro" name="avro" rev="1.5.1">
+			<exclude org="org.codehaus.jackson" name="jackson-core-asl"/>
+			<exclude org="org.codehaus.jackson" name="jackson-mapper-asl"/>
+		</dependency>
 
 		<!-- Commons -->
 		<dependency org="commons-beanutils" name="commons-beanutils" rev="1.8.0" force="true"
 					conf="compile->compile(*),master(*)"/>
-		<dependency org="commons-io" name="commons-io" rev="1.4"
-					conf="compile->*"/>
+		<dependency org="commons-io" name="commons-io" rev="1.4" conf="compile->*"/>
+		<dependency org="commons-fileupload" name="commons-fileupload" rev="1.2.1" conf="compile->*"/>
 
 		<!-- Seam -->
-		<dependency org="org.jboss.seam.persistence"
-					name="seam-persistence"
-					rev="3.1.0.Final" conf="compile->default" transitive="false"/>
-		<dependency org="org.jboss.seam.persistence"
-					name="seam-persistence-api"
-					rev="3.1.0.Final" conf="compile->default" transitive="false"/>
-		<dependency org="org.jboss.seam.faces"
-					name="seam-faces"
-					rev="3.1.0.Final" conf="compile->default" transitive="false"/>
-		<dependency org="org.jboss.seam.faces" name="seam-faces-api"
-					rev="3.1.0.Final" conf="compile->default" transitive="true"/>
-		<dependency org="org.jboss.solder" name="solder-api"
-					rev="3.1.0.Final" conf="compile->default" transitive="true"/>
-		<dependency org="org.jboss.solder" name="solder-impl"
-					rev="3.1.0.Final" conf="compile->default" transitive="true"/>
-		<dependency org="org.jboss.solder" name="solder-logging"
-					rev="3.1.0.Final" conf="compile->default" transitive="true"/>
-		<dependency org="org.jboss.seam.international"
-					name="seam-international"
-					rev="3.1.0.Final" conf="compile->default" transitive="false"/>
-		<dependency org="org.jboss.seam.international" name="seam-international-api"
-					rev="3.1.0.Final" conf="compile->default" transitive="false"/>
+		<dependency org="org.jboss.seam.persistence" name="seam-persistence" rev="3.1.0.Final" conf="compile->default"
+					transitive="false"/>
+		<dependency org="org.jboss.seam.persistence" name="seam-persistence-api" rev="3.1.0.Final"
+					conf="compile->default" transitive="false"/>
+		<dependency org="org.jboss.seam.faces" name="seam-faces" rev="3.1.0.Final" conf="compile->default"
+					transitive="false"/>
+		<dependency org="org.jboss.seam.faces" name="seam-faces-api" rev="3.1.0.Final" conf="compile->default"
+					transitive="true"/>
+		<dependency org="org.jboss.solder" name="solder-api" rev="3.1.0.Final" conf="compile->default"
+					transitive="true"/>
+		<dependency org="org.jboss.solder" name="solder-impl" rev="3.1.0.Final" conf="compile->default"
+					transitive="true"/>
+		<dependency org="org.jboss.solder" name="solder-logging" rev="3.1.0.Final" conf="compile->default"
+					transitive="true"/>
+		<dependency org="org.jboss.seam.international" name="seam-international" rev="3.1.0.Final"
+					conf="compile->default" transitive="false"/>
+		<dependency org="org.jboss.seam.international" name="seam-international-api" rev="3.1.0.Final"
+					conf="compile->default" transitive="false"/>
+		<dependency org="org.jboss.seam.validation" name="seam-validation-api" rev="3.1.0.Final"
+					conf="compile->default"/>
+		<dependency org="org.jboss.seam.validation" name="seam-validation" rev="3.1.0.Final" conf="compile->default"/>
 
 		<!-- seam security required by faces -->
 		<!--
 		<dependency org="org.jboss.seam.security" name="seam-security"
 		rev="3.1.0.Final" conf="compile->compile(*),master(*),optional(*)" transitive="true" /> -->
-		<dependency org="org.jboss.seam.security" name="seam-security-api"
-		rev="3.1.0.Final" conf="compile->compile(*),master(*),optional(*)" transitive="true" />
+		<dependency org="org.jboss.seam.security" name="seam-security-api" rev="3.1.0.Final"
+					conf="compile->compile(*),master(*),optional(*)" transitive="true"/>
 
-		<!--
 		<dependency org="org.jboss.seam.rest" name="seam-rest"
-					rev="3.1.0.Final" conf="compile->default"/>
-		-->
+					rev="3.2.0-SNAPSHOT" conf="compile->default" transitive="true"/>
+		<dependency org="org.apache.httpcomponents" name="httpclient"
+					rev="4.1.2" conf="compile->default"/>
+
 		<!--
 		<dependency org="org.jboss.seam.remoting"
 					name="seam-remoting"
 					rev="3.1.0.Final" conf="compile->default" transitive="false"/>
 		-->
-		<dependency org="org.jboss.seam.transaction" name="seam-transaction-api"
-					rev="3.1.0.Final" conf="compile->default" transitive="false"/>
-		<dependency org="org.jboss.seam.transaction" name="seam-transaction"
-					rev="3.1.0.Final" conf="compile->default" transitive="false"/>
+		<dependency org="org.jboss.seam.transaction" name="seam-transaction-api" rev="3.1.0.Final"
+					conf="compile->default" transitive="false"/>
+		<dependency org="org.jboss.seam.transaction" name="seam-transaction" rev="3.1.0.Final" conf="compile->default"
+					transitive="false"/>
 
 		<!-- Seam - not released -->
 		<!-- Seam - cron -->
@@ -160,10 +166,22 @@
 					rev="3.0.0.Alpha1"/>
 		-->
 
+		<dependency org="org.opensymphony.quartz" name="quartz" rev="1.6.5"/>
+
 		<!-- Seam - mail -->
 		<dependency org="org.jboss.seam.mail" name="seam-mail"
 					rev="3.1.0.Final" conf="compile->master(*),compile(*),optional(*)" transitive="true">
 			<exclude org="javax.servlet" name="servlet-api"/>
+			<exclude org="ant" name="ant"/>
+			<exclude org="org.apache.velocity" name="velocity"/>
+			<exclude org="commons-collections" name="commons-collections"/>
+			<exclude org="log4j" name="log4j"/>
+		</dependency>
+		<dependency org="org.apache.velocity" name="velocity" rev="1.7">
+			<exclude org="commons-collections" name="commons-collections"/>
+			<exclude org="javax.servlet" name="servlet-api"/>
+			<exclude org="log4j" name="log4j"/>
+			<exclude org="ant" name="ant"/>
 		</dependency>
 		<dependency org="org.jboss.seam.mail" name="seam-mail-api"
 					rev="3.1.0.Final" conf="compile->master(*),compile(*),optional(*)" transitive="true"/>
@@ -177,34 +195,35 @@
 		-->
 
 		<!-- Used for naming strategy -->
-		<dependency org="net.java.dev.inflector" name="inflector" rev="0.7.0"
-					conf="compile->default"/>
+		<dependency org="net.java.dev.inflector" name="inflector" rev="0.7.0" conf="compile->default"/>
 
 		<!-- Primefaces  -->
 		<dependency org="org.primefaces" name="primefaces"
-					rev="3.3.1" conf="compile->default" transitive="false"/>
-		<dependency org="org.primefaces.themes" name="cupertino"
-					rev="1.0.3" conf="compile->default" transitive="false"/>
+					rev="3.4.2" conf="compile->default" transitive="false"/>
+		<dependency org="org.primefaces.themes" name="aristo"
+					rev="1.0.1" conf="compile->default" transitive="false"/>
+		<dependency org="org.primefaces.themes" name="cupertino" rev="1.0.3" conf="compile->default"
+					transitive="false"/>
 
 
 		<!-- Prettyfaces  (URL Rewriter)-->
-		<dependency org="com.ocpsoft" name="prettyfaces-jsf2" rev="3.3.3"
-					conf="compile->default"/>
+		<dependency org="com.ocpsoft" name="prettyfaces-jsf2" rev="3.3.3" conf="compile->default"/>
 		<dependency org="org.ocpsoft.prettytime" name="prettytime" rev="1.0.8.Final"
+
+
 					conf="compile->default"/>
 
 
 		<!-- Misc -->
-		<dependency org="joda-time" name="joda-time" rev="1.6"
-					conf="compile->default" transitive="false"/>
-		<dependency org="backport-util-concurrent" name="backport-util-concurrent" rev="3.1"
-					conf="compile->default" transitive="false"/>
-		<dependency org="org.apache.poi" name="poi" rev="3.7"
-					conf="compile->default" transitive="false"/>
-		<dependency org="com.lowagie" name="itext" rev="2.1.7"
-					conf="compile->default" transitive="false"/>
-		<dependency org="com.google.inject" name="guice" rev="2.0"
-					conf="compile->master"/>
+		<dependency org="joda-time" name="joda-time" rev="1.6" conf="compile->default" transitive="false"/>
+		<dependency org="backport-util-concurrent" name="backport-util-concurrent" rev="3.1" conf="compile->default"
+					transitive="false"/>
+		<dependency org="org.apache.poi" name="poi" rev="3.7" conf="compile->default" transitive="false"/>
+		<dependency org="com.lowagie" name="itext" rev="2.1.7" conf="compile->default" transitive="false"/>
+		<dependency org="com.google.inject" name="guice" rev="2.0" conf="compile->master"/>
+
+		<dependency org="org.slf4j" name="slf4j-api" rev="1.6.1" conf="compile->default"/>
+		<dependency org="org.slf4j" name="slf4j-log4j12" rev="1.6.1" conf="compile->default"/>
 
 		<!-- Restlet - For Development -->
 		<!--
@@ -237,29 +256,70 @@
 		<dependency org="junit" name="junit" rev="4.8.2" conf="test->default"/>
 
 		<!-- Arquillian -->
-		<dependency org="org.jboss.arquillian" name="arquillian-bom" rev="1.0.0.Final" conf="test->default"/>
+		<dependency org="org.jboss.arquillian" name="arquillian-bom" rev="1.0.1.Final" conf="test->default"/>
 
 		<!-- Arquillian JUnit Standalone -->
-		<dependency org="org.jboss.arquillian.junit" name="arquillian-junit-standalone" rev="1.0.0.Final"
+		<dependency org="org.jboss.arquillian.junit" name="arquillian-junit-standalone" rev="1.0.1.Final"
+					conf="test->default"/>
+
+		<dependency org="org.jboss.arquillian.junit" name="arquillian-junit-container" rev="1.0.1.Final"
 					conf="test->default"/>
 
 		<!-- Arquillian Graphene -->
 		<dependency org="org.jboss.arquillian.graphene" name="arquillian-graphene" rev="1.0.0.Final"
 					conf="test->default"/>
 
+		<dependency org="org.jboss.as" name="jboss-as-arquillian-container-remote" rev="7.1.1.Final"
+					conf="test->default"/>
+
+		<dependency org="org.jboss.as" name="jboss-as-dist" rev="7.1.1.Final"
+					conf="test->default"/>
 
 		<!--       -->
 		<!-- TOOLS -->
 		<!--       -->
-		<dependency org="org.jboss.tattletale" name="tattletale-ant"
-					rev="1.1.2.Final" conf="tools->runtime"/>
-		<dependency org="org.hibernate" name="hibernate-tools" rev="3.2.4.GA"
+		<dependency org="org.jboss.tattletale" name="tattletale-ant" rev="1.1.2.Final" conf="tools->runtime"/>
+		<dependency org="org.hibernate" name="hibernate-tools" rev="3.2.4.GA" conf="tools->default"/>
+		<dependency org="org.slf4j" name="slf4j-api" rev="1.5.10" conf="tools->default"/>
+		<dependency org="org.slf4j" name="slf4j-log4j12" rev="1.6.0" conf="tools->default"/>
+
+
+		<!-- Used for Jersey WADL and API Documnetation -->
+		<dependency org="xalan"
+					name="xalan"
+					rev="2.7.1"
 					conf="tools->default"/>
-		<dependency org="org.slf4j" name="slf4j-api" rev="1.5.10"
+		<dependency org="javax.xml.bind"
+					name="jaxb-api"
+					rev="2.1"
 					conf="tools->default"/>
-		<dependency org="org.slf4j" name="slf4j-log4j12" rev="1.6.0"
+		<dependency org="com.sun.xml.bind"
+					name="jaxb-impl"
+					rev="2.1"
+					conf="tools->default"/>
+		<dependency org="asm"
+					name="asm"
+					rev="3.1"
+					conf="tools->default"/>
+		<dependency org="com.sun.jersey"
+					name="jersey-bundle"
+					rev="1.14"
+					conf="tools->default"/>
+		<dependency org="com.sun.jersey.contribs"
+					name="maven-wadl-plugin"
+					rev="1.14"
+					conf="tools->default"/>
+		<dependency org="com.sun.jersey.contribs"
+					name="wadl-resourcedoc-doclet"
+					rev="1.14"
 					conf="tools->default"/>
 
+		<!--
+		<dependency org="org.jboss.maven.plugins"
+					name="maven-jdocbook-plugin"
+					rev="2.3.7"
+					conf="tools->default" />
+		-->
 	</dependencies>
 
 </ivy-module>

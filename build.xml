@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
-<project basedir="." default="package" name="timetime"
-	xmlns:ivy="antlib:org.apache.ivy.ant">
+<project basedir="." default="package" name="main"
+	xmlns:ivy="antlib:org.apache.ivy.ant"
+	xmlns:maven="antlib:org.apache.maven.artifact.ant">
 
 	<!-- Load environment properties -->
 	<property environment="env" />
@@ -10,6 +11,7 @@
 
 	<!-- Define source structure -->
 	<property name="src.dir" value="src/java" />
+	<property name="src.tools.dir" value="src-tools/java" />
 	<property name="src.resources.dir" value="resources" />
 	<property name="test.dir" value="test/java" />
 	<property name="conf.dir" value="conf" />
@@ -19,13 +21,17 @@
 	<property name="build.dir" value="build" />
 	<property name="dist.dir" value="dist" />
 	<property name="dist.exploded.dir" value="${dist.dir}/exploded" />
-	<property name="dist.report.dir" value="${dist.dir}/report" />
 	<property name="dist.test.dir" value="${dist.dir}/test" />
 	<property name="dist.war" value="${dist.dir}/${dist.target}.war" />
+	<property name="doc.dir" value="docs" />
+	<property name="dist.report.dir" value="${doc.dir}/report" />
 	<property name="lib.dir" value="lib" />
+	<property name="resources.dir" value="resources" />
 	<property name="lib.compile.dir" value="${lib.dir}/compile" />
 	<property name="lib.tools.dir" value="${lib.dir}/tools" />
+	<property name="lib.test.dir" value="${lib.dir}/test" />
 	<property name="test.src.dir" value="test/java" />
+	<property name="test.build.dir" value="build/test" />
 	<property name="test.resources.dir" value="test/resources" />
 	<property name="web.dir" value="web" />
 	<property name="web.meta-inf.dir" value="${web.dir}/META-INF" />
@@ -96,14 +102,21 @@
 	<target name="ivy-resolve" description="resolves dependencies and downloads
 		jars"
 		depends="ivy-setup">
-		<ivy:retrieve sync="true" conf="*" type="jar,bundle" pattern="${lib.ivy.dir}/[conf]/[artifact]-[revision].[ext]"/>
+		<ivy:retrieve sync="true" conf="compile,provided,tools" type="jar,zip,bundle,maven-plugin" pattern="${lib.ivy.dir}/[conf]/[artifact]-[revision].[ext]"/>
+	</target>
+
+	<!-- retreive dependencies with ivy and copy to lib/[conf] in project workspace -->
+	<target name="ivy-resolve-test" description="resolves dependencies and downloads
+		jars"
+		depends="ivy-setup">
+		<ivy:retrieve sync="true" conf="compile,provided,tools,test" type="jar,zip,bundle,maven-plugin" pattern="${lib.ivy.dir}/[conf]/[artifact]-[revision].[ext]"/>
 	</target>
 
 	<!-- generates a report of dependencies -->
-	<target name="ivy-report" depends="ivy-resolve"
+	<target name="ivy-report" depends="ivy-resolve,ivy-resolve-test"
 		description="generate a dependency
 		report">
-		<ivy:report todir="${dist.report.dir}" />
+		<ivy:report conf="compile,provided,tools,test" todir="${dist.report.dir}/ivy" />
 	</target>
 
 	<!-- "Clean the ivy cache" -->
@@ -128,21 +141,7 @@
 		<delete dir="${web.web-inf.classes.dir}" />
 	</target>
 
-	<target name="configure" description="initialize the build configuration">
-
-		<!-- Set the default build mode (if no build mode has been set) -->
-		<property name="build.mode" value="development" />
-
-		<!-- Define the distribution properties -->
-		<property name="dist.context" value="${app.name}" />
-
-		<property name="dist.target"
-			value="${dist.context}-${build.mode}-${app.version.major}.${app.version.minor}-${build.number}" />
-
-		<!-- Load the database properties -->
-		<xmlproperty keepRoot="false" semanticAttributes="true"
-			file="${conf.dir}/${build.mode}/configuration.xml" />
-
+	<target name="configure-classpaths" description="initialize the build configuration">
 		<path id="application.jdbc.classpath">
 			<pathelement location="${lib.ivy.provided.dir}/mysql-connector-java-5.1.13.jar" />
 		</path>
@@ -154,6 +153,9 @@
 		</path>
 
 		<path id="application.compile.classpath">
+			<fileset dir="${lib.compile.dir}">
+				<include name="**/*.jar" />
+			</fileset>
 			<fileset dir="${lib.ivy.compile.dir}">
 				<include name="**/*.jar" />
 			</fileset>
@@ -163,6 +165,9 @@
 		</path>
 
 		<path id="application.test.classpath">
+			<fileset dir="${lib.test.dir}">
+				<include name="**/*.jar" />
+			</fileset>
 			<fileset dir="${lib.ivy.test.dir}">
 				<include name="**/*.jar" />
 			</fileset>
@@ -187,15 +192,41 @@
 			</fileset>
 		</path>
 
+		<path id="maventool.classpath">
+			<fileset dir="${lib.tools.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+		</path>
+
 		<taskdef name="hibernatetool" classname="org.hibernate.tool.ant.EnversHibernateToolTask"
 			classpathref="hibernatetool.classpath" />
 
 		<taskdef name="report" classname="org.jboss.tattletale.ant.ReportTask"
 			classpathref="application.tools.classpath" />
 
+		<typedef resource="org/apache/maven/artifact/ant/antlib.xml"
+		           uri="antlib:org.apache.maven.artifact.ant"
+		           classpathref="maventool.classpath" />
+
 		<!-- See http://java.sogeti.nl/JavaBlog/tag/apache-ant-classloaders/ -->
 		<taskdef resource="net/jtools/classloadertask/antlib.xml"
 			classpath="${lib.tools.dir}/ant-classloadertask.jar" />
+	</target>
+
+	<target name="configure" description="initialize the build configuration" depends="configure-classpaths">
+
+		<!-- Set the default build mode (if no build mode has been set) -->
+		<property name="build.mode" value="development" />
+
+		<!-- Define the distribution properties -->
+		<property name="dist.context" value="${app.name}" />
+
+		<property name="dist.target"
+			value="${dist.context}-${build.mode}-${app.version.major}.${app.version.minor}-${build.number}" />
+
+		<!-- Load the database properties -->
+		<xmlproperty keepRoot="false" semanticAttributes="true"
+			file="${conf.dir}/${build.mode}/configuration.xml" />
 
 	</target>
 
@@ -212,6 +243,25 @@
 
 	</target>
 
+	<target name="compile-test" description="compile test source" depends="configure,compile">
+
+		<mkdir dir="${test.build.dir}"/>
+
+		<!-- Initialize the test classpath -->
+		<path id="compile.test.classpath">
+			<path path="${web.web-inf.classes.dir}"/>
+			<path refid="application.compile.classpath" />
+			<path refid="application.test.classpath" />
+		</path>
+
+		<!-- Compile the test source -->
+		<javac debug="true" includeantruntime="false" debuglevel="${debuglevel}" destdir="${test.build.dir}" source="${source}" target="${target}">
+			<src path="${test.dir}" />
+			<classpath refid="compile.test.classpath" />
+		</javac>
+
+	</target>
+
 	<target name="compile-and-hotdeploy" description="compiles and pushes the class files to exploded war, useful for hotdeploy
 		in conjunction with JRebel"
 		depends="compile">
@@ -219,6 +269,12 @@
 		<antcall target="deploy-dev-jboss-resources" />
 
     </target>
+
+	<target name="assemble-production">
+		<property name="build.mode" value="production" />
+
+		<antcall target="assemble" />
+	</target>
 
 	<target name="assemble" depends="compile" description="assemble application components but do not compile">
 
@@ -234,6 +290,7 @@
 			todir="${web.web-inf.classes.dir}">
 			<fileset dir="${src.dir}">
 				<include name="**/*.properties"/>
+				<include name="**/*.xml"/>
 				<exclude name="**/*.java"/>
 				<exclude name="**/*.template"/>
 				<exclude name="**/*.class"/>
@@ -247,8 +304,9 @@
 		<property name="local.context" value="" />
 
 		<replace dir="${web.web-inf.classes.dir}" summary="true">
-			<include name="*.properties" />
-			<include name="*.xml" />
+			<include name="**/*.properties" />
+			<include name="**/*.xml" />
+
 			<replacefilter token="@local.mail.recipient@" value="${local.mail.recipient}" />
 			<replacefilter token="@local.host@" value="${local.host}" />
 			<replacefilter token="@local.context.root@" value="${local.context.root}" />
@@ -257,12 +315,24 @@
 			<replacefilter token="@rebel.compiled.classpath@" value="${basepath.dir}/${web.web-inf.classes.dir}" />
 			<replacefilter token="@rebel.web.root@" value="${basepath.dir}/${web.dir}" />
 
+			<replacefilter token="@db.source.main.hibernate.show_sql@" value="${db.source.main.hibernate.show_sql}" />
+			<replacefilter token="@db.source.main.hibernate.format_sql@" value="${db.source.main.hibernate.format_sql}" />
+			<replacefilter token="@db.source.main.hibernate.generate_statistics@" value="${db.source.main.hibernate.generate_statistics}" />
+			<replacefilter token="@db.source.main.hibernate.use_sql_comments@" value="${db.source.main.hibernate.use_sql_comments}" />
+
+			<replacefilter token="@db.source.main.hibernate.hbm2ddl@" value="${db.source.main.hibernate.hbm2ddl}" />
+			<replacefilter token="@db.source.main.schema@" value="${db.source.main.schema}" />
+			<replacefilter token="@db.source.main.dialect@" value="${db.source.main.dialect}" />
+
 		</replace>
 
 		<!-- Populate the runtime libraries -->
 		<mkdir dir="${web.web-inf.lib.dir}" />
 		<copy includeemptydirs="false" todir="${web.web-inf.lib.dir}">
 			<fileset dir="${lib.ivy.compile.dir}/">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${lib.compile.dir}/">
 				<include name="**/*.jar" />
 			</fileset>
 			<!-- Flatten the resulting path structure -->
@@ -292,6 +362,10 @@
 		</copy>
 	</target>
 
+	<target name="stage" depends="clean,assemble,assemble-datasources">
+
+	</target>
+
 	<target name="package" description="package distribution"
 		depends="clean, assemble, assemble-datasources">
 
@@ -313,9 +387,156 @@
 
 	</target>
 
+	<!-- Test -->
+	<target name="test" description="test the build" depends="configure-classpaths">
+
+		<delete dir="${jboss.as7.home}/${jboss.as7.deploy.dir}">
+			<include name="*/**"/>
+		</delete>
+
+		<property name="build.mode" value="test" />
+
+		<antcall target="package"/>
+		<antcall target="as7-deploy-datasource"/>
+		<antcall target="compile-test"/>
+
+		<!-- Initialize the classpath -->
+		<path id="test.classpath">
+			<path path="${web.web-inf.classes.dir}" />
+			<path path="${test.build.dir}" />
+			<path refid="application.compile.classpath" />
+			<path refid="application.test.classpath" />
+		</path>
+
+		<!-- Execute the test suite -->
+		<mkdir dir="${dist.dir}" />
+		<junit fork="yes" maxmemory="256m"
+			   showoutput="true"
+			   printsummary="yes" haltonfailure="false"
+				>
+			<classpath refid="test.classpath" />
+			<formatter type="xml" />
+			<test name="test.com.shortvid.app.RestClientTestCase" outfile="${dist.target}.tests" todir="${dist.dir}" />
+		</junit>
+
+	</target>
+
 	<!-- -->
 	<!-- Generation targets -->
 	<!-- -->
+
+	<target name="generate-wadl" description="package jersey wadl generator"
+			depends="compile">
+
+		<path id="wadl.compile.classpath">
+			<fileset dir="${lib.ivy.compile.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${lib.ivy.provided.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${lib.ivy.tools.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${lib.tools.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+		</path>
+
+		<taskdef name="generatewadl" classname="com.sun.jersey.wadl.GenerateWadlTask"
+			classpathref="wadl.compile.classpath" />
+
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${build.dir}/classes" />
+		<mkdir dir="${build.dir}/classes/wadl" />
+
+		<javadoc access="public" classpathref="wadl.compile.classpath">
+			<fileset dir="${src.dir}" defaultexcludes="yes">
+				<include name="**/*.java" />
+			</fileset>
+			<doclet name="com.sun.jersey.wadl.resourcedoc.ResourceDoclet" pathref="wadl.compile.classpath">
+				<param name="-output" value="${build.dir}/classes/wadl/resourcedoc.xml" />
+			</doclet>
+		</javadoc>
+
+		<generatewadl wadlFile="${build.dir}/classes/wadl/api_v1.wadl"
+					  formatWadlFile="true"
+					  baseUri="http://shortvid.com/api/v1"
+				>
+			<classpath>
+				<!-- have to add the path to your compiled resources as well! -->
+				<pathelement location="${web.web-inf.classes.dir}" />
+				<path refid="wadl.compile.classpath" />
+			</classpath>
+			<packages>
+				<package name="com.shortvid" />
+			</packages>
+			<wadlGenerators>
+				<wadlGeneratorDescription name="com.sun.jersey.server.wadl.generators.resourcedoc.WadlGeneratorResourceDocSupport">
+					<param name="resourceDocFile" value="${build.dir}/classes/wadl/resourcedoc.xml" />
+				</wadlGeneratorDescription>
+			</wadlGenerators>
+		</generatewadl>
+
+		<mkdir dir="${doc.dir}" />
+		<mkdir dir="${doc.dir}/api" />
+		<xslt in="${build.dir}/classes/wadl/api_v1.wadl"
+			  out="${doc.dir}/api/api_v1.html"
+			  style="${src.resources.dir}/wadl.xsl"/>
+		<copy todir="${doc.dir}/api" file="${build.dir}/classes/wadl/api_v1.wadl"/>
+
+	</target>
+
+	<target name="generate-wadl-generator" description="package jersey wadl generator"
+			depends="configure">
+
+		<path id="wadl.compile.classpath">
+			<fileset dir="${lib.ivy.compile.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${lib.ivy.provided.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${lib.ivy.tools.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+		</path>
+
+		<!-- Compile the java source -->
+		<delete dir="${build.dir}" failonerror="false" />
+		<mkdir dir="${build.dir}" />
+		<javac debug="true" debuglevel="${debuglevel}" destdir="${build.dir}"
+			source="${source}" target="${target}">
+			<src path="${src.tools.dir}" />
+			<classpath refid="wadl.compile.classpath" />
+		</javac>
+
+		<jar file="${lib.tools.dir}/wadl-generate.jar"
+			 basedir="${build.dir}" />
+
+		<delete dir="${build.dir}" failonerror="false" />
+	</target>
+
+
+	<target name="generate-xsd" description="generate xsd" depends="configure">
+
+		<taskdef name="schemagen" classname="com.sun.tools.jxc.SchemaGenTask" classpathref="application.tools.classpath" />
+
+		<mkdir dir="${doc.dir}" />
+		<mkdir dir="${doc.dir}/api" />
+		<mkdir dir="${doc.dir}/api/xsd" />
+
+		<schemagen classpathref="application.tools.classpath"
+				   srcdir="${src.dir}"
+				   destdir="${doc.dir}/api"
+				   includes="**/representations/*.java"
+				   >
+			<schema namespace="http://shortvid.com/api/v1" file="api_v1_entities.xsd" />
+		</schemagen>
+
+		<move tofile="${doc.dir}/api/api_v1.xsd" file="${doc.dir}/api/api_v1_entities.xsd" />
+
+	</target>
 
 	<target name="report-tattletale" depends="configure">
 
@@ -328,22 +549,49 @@
 
 	</target>
 
+	<target name="refdoc" description="Generate and copy reference documentation" depends="configure">
+		<condition property="maven.build.translations" value="-Dbuild.translations" else="">
+			<isset property="build.translations"/>
+		</condition>
+		<echo file="${doc.dir}/main/docbook/en-US/version_info.xml">
+			&lt;releaseinfo&gt;${app.version}&lt;/releaseinfo&gt;
+		</echo>
+
+		<!-- <copy file="${docs.pom}" tofile="${doc.dir}/pom.xml" overwrite="true"/> -->
+
+		<maven:mvn dir="${doc.dir}" fork="true">
+			<arg value="compile"/>
+			<arg value="-e"/>
+
+			<!--
+			<jvmarg line="-Xms128m -Xmx512m" />
+			<arg line="${maven.build.translations}" />
+			-->
+		</maven:mvn>
+		<copy todir="${dist.dir}">
+			<fileset dir="${doc.dir}/target/docbook/publish" />
+		</copy>
+	</target>
+
 	<!-- -->
 	<!-- Schema targets -->
 	<!-- -->
 
-	<target name="export-schema"
+	<target name="generate-schema"
 		description="export the schema using the current
 		JPA configuration"
 		depends="package">
 
 		<!-- Initialize the classpath -->
-		<path id="export-schema.classpath">
+		<path id="hibernatetool.classpath">
 			<pathelement path="${web.web-inf.classes.dir}" />
 			<fileset dir="${web.web-inf.lib.dir}">
 				<include name="**/*.jar" />
 			</fileset>
 			<fileset dir="${lib.ivy.provided.dir}">
+				<include name="**/*.jar" />
+			</fileset>
+			<fileset dir="${lib.ivy.tools.dir}">
 				<include name="**/*.jar" />
 			</fileset>
 			<fileset dir="${lib.tools.dir}">
@@ -352,29 +600,22 @@
 		</path>
 
 		<!-- Export the database schema -->
-		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${db.dir}" />
 
-		<hibernatetool destdir="${dist.dir}">
-			<jpaconfiguration persistenceunit="localconnection" />
-			<classpath refid="export-schema.classpath" />
+		<hibernatetool destdir="${db.dir}">
+			<jpaconfiguration persistenceunit="primary" />
+			<classpath refid="hibernatetool.classpath" />
 			<hbm2ddl drop="false" create="true" export="false"
-				outputfilename="${db.source.localconnection.schema}-ddl.sql" delimiter=";"
+				outputfilename="${db.source.main.schema}-ddl.sql" delimiter=";"
 				format="true" />
 		</hibernatetool>
-
-		<!-- Populate the database scripts -->
-		<copy todir="${dist.dir}">
-			<fileset dir="${db.dir}">
-				<include name="${db.source.localconnection.schema}-*" />
-			</fileset>
-		</copy>
 
 	</target>
 
 	<target name="seed-schema"
 		description="seed the exported schema using
 		the current JPA configuration"
-		depends="export-schema">
+		depends="generate-schema">
 
 		<!-- Drop and create the target schema -->
 		<sql driver="${db.source.localconnection.driver}" url="${db.source.localconnection.url_base}"
@@ -412,7 +653,7 @@
 
 	<target name="assemble-jboss-datasource" depends="configure" description="deploys just the datasource to jboss">
 
-		<property name="jboss.as7.datasource.name" value="${build.dir}/data/${dist.target}_jbossAs7.xml"/>
+		<property name="jboss.as7.datasource.name" value="${build.dir}/data/${dist.target}_jbossAs7-ds.xml"/>
 		<mkdir dir="${build.dir}" />
 		<mkdir dir="${build.dir}/data" />
 		<copy tofile="${jboss.as7.datasource.name}" file="${conf.dir}/data_descriptor_jbossAs7.xml" />
@@ -437,20 +678,39 @@
 
 	</target>
 
-	<target name="deploy-jboss-datasource" depends="assemble-jboss-datasource" description="deploys just the datasource to jboss">
+	<target name="as7-deploy-datasource" depends="assemble-jboss-datasource" description="deploys just the datasource to jboss">
 
 		<copy todir="${jboss.as7.home}/${jboss.as7.deploy.dir}"
 			  file="${jboss.as7.datasource.name}" />
 
+		<delete file="${jboss.as7.home}/${jboss.as7.deploy.dir}/${dist.target}_jbossAs7-ds.xml.failed" />
+		<touch file="${jboss.as7.home}/${jboss.as7.deploy.dir}/${dist.target}_jbossAs7-ds.xml.dodeploy" />
 	</target>
 
+	<target name="as7-deploy-config">
+		<copy todir="${jboss.as7.home}" overwrite="true">
+			<fileset dir="${resources.dir}/jboss-as7"/>
+		</copy>
 
-	<target name="as7-deploy" depends="package" description="deploys the exploded archive to jboss as7">
+		<replace dir="${jboss.as7.home}/standalone/configuration" summary="true" >
+			<include name="**/*.xml" />
+
+			<replacefilter token="@web.dir@" value="${basepath.dir}/${web.dir}" />
+		</replace>
+
+	</target>
+
+	<target name="as7-deploy" depends="stage,as7-deploy-datasource,as7-deploy-config" description="deploys the exploded archive to jboss as7">
+
+		<!--
 		<copy todir="${jboss.as7.home}/${jboss.as7.deploy.dir}">
-			<fileset dir="${dist.exploded.dir}">
+			<fileset dir="${web.dir}">
 				<include name="**/*.*" />
 			</fileset>
 		</copy>
+		-->
+
+		<delete file="${jboss.as7.home}/${jboss.as7.deploy.dir}/${dist.target}.war.failed" />
 		<touch file="${jboss.as7.home}/${jboss.as7.deploy.dir}/${dist.target}.war.dodeploy" />
 	</target>
 	<target name="as7-write-deploy-marker">
