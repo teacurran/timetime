@@ -14,6 +14,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -21,7 +23,29 @@ import javax.persistence.TemporalType;
 @Entity
 @Access( AccessType.FIELD )
 @Cacheable
+@NamedQueries({
+		@NamedQuery(name = Account.QUERY_ALL,
+				query = "SELECT A FROM Account A"),
+		@NamedQuery(name = Account.QUERY_BY_ID,
+				query = "SELECT A FROM Account A WHERE A.id = :id"),
+		@NamedQuery(name = Account.QUERY_BY_USERNAME,
+				query = "SELECT A FROM Account A WHERE A.username = :username"),
+		@NamedQuery(name = Account.QUERY_BY_USERNAME_NORMALIZED,
+				query = "SELECT A FROM Account A WHERE A.usernameNormalized = :username"),
+		@NamedQuery(name = Account.QUERY_BY_USERNAME_NORMALIZED_OR_EMAIL,
+				query = "SELECT A FROM Account A WHERE A.usernameNormalized = :username OR A.email = :email"),
+		@NamedQuery(name = Account.QUERY_BY_EMAIL,
+				query = "SELECT A FROM Account A WHERE A.email = :email")
+	}
+)
 public class Account implements java.io.Serializable {
+
+	public static final String QUERY_ALL					= "account.getAll";
+	public static final String QUERY_BY_ID					= "account.byId";
+	public static final String QUERY_BY_EMAIL				= "account.byEmail";
+	public static final String QUERY_BY_USERNAME			= "account.byUsername";
+	public static final String QUERY_BY_USERNAME_NORMALIZED	= "account.byUsernameNormalized";
+	public static final String QUERY_BY_USERNAME_NORMALIZED_OR_EMAIL	= "account.byUsernameNormalizedOrEmail";
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,16 +55,16 @@ public class Account implements java.io.Serializable {
 	private Company company;
 
 	@Basic
-	private String nameFirst;
-
-	@Basic
-	private String nameLast;
+	private String fullName;
 
 	@Basic
 	private String email;
 
 	@Basic
 	private String password;
+
+	@Basic
+	protected String passwordSalt;
 
 	@Basic
 	private Integer timezone;
@@ -77,22 +101,6 @@ public class Account implements java.io.Serializable {
 
 	public void setCompany(Company company) {
 		this.company = company;
-	}
-
-	public String getNameFirst() {
-		return nameFirst;
-	}
-
-	public void setNameFirst(String nameFirst) {
-		this.nameFirst = nameFirst;
-	}
-
-	public String getNameLast() {
-		return nameLast;
-	}
-
-	public void setNameLast(String nameLast) {
-		this.nameLast = nameLast;
 	}
 
 	public String getEmail() {
@@ -157,5 +165,21 @@ public class Account implements java.io.Serializable {
 
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
+	}
+
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public String getPasswordSalt() {
+		return passwordSalt;
+	}
+
+	public void setPasswordSalt(String passwordSalt) {
+		this.passwordSalt = passwordSalt;
 	}
 }

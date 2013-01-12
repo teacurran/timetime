@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xsi:schemaLocation="
+	http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+	<persistence-unit name="main">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+
+		<!-- jdbc/__default is the default data source in GlassFish -->
+		<jta-data-source>java:jboss/datasources/@db.source.main.schema@</jta-data-source>
+
+		<class>com.approachingpi.timetime.data.model.Account</class>
+		<class>com.approachingpi.timetime.data.model.Company</class>
+		<class>com.approachingpi.timetime.data.model.Task</class>
+		<class>com.approachingpi.timetime.data.model.TaskSummary</class>
+		<class>com.approachingpi.timetime.data.model.TimeSegment</class>
+
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+
+		<properties>
+			<!-- Use hibernate 3 bundled provider -->
+			<property name="jboss.as.jpa.providerModule" value="org.hibernate"/>
+			<property name="hibernate.search.autoregister_listeners" value="false"/>
+
+			<!-- use a custom plural naming strategy -->
+			<property name="hibernate.ejb.naming_strategy" value="com.approachingpi.timetime.data.util.TimeTimeNamingStrategy"/>
+			<property name="hibernate.dialect" value="@db.source.main.dialect@"/>
+			<property name="hibernate.hbm2ddl.auto" value="@db.source.main.hibernate.hbm2ddl@"/>
+
+			<!-- Logging properties -->
+			<property name="hibernate.show_sql" value="@db.source.main.hibernate.show_sql@"/>
+			<property name="hibernate.format_sql" value="@db.source.main.hibernate.format_sql@"/>
+			<property name="hibernate.generate_statistics" value="@db.source.main.hibernate.generate_statistics@"/>
+			<property name="hibernate.use_sql_comments" value="@db.source.main.hibernate.use_sql_comments@"/>
+
+			<property name="org.hibernate.envers.auditTableSuffix" value="_audit"/>
+
+		</properties>
+	</persistence-unit>
+
+</persistence>
