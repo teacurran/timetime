@@ -1,7 +1,15 @@
-<beans xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<beans xmlns="http://java.sun.com/xml/ns/javaee"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:s="urn:java:ee"
+	   xmlns:plidm="urn:java:org.jboss.seam.security.management.picketlink"
+	   xmlns:rest="urn:java:org.jboss.seam.rest:org.jboss.seam.rest.exceptions"
+	   xmlns:weld="http://jboss.org/schema/weld/beans"
 	   xsi:schemaLocation="
       http://java.sun.com/xml/ns/javaee
-      http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
+      http://java.sun.com/xml/ns/javaee/beans_1_0.xsd
+      http://jboss.org/schema/weld/beans
+      http://jboss.org/schema/weld/beans_1_1.xsd
+      ">
 
 	<!-- Alternatives -->
 	<alternatives>
@@ -14,5 +22,20 @@
 		<class>com.approachingpi.timetime.interceptor.TimestampableInterceptor</class>
 		<class>org.jboss.seam.transaction.TransactionInterceptor</class>
 	</interceptors>
+
+	<rest:SeamRestConfiguration preferedTemplatingProvider="org.jboss.seam.rest.templating.freemarker.FreeMarkerProvider" />
+
+	<weld:scan>
+		<!-- https://issues.jboss.org/browse/RESTEASY-555 -->
+		<weld:exclude name="com.approachingpi.timetime.api.v1.providers.JacksonConfiguratorProvider" />
+	</weld:scan>
+
+	<plidm:JpaIdentityStoreConfiguration>
+		<s:replaces/>
+		<plidm:identityClass>com.approachingpi.timetime.data.model.IdentityObject</plidm:identityClass>
+		<plidm:credentialClass>com.approachingpi.timetime.data.model.IdentityObjectCredential</plidm:credentialClass>
+		<plidm:relationshipClass>com.approachingpi.timetime.data.model.IdentityObjectRelationship</plidm:relationshipClass>
+		<plidm:roleTypeClass>com.approachingpi.timetime.data.model.IdentityRoleName</plidm:roleTypeClass>
+	</plidm:JpaIdentityStoreConfiguration>
 
 </beans>

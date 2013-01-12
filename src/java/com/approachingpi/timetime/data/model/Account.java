@@ -28,12 +28,6 @@ import javax.persistence.TemporalType;
 				query = "SELECT A FROM Account A"),
 		@NamedQuery(name = Account.QUERY_BY_ID,
 				query = "SELECT A FROM Account A WHERE A.id = :id"),
-		@NamedQuery(name = Account.QUERY_BY_USERNAME,
-				query = "SELECT A FROM Account A WHERE A.username = :username"),
-		@NamedQuery(name = Account.QUERY_BY_USERNAME_NORMALIZED,
-				query = "SELECT A FROM Account A WHERE A.usernameNormalized = :username"),
-		@NamedQuery(name = Account.QUERY_BY_USERNAME_NORMALIZED_OR_EMAIL,
-				query = "SELECT A FROM Account A WHERE A.usernameNormalized = :username OR A.email = :email"),
 		@NamedQuery(name = Account.QUERY_BY_EMAIL,
 				query = "SELECT A FROM Account A WHERE A.email = :email")
 	}
@@ -43,9 +37,6 @@ public class Account implements java.io.Serializable {
 	public static final String QUERY_ALL					= "account.getAll";
 	public static final String QUERY_BY_ID					= "account.byId";
 	public static final String QUERY_BY_EMAIL				= "account.byEmail";
-	public static final String QUERY_BY_USERNAME			= "account.byUsername";
-	public static final String QUERY_BY_USERNAME_NORMALIZED	= "account.byUsernameNormalized";
-	public static final String QUERY_BY_USERNAME_NORMALIZED_OR_EMAIL	= "account.byUsernameNormalizedOrEmail";
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

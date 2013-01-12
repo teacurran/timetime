@@ -323,6 +323,7 @@
 			<replacefilter token="@db.source.main.hibernate.hbm2ddl@" value="${db.source.main.hibernate.hbm2ddl}" />
 			<replacefilter token="@db.source.main.schema@" value="${db.source.main.schema}" />
 			<replacefilter token="@db.source.main.dialect@" value="${db.source.main.dialect}" />
+			<replacefilter token="@db.source.main.jta_data_source@" value="${db.source.main.jta_data_source}" />
 
 		</replace>
 
@@ -656,7 +657,7 @@
 		<property name="jboss.as7.datasource.name" value="${build.dir}/data/${dist.target}_jbossAs7-ds.xml"/>
 		<mkdir dir="${build.dir}" />
 		<mkdir dir="${build.dir}/data" />
-		<copy tofile="${jboss.as7.datasource.name}" file="${conf.dir}/data_descriptor_jbossAs7.xml" />
+		<copy tofile="${jboss.as7.datasource.name}" file="${conf.dir}/data_descriptor_jbossAs7.xml" overwrite="true"/>
 
 		<replace file="${jboss.as7.datasource.name}">
 
@@ -671,6 +672,7 @@
 			<replacefilter token="@db.source.main.url@" value="${db.source.main.url}" />
 			<replacefilter token="@db.source.main.username@" value="${db.source.main.username}" />
 			<replacefilter token="@db.source.main.password@" value="${db.source.main.password}" />
+			<replacefilter token="@db.source.main.jta_data_source@" value="${db.source.main.jta_data_source}" />
 		</replace>
 	</target>
 

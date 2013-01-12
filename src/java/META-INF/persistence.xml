@@ -8,10 +8,18 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 
 		<!-- jdbc/__default is the default data source in GlassFish -->
-		<jta-data-source>java:jboss/datasources/@db.source.main.schema@</jta-data-source>
+		<jta-data-source>@db.source.main.jta_data_source@</jta-data-source>
 
 		<class>com.approachingpi.timetime.data.model.Account</class>
 		<class>com.approachingpi.timetime.data.model.Company</class>
+		<class>com.approachingpi.timetime.data.model.IdentityObject</class>
+		<class>com.approachingpi.timetime.data.model.IdentityObjectCredential</class>
+		<class>com.approachingpi.timetime.data.model.IdentityObjectCredentialType</class>
+		<class>com.approachingpi.timetime.data.model.IdentityObjectRelationship</class>
+		<class>com.approachingpi.timetime.data.model.IdentityObjectRelationshipType</class>
+		<class>com.approachingpi.timetime.data.model.IdentityObjectType</class>
+		<class>com.approachingpi.timetime.data.model.IdentityPermission</class>
+		<class>com.approachingpi.timetime.data.model.IdentityRoleName</class>
 		<class>com.approachingpi.timetime.data.model.Task</class>
 		<class>com.approachingpi.timetime.data.model.TaskSummary</class>
 		<class>com.approachingpi.timetime.data.model.TimeSegment</class>
@@ -34,7 +42,9 @@
 			<property name="hibernate.generate_statistics" value="@db.source.main.hibernate.generate_statistics@"/>
 			<property name="hibernate.use_sql_comments" value="@db.source.main.hibernate.use_sql_comments@"/>
 
+			<!--
 			<property name="org.hibernate.envers.auditTableSuffix" value="_audit"/>
+			-->
 
 		</properties>
 	</persistence-unit>
