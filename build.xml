@@ -165,9 +165,6 @@
 		</path>
 
 		<path id="application.test.classpath">
-			<fileset dir="${lib.test.dir}">
-				<include name="**/*.jar" />
-			</fileset>
 			<fileset dir="${lib.ivy.test.dir}">
 				<include name="**/*.jar" />
 			</fileset>

@@ -1,4 +1,4 @@
-package test.com.shortvid.app;
+package test.com.approachingpi.timetime;
 
 /*
  * JBoss, Home of Professional Open Source
@@ -26,9 +26,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response.Status;
 
-import com.shortvid.api.v1.representations.ApplicationError;
-import com.shortvid.api.v1.representations.AuthType;
-import com.shortvid.api.v1.representations.EnumErrorCode;
+import com.approachingpi.timetime.api.v1.representations.ApplicationError;
+import com.approachingpi.timetime.api.v1.representations.AuthType;
+import com.approachingpi.timetime.api.v1.representations.EnumErrorCode;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.resteasy.client.ClientRequest;
