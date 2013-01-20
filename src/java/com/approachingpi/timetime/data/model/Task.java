@@ -49,11 +49,11 @@ public class Task implements java.io.Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date dateModified;
 
-	@Basic
-	protected Integer createdAccountId;
+	@ManyToOne
+	protected Account createdAccount;
 
-	@Basic
-	protected Integer modifiedAccountId;
+	@ManyToOne
+	protected Account modifiedAccount;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date dateLastEvent;
@@ -135,20 +135,20 @@ public class Task implements java.io.Serializable {
 		this.dateModified = dateModified;
 	}
 
-	public Integer getCreatedAccountId() {
-		return this.createdAccountId;
+	public Account getCreatedAccount() {
+		return createdAccount;
 	}
 
-	public void setCreatedAccountId(Integer createdAccountId) {
-		this.createdAccountId = createdAccountId;
+	public void setCreatedAccount(Account createdAccount) {
+		this.createdAccount = createdAccount;
 	}
 
-	public Integer getModifiedAccountId() {
-		return this.modifiedAccountId;
+	public Account getModifiedAccount() {
+		return modifiedAccount;
 	}
 
-	public void setModifiedAccountId(Integer modifiedAccountId) {
-		this.modifiedAccountId = modifiedAccountId;
+	public void setModifiedAccount(Account modifiedAccount) {
+		this.modifiedAccount = modifiedAccount;
 	}
 
 	public Date getDateLastEvent() {
