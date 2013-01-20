@@ -11,6 +11,8 @@
 		<jta-data-source>@db.source.main.jta_data_source@</jta-data-source>
 
 		<class>com.approachingpi.timetime.data.model.Account</class>
+		<class>com.approachingpi.timetime.data.model.ApiApplication</class>
+		<class>com.approachingpi.timetime.data.model.Authorization</class>
 		<class>com.approachingpi.timetime.data.model.Company</class>
 		<class>com.approachingpi.timetime.data.model.IdentityObject</class>
 		<class>com.approachingpi.timetime.data.model.IdentityObjectCredential</class>

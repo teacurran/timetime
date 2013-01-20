@@ -42,6 +42,7 @@
     <orderEntry type="library" scope="PROVIDED" name="ivy - provided" level="project" />
     <orderEntry type="library" scope="TEST" name="ivy - test" level="project" />
     <orderEntry type="library" scope="TEST" name="tools" level="project" />
+    <orderEntry type="library" name="compile" level="project" />
   </component>
 </module>
 
