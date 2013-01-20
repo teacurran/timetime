@@ -320,26 +320,16 @@
 		<!--         -->
 		<!-- TESTING -->
 		<!--         -->
-		<!--
-		<dependency org="junit" name="junit" rev="4.8.2" conf="test->default"/>
-		<dependency org="org.jboss.arquillian" name="arquillian-junit" rev="1.0.0.Alpha5" conf="test->default"/>
-		<dependency org="org.jboss.as" name="jboss-as-arquillian-container-managed" rev="7.0.1.Final" conf="test->default"/>
-		-->
+		<dependency org="org.jboss.as" name="jboss-as-arquillian-container-managed" rev="7.1.2.Final" conf="test->default"/>
 
 		<!-- JUnit -->
 		<dependency org="junit" name="junit" rev="4.8.2" conf="test->default"/>
 
-		<!-- Arquillian -->
-		<dependency org="org.jboss.arquillian" name="arquillian-bom" rev="1.0.1.Final" conf="test->default"/>
-
-		<!-- Arquillian JUnit Standalone -->
-		<dependency org="org.jboss.arquillian.junit" name="arquillian-junit-standalone" rev="1.0.1.Final"
-					conf="test->default"/>
-
-		<dependency org="org.jboss.arquillian.junit" name="arquillian-junit-container" rev="1.0.1.Final"
+		<dependency org="org.jboss.arquillian.junit" name="arquillian-junit-container" rev="1.0.3.Final"
 					conf="test->default"/>
 
 		<!-- Arquillian Graphene -->
+		<!--
 		<dependency org="org.jboss.arquillian.graphene" name="arquillian-graphene" rev="1.0.0.Final"
 					conf="test->default"/>
 
@@ -348,6 +338,8 @@
 
 		<dependency org="org.jboss.as" name="jboss-as-dist" rev="7.1.1.Final"
 					conf="test->default"/>
+		-->
+
 
 		<!--       -->
 		<!-- TOOLS -->

@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/compile/amber-oauth2-authzserver-0.22-incubating.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/compile/amber-oauth2-client-0.22-incubating.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/compile/amber-oauth2-common-0.22-incubating.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/compile/amber-oauth2-httpclient4-0.22-incubating.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/compile/amber-oauth2-resourceserver-0.22-incubating.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/compile/amber-oauth2-resourceserver-filter-0.22-incubating.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/compile/oauth2core-20111219.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/compile/oauth2provider-20111219.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/ApiApplication.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/services/ApiApplicationService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Authorization.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/services/AuthorizationService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/api/oauth2/provider/services/OAuth2ProviderService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/services/SessionService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/api/oauth2/provider/TimeTimeTokenType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.iml" afterPath="$PROJECT_DIR$/main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/java/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/java/test/com/approachingpi/timetime/RestClientTestCase.java" afterPath="$PROJECT_DIR$/test/java/test/com/approachingpi/timetime/RestClientTestCase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ivy.xml" afterPath="$PROJECT_DIR$/ivy.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="timetime.iws" />
@@ -120,7 +105,7 @@
     <ignored path="local.build.properties" />
     <ignored path=".idea/codeStyleSettings.xml" />
     <ignored path=".idea/libraries/compile.xml" />
-    <file path="/Dummy.txt" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358722828615" ignored="false" />
+    <file path="/Dummy.txt" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358723786125" ignored="false" />
     <file path="/a.xml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357964256350" ignored="false" />
     <file path="/a.dummy" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358121827869" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/src/java/com/shortvid/api/v1/resources/AccountResource.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357615631846" ignored="false" />
@@ -232,24 +217,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Company.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Company.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="0" selection-end="47" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApiApplication.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/ApiApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="1" selection-start="589" selection-end="589" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Authorization.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Authorization.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -261,14 +228,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OAuth2ProviderService.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="OAuth2ProviderService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/api/oauth2/provider/services/OAuth2ProviderService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="1439" selection-end="1439" vertical-scroll-proportion="0.72262776">
+            <state line="33" column="0" selection-start="1439" selection-end="1439" vertical-scroll-proportion="-15.230769">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#authorize#0;class#OAuth2ProviderService#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestClientTestCase.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/java/test/com/approachingpi/timetime/RestClientTestCase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="80" column="51" selection-start="2791" selection-end="2791" vertical-scroll-proportion="0.70731705">
+              <folding>
+                <element signature="method#accountCreateWithoutParamsShouldFail#0;class#RestClientTestCase#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ivy.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ivy.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="341" column="8" selection-start="14711" selection-end="14711" vertical-scroll-proportion="-20.23077">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -355,8 +342,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/build.xml" />
-        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/IdentityObject.java" />
         <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/IdentityObjectCredential.java" />
         <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/IdentityObjectRelationship.java" />
         <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java" />
@@ -371,6 +356,8 @@
         <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/api/oauth2/provider/TimeTimeTokenType.java" />
         <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/services/SessionService.java" />
         <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/api/oauth2/provider/services/OAuth2ProviderService.java" />
+        <option value="$PROJECT_DIR$/test/java/test/com/approachingpi/timetime/RestClientTestCase.java" />
+        <option value="$PROJECT_DIR$/ivy.xml" />
       </list>
     </option>
   </component>
@@ -444,65 +431,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="META-INF" />
+              <option name="myItemId" value="approachingpi" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -537,6 +486,48 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="approachingpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="persistence" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1199,7 +1190,11 @@
       <created>1358722831351</created>
       <updated>1358722831351</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="oauth2 provider services.">
+      <created>1358723788399</created>
+      <updated>1358723788399</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1211,7 +1206,7 @@
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24908201" sideWeight="0.6537657" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24908201" sideWeight="0.6715481" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39958158" sideWeight="0.497552" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39958158" sideWeight="0.49816403" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1275,7 +1270,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="small model change." />
+    <option name="LAST_COMMIT_MESSAGE" value="oauth2 provider services." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1299,6 +1294,7 @@
     <MESSAGE value="persistence.xml" />
     <MESSAGE value="lets try picketlink" />
     <MESSAGE value="small model change." />
+    <MESSAGE value="oauth2 provider services." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1350,20 +1346,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/IdentityObjectType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="66" selection-start="631" selection-end="631" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/beans.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="62" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/api/v1/exceptions/ApplicationException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="74" column="34" selection-start="1300" selection-end="1300" vertical-scroll-proportion="0.0">
@@ -1501,10 +1483,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/api/oauth2/provider/services/OAuth2ProviderService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="1439" selection-end="1439" vertical-scroll-proportion="0.72262776">
+        <state line="33" column="0" selection-start="1439" selection-end="1439" vertical-scroll-proportion="-15.230769">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#authorize#0;class#OAuth2ProviderService#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ivy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="341" column="8" selection-start="14711" selection-end="14711" vertical-scroll-proportion="-20.23077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/java/test/com/approachingpi/timetime/RestClientTestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="51" selection-start="2791" selection-end="2791" vertical-scroll-proportion="0.70731705">
+          <folding>
+            <element signature="method#accountCreateWithoutParamsShouldFail#0;class#RestClientTestCase#0" expanded="true" />
           </folding>
         </state>
       </provider>

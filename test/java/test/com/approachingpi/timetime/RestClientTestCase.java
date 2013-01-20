@@ -55,7 +55,7 @@ import org.junit.runner.RunWith;
 @RunWith(Arquillian.class)
 public class RestClientTestCase {
 
-	static final String ROOT_URL = "http://localhost:8080/shortvid-test";
+	static final String ROOT_URL = "http://localhost:8080/timetime-test";
 
 
 	@Deployment(testable = false)
