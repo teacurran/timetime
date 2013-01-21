@@ -1,17 +1,73 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui">
 
 <ui:composition template="/WEB-INF/templates/restricted-layout.xhtml">
 
-<ui:param name="label"
-        value="#{authenticator.loggedIn?'Log Out':'Log In'}" />
-
 	<ui:define name="content">
-        <p></p>
+
+		<p:panel id="register-panel" header="Register">
+			<h:form id="registerForm" prependId="false">
+				<p:outputPanel rendered="#{not identity.loggedIn}">
+					<p:inputText id="registerFullNameField" value="#{registerService.inputFullName}"
+								 required="true" label="Your Full Name"/>
+					<p:watermark value="Your Full Name" for="registerFullNameField"/>
+					<p:message for="registerFullNameField"/>
+
+					<p:inputText id="registerEmailField" value="#{registerService.inputEmail}"
+								 required="true" label="email"/>
+					<p:watermark value="email" for="registerEmailField"/>
+					<p:message for="registerEmailField"/>
+
+					<p:inputText id="registerCompanyField" value="#{registerService.inputCompany}"
+								 required="true" label="Company or Organization"/>
+					<p:watermark value="Company or Organization" for="registerCompanyField"/>
+					<p:message for="registerCompanyField"/>
+
+					<p:password id="registerPasswordField" value="#{registerService.inputPassword}"
+								required="true" label="Password"/>
+					<p:watermark value="Password" for="registerPasswordField"/>
+					<p:message for="registerPasswordField"/>
+
+					<div class="actionRow">
+						<p:commandButton id="registerButton" value="Register for Free"
+										 action="#{registerService.registerAccount}"
+										 update="registerForm"
+								/>
+					</div>
+				</p:outputPanel>
+
+			</h:form>
+		</p:panel>
+
+
+		<p:panel id="login-panel" header="Log In">
+			<h:form id="loginForm" prependId="false">
+				<p:outputPanel rendered="#{not identity.loggedIn}">
+					<p:inputText id="loginUsernameField" value="#{credentials.username}"
+								 required="true" label="username"/>
+					<p:watermark for="loginUsernameField" value="username"/>
+					<p:message for="loginUsernameField"/>
+
+					<p:password id="loginPasswordField"
+								value="#{credentials.password}" required="true"
+								minLength="3" feedback="false" label="password"/>
+					<p:watermark for="loginPasswordField" value="username"/>
+					<p:message for="loginPasswordField"/>
+
+					<div class="actionRow">
+						<p:commandButton id="loginButton" value="Log In"
+										 update="loginForm"
+								/>
+					</div>
+				</p:outputPanel>
+			</h:form>
+		</p:panel>
+
 
 	</ui:define>
 

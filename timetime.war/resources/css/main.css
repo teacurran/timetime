@@ -1,557 +1,81 @@
-/*Structural ids*/
-.wrapper {
-	/*
-    min-height:100%;
-    height:auto !important;
-    height:100%;
-    */
-	width: 95%;
-	margin-right: auto;
-	margin-left: auto;
-}
-.wrapperPatientView{
-	width: 100%;
-}
-.event-status {
-	text-transform: lowercase;
+html, body {
+    height: 100%;
+	margin: 0;
 }
 
-.event-type {
-	text-transform: lowercase;
-}
 
-.event-type-WEB {
-}
-
-.event-type-LIVE {
-	color: #339900;
-}
-
-.timespan {
-	font-size: 10px;
-}
-
-h2 {
-	clear: both;
-	padding-top: 20px;
-}
-
-.CONFIRMED {
-}
-
-.ARCHIVED {
-	color:  #ff0000;
-}
-
-.CANCELLED {
-	color:  #ff0000;
-}
-
-.button-detail-edit {
-	float: right;
-	margin-top: 10px;
-}
-
-#footer {
-	width: 98%;
-    clear: both;
-}
-
-#footer, .push {
-	height: 60px;
-}
-
-#header {
-	height: 100px;
-	border-top: none;
-	border-left: none;
-	border-right: none;
-}
-#footer {
-	padding: 10px;
-	text-align: left;
-	margin-left: 35px;;
-}
-
-#header .logo {
-	margin: 10px 10px 10px 35px;
-	float: left;
-}
-
-#header .logo img {
-	border: 0;
-	padding-top: 15px;
-}
-
-#header .title {
-	float: right;
-	margin-right: 35px;
-	text-align: right;
-}
-
-#header h1 {
-}
-
-#header h3 {
-	font-size: .9em;
+body.restricted {
+	background-image: url("../images/restricted-background2.png");
+	background-repeat: repeat-x;
+	background-color: #737373;
 }
 
 #header-restricted {
-	height: 160px;
-	border-top: none;
-	border-left: none;
-	border-right: none;
-}
-#header-restricted .logo {
-	margin: 40px 0 40px 40px;
-	float: left;
-}
-
-#header-restricted .logo img {
-	border: 0;
-}
-
-#header-restricted .title {
-	float: right;
-	margin-right: 10px;
-	text-align: right;
-}
-
-#header-restricted h1 {
-	padding: 40px 40px 0px 0px;
-	font-size: 30px;
-}
-
-#header-restricted h3 {
-	font-size: .9em;
-}
-
-
-#footer {
-	height: 40px;
-}
-
-#footer dl {
-	list-style: none;
-}
-
-#footer dl dt {
-	padding: 0 0 0 5px;
-	float: left;
-	font-weight: bold;
-}
-
-#footer dl dd {
-	float: left;
-	-webkit-margin-start: 10px;
-}
-
-#toolbar {
-	background-color: #ccc;
-	height: 30px;
-}
-
-#content {
-	padding: 5px;
-}
-#content.patientView {
-	padding: 0px;
-}
-
-#logo {
-	display: block;
-	height: 49px;
-	margin-left: 20px;
-	color: #fff;
-	font-size: 48px;
-	font-weight: bold;
-	letter-spacing: -4px;
-	text-shadow: 1px 2px 2px #000;
-}
-
-#title h1 {
-	font-size: 48px;
-	margin: 5;
-}
-
-#title h1 a {
-	text-decoration: none;
-	color: inherit;
-}
-
-#title h2 {
-	font-size: 26px;
-	margin: 0;
-	font-weight: normal;
-}
-
-#logo span {
-	color: #f00;
-	font-size: 70%;
-}
-
-/*Document*/
-html, body {
-	background: #ffffff !important;
-	font-family: Lucida Grande, Arial, Sans !important;
-	margin: auto;
-	font-size: 12px;
-}
-
-a {
-	color: #1156a6;
-	text-decoration: none;
-}
-
-a img {
-	border: 0;
-}
-
-a:hover {
-	color: #4b82c3;
-	text-decoration: underline;
-}
-
-/*classes*/
-.error {
-	color: #f00;
+	background: none;
 }
 
 #login-panel {
-	width: 300px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.login-box {
-	text-align: center;
-	vertical-align: center;
-	color: #ddd;
-	width: 300px;
-	height: 100px;
-	border: 2px double #999;
-	background-color: #444444;
-	padding: 10px 20px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	-webkit-box-shadow: 0 2px 0 #800;
-}
-
-.property-input {
-	border: 2px none transparent;
-	width: 400px;
-	background-color: transparent;
-}
-
-.rows-pair {
-	background-color: #efefef;
-}
-
-.rows-odd {
-}
-
-.property-label {
-	color: #660000;
-}
-
-form .error {
-	background: #c00;
-	color: #fff;
-	font-size: 90%;
-	padding: 3px 5px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	-webkit-box-shadow: 0 2px 0 #800;
-}
-
-form textarea {
-	width: 70%;
-	height: 150px;
-}
-
-form input, form textarea {
-	font-size: 14px;
-}
-#patientEditForm input, #patientEditForm  select{
-	width: 300px;
-}
-#patientEditForm #fieldPhoneWorkExtension{
-	width: 150px;
-}
-#patientEditForm input#patientEditForm\:fieldPhoneWorkExtension {
-	width: 50px;
-}
-
-#patientEditForm input#patientEditForm\:fieldZip {
-	width: 90px;
-}
-#patientEditForm input#patientEditForm\:fieldDob_input {
-	width: 100px;
-}
-
-#reportsForm\:fieldName {
-	width: 300px;
-}
-#reportsForm\:fieldStartDate_input {
-	width: 90px;
-}
-#reportsForm\:fieldDateEnd_input {
-	width: 90px;
-}
-
-
-form label {
-	color: #000000;
-	margin: 0 5px 0 5px;
-}
-
-.formLogout {
-	color: #f60;
-
-}
-
-#captcha {
-	display: block;
-	height: 50px;
-}
-
-.success {
-	background: #67AD10;
-	color: #fff;
-	padding: 10px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	-webkit-box-shadow: 0 2px 0 #4E840B;
-}
-
-.toolbar {
-	-moz-border-radius: 0;
-	-webkit-border-radius: 0;
-	border-radius: 0;
-	border-left: none;
-	border-right: none;
-	padding-left: 33px;
-}
-
-#newPatientForm .ui-inputfield {
-	width: 200px;
-}
-
-.grid-wide {
-	width: 100%;
-}
-
-.data-grid {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-.data-grid tr {
-	border-bottom: solid 1px #DDD;
-}
-
-.grid .label,
-.data-grid .label {
-	vertical-align: top;
-	font-weight: bold;
-	padding: 5px;
-}
-
-.grid .value,
-.data-grid .value {
-	vertical-align: top;
-	padding: 5px;
-}
-.detail-grid-short .value{
-	padding-left: 15px !important;
-	font-weight: bold;
-}
-.detail-grid {
+	width: 350px;
 	float: left;
-	width: 48%;
+	margin: 20px;
 }
 
-.detail-grid {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-.detail-grid tr {
-}
-
-.detail .label,
-.detail-grid .label {
-	vertical-align: top;
-	font-weight: bold;
-	padding: 5px;
-	background-color: #d1e7ff;
-	border-top: solid 1px white;
-	width: 150px;
-}
-.detail-grid-short .label{
-	font-weight: normal;
-}
-
-.detail .value,
-.detail-grid .value {
-	vertical-align: top;
-	padding: 5px;
-}
-
-.detail-grid-short {
-	width: 33%;
-	margin-bottom: 20px;
-}
-.detail-grid-short h2{
-	padding-left: 12px;
-	padding-bottom: 20px;
-}
-.detail-grid-short td{
-	padding-bottom: 20px;
-}
-.detail-grid-short .label{
-	background-color: inherit;
-	border: none;
-}
-.detail-grid-wide {
-	width: 100%;
-}
-
-.detail-grid-wide .label {
-	width: 200px;
-}
-#patientEditForm .detail-grid-wide .label{
-	text-align: right;
-}
-.phone-preferred {
-	font-weight: bold;
-}
-
-.action-row {
-	clear: both;
-	padding: 20px 10px 10px 10px;
-	text-align: right;
-}
-
-#patitentSearchForm td.label button{
-	float: right;
-}
-.results-action {
-	clear: both;
-	margin: 15px 0 15px 0;
-	text-align: right;
-}
-
-/**
-Theme Overrides
-**/
-tr.ui-widget-content.ui-datatable-odd {
-	background: #f1f5f8 !important;;
-}
-tr.ui-widget-content.rowOver{
-	background: #cfd6ff !important;;
-}
-tr.ui-widget-content td{
-	padding-left: 16px !important;
-}
-.ui-widget-header a {
-	color: #1156a6;
-}
-
-.ui-messages {
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.ui-panel {
-	margin-bottom: 20px;
-}
-
-.ui-widget-overlay {
-	background: #333333;
-}
-
-.ui-widget-content a.ui-commandlink {
-	color: #2200C1;
-	display: block;
-}
-
-.ui-widget-header{
-	background: url("/resources/img/login_header_bg.png") repeat-x scroll bottom left #e8f3f9 !important;
-}
-.detail-grid select, .grid select{
-	background-color: #D7EBF9;
-	border: 1px solid #AED0EA;
-	color: #000000;
-	font-weight: bold;
-	padding: 3px;
-}
-.detail-grid select option, .grid select option{
-	background-color: #f2f5f7;
-	padding-top: 3px;
-}
-
-.ui-icon-search, .ui-icon-calendar, .ui-icon-image, .ui-icon-gear{
-	background-image: url("/resources/img/util_icons.png") !important;
-	width: 32px;
-	height: 32px;
-}
-.ui-icon-search{
-	background-position: 0px 0px;
-}
-.ui-icon-calendar{
-	background-position: -32px 0px;
-}
-.ui-icon-image{
-	background-position: -64px 0px;
-}
-.ui-icon-gear{
-	background-position: -96px 0px;
-}
-.ui-state-error-select,
-.detail-grid select.ui-state-error-select,
-.grid select.ui-state-error-select {
-	border: 1px solid #cd0a0a;
-}
-.toolbar .ui-menuitem-text{
-	padding-top: 10px;
-	padding-left: 8px;
-	color: #2779AA;
-}
-
-.patientViewWrapper{
-	background-color: #b6d7eb;
-	padding:0px 35px 30px 35px;
-}
-.patientViewWrapper h1{
-	margin-top: 0px;
-	padding-top: 20px;
-	padding-left: 12px;
-}
-.patientViewWrapper h2{
-	padding: 0px 0px 0px 18px;
-}
-.patientEventsWrapper{
-	margin: 0px 35px 0px 35px;
-}
-.patientEventHead{
-	margin-top: 30px;
-	border: 1px solid #DDDDDD;
-	background: url("/resources/img/tblheader_bg.jpg") repeat-x scroll top left #d5e7f2;
-	clear: both;
-	border-top-left-radius: 6px;
-}
-.patientEventsWrapper h2{
-	margin: 0px;
-	padding: 12px 10px 4px 18px;
-}
-.patientEventsWrapper .ui-panel{
-	padding-bottom: 3px;
+#loginForm input {
+	width: 300px;
 	margin-bottom: 10px;
 }
-.patientEventsWrapper .ui-panel{
-	border-radius: 0px;
-	background: none;
+
+#loginForm .actionRow {
+	text-align: center;
+}
+
+#loginForm .ui-message-error {
 	border: none;
+	background: none;
+	margin-top: -10px;
+	margin-bottom: 10px;
+	font-size: .8em;
+}
+
+#loginForm .ui-message-error-icon {
+	display: none;
+}
+
+
+.page-header .logo {
+	margin: 15px 20px 5px 20px;
+}
+
+#register-panel {
+	width: 350px;
+	float: left;
+	margin: 20px;
+}
+
+#registerForm input {
+	width: 300px;
+	margin-bottom: 10px;
+}
+
+#registerForm .actionRow {
+	text-align: center;
+}
+
+#registerForm .ui-message-error {
+	border: none;
+	background: none;
+	margin-top: -10px;
+	margin-bottom: 10px;
+	font-size: .8em;
+}
+
+#registerForm .ui-message-error-icon {
+	display: none;
+}
+
+.ui-messages-error {
+	border-left: none;
+	border-right: none;
+	border-top-color: #ff0000;
+	border-bottom-color: #ff0000;
 }

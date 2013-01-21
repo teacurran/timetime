@@ -27,13 +27,10 @@
 		-->
 	</h:head>
 
-	<body>
+	<body class="restricted">
 
-	<div id="header-restricted" class="ui-widget ui-widget-header">
-		<div class="logo"><h:link outcome="/pages/secure/home"><h:graphicImage value="/resources/img/logo.png" alt="logo" height="100" width="175"/></h:link></div>
-		<div class="title">
-			<h1><h:link outcome="/pages/secure/home" value="#{i18n['application.name']}"/></h1>
-		</div>
+	<div id="header-restricted" class="page-header ui-widget ui-widget-header">
+		<div class="logo"><h:link outcome="/pages/secure/home"><h:graphicImage value="/resources/images/logo.png" alt="#{i18n['application.name']} logo"/></h:link></div>
 	</div>
 
 	<p:messages id="messages" showDetail="false"/>
