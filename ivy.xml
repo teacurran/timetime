@@ -274,10 +274,7 @@
 		<!-- Primefaces  -->
 		<dependency org="org.primefaces" name="primefaces"
 					rev="3.4.2" conf="compile->default" transitive="false"/>
-		<dependency org="org.primefaces.themes" name="aristo"
-					rev="1.0.1" conf="compile->default" transitive="false"/>
-		<dependency org="org.primefaces.themes" name="cupertino" rev="1.0.3" conf="compile->default"
-					transitive="false"/>
+		<dependency org="org.primefaces.themes" name="all-themes" rev="1.0.9"/>
 
 
 		<!-- Prettyfaces  (URL Rewriter)-->

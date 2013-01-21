@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import org.jboss.seam.security.annotations.management.EntityType;
+import org.jboss.seam.security.annotations.management.IdentityEntity;
 import org.jboss.seam.security.annotations.management.IdentityProperty;
 import org.jboss.seam.security.annotations.management.PropertyType;
 
@@ -14,6 +16,7 @@ import org.jboss.seam.security.annotations.management.PropertyType;
  * @author T. Curran
  */
 @Entity
+@IdentityEntity(EntityType.IDENTITY_ROLE_NAME)
 public class IdentityObjectType implements Serializable {
 
 	private static final long serialVersionUID = 4310474293960109663L;

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:composite="http://java.sun.com/jsf/composite">
+
+<!-- INTERFACE -->
+<composite:interface>
+	<composite:attribute name="loginAction"
+		method-signature="java.lang.Void login()" required="true" />
+	<composite:attribute name="credentials" required="true" />
+</composite:interface>
+
+<!-- IMPLEMENTATION -->
+<composite:implementation>
+	<ui:param name="label"
+		value="#{authenticator.loggedIn?'Log Out':'Log In'}" />
+	<h:form id="login" prependId="false">
+		<h:panelGroup rendered="#{!authenticator.loggedIn}"
+			styleClass="login-box" layout="block">
+			<div class="prompt">#{label}</div>
+			<h:panelGrid columns="2">
+                username:
+                <h:inputText id="name"
+					value="#{cc.attrs.credentials.username}" required="true" />
+                password:
+                <h:inputSecret id="password"
+					value="#{cc.attrs.credentials.password}" required="true" />
+			</h:panelGrid>
+			<h:panelGroup>
+				<h:commandButton id="loginButton" value="#{label}"
+					action="#{cc.attrs.loginAction}"
+					rendered="#{!authenticator.loggedIn}" />
+			</h:panelGroup>
+		</h:panelGroup>
+
+		<h:panelGroup rendered="#{authenticator.loggedIn}">
+            #{cc.attrs.user.username}
+            <h:commandButton id="logoutButton" value="#{label}"
+				action="#{authenticator.logout}"
+				rendered="#{authenticator.loggedIn}" />
+		</h:panelGroup>
+	</h:form>
+
+</composite:implementation>
+</html>

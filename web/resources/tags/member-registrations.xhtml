@@ -1,0 +1,74 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:cc="http://java.sun.com/jsf/composite">
+
+	<cc:interface>
+		<cc:attribute name="registrations" required="true" />
+	</cc:interface>
+
+	<cc:implementation>
+		<h1>Member Registrations</h1>
+		<h:form>
+			<p:dataTable id="tbl" value="#{cc.attrs.registrations}" var="reg" rows="10" paginator="true">
+				<p:column>
+					<f:facet name="header">
+              Member
+            </f:facet>
+					<h:outputText value="#{reg.member.name}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header">
+               Program Selected
+            </f:facet>
+					<h:outputText value="#{reg.program.name}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header">
+               Program Capacity
+            </f:facet>
+					<h:outputText value="#{reg.program.capacity}" />
+				</p:column>
+				<p:column>
+					<f:facet name="header">
+               Registered Date
+            </f:facet>
+					<h:outputText value="#{reg.registeredDate}" />
+				</p:column>
+			</p:dataTable>
+
+			<p:panel header="Export Page Data">
+				<h:commandLink>
+					<p:graphicImage value="/resources/img/excel.png" />
+					<p:dataExporter type="xls" target="tbl" fileName="registrations"
+						pageOnly="true" />
+				</h:commandLink>
+
+				<h:commandLink>
+					<p:graphicImage value="/resources/img/pdf.png" />
+					<p:dataExporter type="pdf" target="tbl" fileName="registrations"
+						pageOnly="true" />
+				</h:commandLink>
+
+				<h:commandLink>
+					<p:graphicImage value="/resources/img/csv.png" />
+					<p:dataExporter type="csv" target="tbl" fileName="registrations"
+						pageOnly="true" />
+				</h:commandLink>
+
+				<h:commandLink>
+					<p:graphicImage value="/resources/img/xml.png" />
+					<p:dataExporter type="xml" target="tbl" fileName="registrations"
+						pageOnly="true" />
+				</h:commandLink>
+			</p:panel>
+		</h:form>
+
+	</cc:implementation>
+
+</ui:composition>
