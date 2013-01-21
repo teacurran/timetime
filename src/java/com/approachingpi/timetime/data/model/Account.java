@@ -60,6 +60,9 @@ public class Account implements java.io.Serializable {
 	@Basic
 	private Integer timezone;
 
+	@Basic
+	protected String username;
+
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date dateCreated;
 
@@ -172,5 +175,13 @@ public class Account implements java.io.Serializable {
 
 	public void setPasswordSalt(String passwordSalt) {
 		this.passwordSalt = passwordSalt;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 }

@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="main:war exploded">
-    <output-path>$PROJECT_DIR$/dist/exploded/timetime.war</output-path>
+    <output-path>$PROJECT_DIR$/timetime.war</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -9,6 +9,7 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="ivy - compile" />
           <element id="library" level="project" name="tools" />
+          <element id="library" level="project" name="compile" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="main/web/Web" />

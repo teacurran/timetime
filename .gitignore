@@ -3,8 +3,8 @@ atlassian-ide-plugin.xml
 ./.idea/workspace.xml
 ./.idea/codeStyleSettings.xml
 dist/*
-web/WEB-INF/classes/*
-web/WEB-INF/lib/*
+timetime.war/WEB-INF/classes/*
+timetime.war/WEB-INF/lib/*
 build/*
 local.build.properties
 *.DS_Store

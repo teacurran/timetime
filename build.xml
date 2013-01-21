@@ -33,7 +33,7 @@
 	<property name="test.src.dir" value="test/java" />
 	<property name="test.build.dir" value="build/test" />
 	<property name="test.resources.dir" value="test/resources" />
-	<property name="web.dir" value="web" />
+	<property name="web.dir" value="timetime.war" />
 	<property name="web.meta-inf.dir" value="${web.dir}/META-INF" />
 	<property name="web.web-inf.dir" value="${web.dir}/WEB-INF" />
 	<property name="web.web-inf.classes.dir" value="${web.web-inf.dir}/classes" />

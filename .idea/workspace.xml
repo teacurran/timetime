@@ -2,37 +2,80 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/images/ajaxloading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/images/ajaxloadingbar.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/images/csv.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/images/excel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/design/logo.psd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/images/xml.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/security/annotations/AuthenticatedUser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/security/AuthenticatorImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/security/Restrictions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/view/ViewMapping.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/pages/auth/access-denied.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/tags/address.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/tags/date.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/tags/datetime.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/pages/secure/home.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/pages/index.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/tags/input.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/tags/login.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/javascript/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/tags/member-registrations.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/tags/output.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/tags/timespan-string.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/tags/timespan.xhtml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/pretty-config.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/IdentityObjectType.java" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/IdentityObjectType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/beans.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/beans.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ivy.xml" afterPath="$PROJECT_DIR$/ivy.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.iml" afterPath="$PROJECT_DIR$/main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/images/ajaxloading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/images/ajaxloadingbar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/images/csv.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/images/excel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/images/logo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/images/xml.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/pages/auth/access-denied.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/tags/address.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/WEB-INF/beans.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/WEB-INF/META-INF/context.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/tags/date.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/tags/datetime.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/pages/error.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/WEB-INF/faces-config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/WEB-INF/fragments/footer.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/WEB-INF/functions.taglib.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/WEB-INF/fragments/header.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/pages/secure/home.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/pages/index.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/tags/input.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/WEB-INF/jboss-deployment-structure.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/WEB-INF/jboss-web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/pages/auth/login.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/tags/login.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/css/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/javascript/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/WEB-INF/templates/main.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/tags/member-registrations.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/tags/output.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/pages/register.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/WEB-INF/templates/restricted-layout.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/tags/timespan-string.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/tags/timespan.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/WEB-INF/fragments/toolbar.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/WEB-INF/web.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/META-INF/context.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/beans.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/fragments/footer.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/fragments/header.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/fragments/toolbar.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/functions.taglib.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/jboss-deployment-structure.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/jboss-web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/templates/main.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/templates/restricted-layout.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/pages/auth/access-denied.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/pages/auth/login.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/pages/error.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/pages/index.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/pages/register.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/pages/secure/home.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/css/main.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/images/ajaxloading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/images/ajaxloadingbar.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/images/csv.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/images/excel.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/images/xml.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/javascript/main.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/tags/address.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/tags/date.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/tags/datetime.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/tags/input.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/tags/login.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/tags/member-registrations.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/tags/output.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/tags/timespan-string.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/tags/timespan.xhtml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/main_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/main_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="timetime.iws" />
@@ -134,7 +177,7 @@
     <ignored path="local.build.properties" />
     <ignored path=".idea/codeStyleSettings.xml" />
     <ignored path=".idea/libraries/compile.xml" />
-    <file path="/Dummy.txt" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358726033555" ignored="false" />
+    <file path="/Dummy.txt" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358746546990" ignored="false" />
     <file path="/a.xml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357964256350" ignored="false" />
     <file path="/a.dummy" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358734495608" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/src/java/com/shortvid/api/v1/resources/AccountResource.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357615631846" ignored="false" />
@@ -156,7 +199,7 @@
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/src/java/com/shortvid/api/v1/representations/ServiceListType.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357615491208" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/src/java/com/shortvid/api/v1/representations/ServiceType.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357615497179" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/src/java/com/shortvid/api/v1/representations/VideoType.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357615522155" ignored="false" />
-    <file path="/build.xml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358023199943" ignored="false" />
+    <file path="/build.xml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358747105830" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/src/java/com/shortvid/api/v1/resources/PasswordResetResource.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357618102318" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/src/java/com/shortvid/api/v1/resources/ServiceResource.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357618144391" ignored="false" />
     <file path="/.gitignore" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357618364732" ignored="false" />
@@ -195,6 +238,7 @@
     <file path="/ViewMapping.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358746156391" ignored="false" />
     <file path="/home.xhtml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358746309609" ignored="false" />
     <file path="/index.xhtml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358746361139" ignored="false" />
+    <file path="/Account.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358747357364" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,24 +297,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="beans.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/beans.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="55" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/index.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="38" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AuthenticatorImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/security/AuthenticatorImpl.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -292,24 +318,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="8" selection-start="1752" selection-end="1752" vertical-scroll-proportion="-3.7547169">
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-            <state />
-          </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AuthenticatedUser.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/security/annotations/AuthenticatedUser.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -317,15 +325,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/pages/secure/home.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="49" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -342,12 +341,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ViewMapping.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ViewMapping.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/view/ViewMapping.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="14" selection-start="652" selection-end="652" vertical-scroll-proportion="0.58536583">
+            <state line="28" column="14" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="37" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="20" selection-start="700" selection-end="700" vertical-scroll-proportion="0.40860215">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Account.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="179" column="33" selection-start="3764" selection-end="3764" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="method#setUsername#0;class#Account#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -371,9 +399,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/api/v1/representations/ApiApplicationType.java" />
-        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/api/v1/representations/AuthType.java" />
-        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/api/v1/representations/AccountType.java" />
         <option value="$PROJECT_DIR$/test/java/test/com/approachingpi/timetime/RestClientTestCase.java" />
         <option value="$PROJECT_DIR$/ivy.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
@@ -387,6 +412,9 @@
         <option value="$PROJECT_DIR$/web/pages/secure/home.xhtml" />
         <option value="$PROJECT_DIR$/web/pages/index.xhtml" />
         <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/view/ViewMapping.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/build.xml" />
+        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java" />
       </list>
     </option>
   </component>
@@ -447,122 +475,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="secure" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auth" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -717,6 +629,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="approachingpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="services" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -912,7 +858,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -925,6 +871,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
@@ -1216,7 +1163,11 @@
       <created>1358726036043</created>
       <updated>1358726036043</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="jsf view mapping, security annotations">
+      <created>1358746549136</created>
+      <updated>1358746549136</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1229,7 +1180,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24908201" sideWeight="0.6537657" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24908201" sideWeight="0.6715481" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39958158" sideWeight="0.497552" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39958158" sideWeight="0.49816403" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1292,7 +1243,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="arquillian, rest representations." />
+    <option name="LAST_COMMIT_MESSAGE" value="jsf view mapping, security annotations" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1319,6 +1270,7 @@
     <MESSAGE value="oauth2 provider services." />
     <MESSAGE value="arquillian embedded jboss container." />
     <MESSAGE value="arquillian, rest representations." />
+    <MESSAGE value="jsf view mapping, security annotations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1386,20 +1338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/main.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/templates/restricted-layout.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="20" selection-start="933" selection-end="933" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/ivy/compile/seam-security-3.1.0.Final.jar!/org/jboss/seam/security/BaseAuthenticator.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="22" selection-start="175" selection-end="175" vertical-scroll-proportion="0.10186757">
@@ -1431,29 +1369,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/beans.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="55" selection-start="634" selection-end="634" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="8" selection-start="1752" selection-end="1752" vertical-scroll-proportion="-3.7547169">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/security/Restrictions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="416" selection-end="416" vertical-scroll-proportion="0.0">
@@ -1473,26 +1388,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/secure/home.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="49" selection-start="459" selection-end="459" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/pages/index.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="38" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/view/ViewMapping.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="14" selection-start="652" selection-end="652" vertical-scroll-proportion="0.58536583">
+        <state line="28" column="14" selection-start="652" selection-end="652" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="37" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="33" selection-start="3764" selection-end="3764" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#setUsername#0;class#Account#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="20" selection-start="700" selection-end="700" vertical-scroll-proportion="0.40860215">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1551,12 +1475,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>main</last-edited>
+          <last-edited>Web|main</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.15850815" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
