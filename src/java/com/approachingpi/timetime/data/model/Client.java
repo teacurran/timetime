@@ -2,6 +2,7 @@ package com.approachingpi.timetime.data.model;
 
 import java.util.Date;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
@@ -13,14 +14,23 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+/**
+ * Date: 1/22/13
+ *
+ * @author T. Curran
+ */
 @Entity
 @Access( AccessType.FIELD )
 @Cacheable
-public class Company implements java.io.Serializable {
+public class Client {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,23 +47,21 @@ public class Company implements java.io.Serializable {
 	@Column( length = 0 )
 	protected Date dateModified;
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "company")
-	protected Set<Client> clients = new HashSet<Client>(0);
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "client")
+	protected Set<Project> projects = new HashSet<Project>(0);
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "company")
-	protected Set<Account> accounts = new HashSet<Account>(0);
+	@ManyToOne
+	private Company company;
 
-	public Company() {
-	}
+	@Basic
+	protected Boolean deleted = false;
 
-	public Company(String name, Date dateCreated, Date dateModified) {
-		this.name = name;
-		this.dateCreated = dateCreated;
-		this.dateModified = dateModified;
-	}
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "clients_tasks", joinColumns = @JoinColumn(name = "task_id"), inverseJoinColumns = @JoinColumn(name = "client_id"))
+	protected List<Task> tasks;
 
 	public Integer getId() {
-		return this.id;
+		return id;
 	}
 
 	public void setId(Integer id) {
@@ -61,7 +69,7 @@ public class Company implements java.io.Serializable {
 	}
 
 	public String getName() {
-		return this.name;
+		return name;
 	}
 
 	public void setName(String name) {
@@ -69,7 +77,7 @@ public class Company implements java.io.Serializable {
 	}
 
 	public Date getDateCreated() {
-		return this.dateCreated;
+		return dateCreated;
 	}
 
 	public void setDateCreated(Date dateCreated) {
@@ -77,26 +85,42 @@ public class Company implements java.io.Serializable {
 	}
 
 	public Date getDateModified() {
-		return this.dateModified;
+		return dateModified;
 	}
 
 	public void setDateModified(Date dateModified) {
 		this.dateModified = dateModified;
 	}
 
-	public Set<Account> getAccounts() {
-		return this.accounts;
+	public Set<Project> getProjects() {
+		return projects;
 	}
 
-	public void setAccounts(Set<Account> accounts) {
-		this.accounts = accounts;
+	public void setProjects(Set<Project> projects) {
+		this.projects = projects;
 	}
 
-	public Set<Client> getClients() {
-		return clients;
+	public Company getCompany() {
+		return company;
 	}
 
-	public void setClients(Set<Client> clients) {
-		this.clients = clients;
+	public void setCompany(Company company) {
+		this.company = company;
+	}
+
+	public Boolean getDeleted() {
+		return deleted;
+	}
+
+	public void setDeleted(Boolean deleted) {
+		this.deleted = deleted;
+	}
+
+	public List<Task> getTasks() {
+		return tasks;
+	}
+
+	public void setTasks(List<Task> tasks) {
+		this.tasks = tasks;
 	}
 }

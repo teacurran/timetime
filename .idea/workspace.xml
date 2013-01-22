@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/images/restricted-background.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/timetime.war/resources/images/restricted-background2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/web/validation/RegisterAccountValidator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/services/RegisterService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/util/TimeTimeConstants.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/timetime.war/resources/javascript/main.js" afterPath="$PROJECT_DIR$/timetime.war/resources/scripts/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetime.war/pages/index.xhtml" afterPath="$PROJECT_DIR$/timetime.war/pages/index.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/ivy___compile.xml" afterPath="$PROJECT_DIR$/.idea/libraries/ivy___compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetime.war/resources/css/main.css" afterPath="$PROJECT_DIR$/timetime.war/resources/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.iml" afterPath="$PROJECT_DIR$/main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/timetime.war/WEB-INF/templates/restricted-layout.xhtml" afterPath="$PROJECT_DIR$/timetime.war/WEB-INF/templates/restricted-layout.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Client.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Project.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TaskSummary.java" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSummary.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Company.java" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Company.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Task.java" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Task.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSegment.java" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSegment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/java/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="timetime.iws" />
@@ -114,9 +111,9 @@
     <ignored path="local.build.properties" />
     <ignored path=".idea/codeStyleSettings.xml" />
     <ignored path=".idea/libraries/compile.xml" />
-    <file path="/Dummy.txt" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358752555113" ignored="false" />
+    <file path="/Dummy.txt" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358808976754" ignored="false" />
     <file path="/a.xml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357964256350" ignored="false" />
-    <file path="/a.dummy" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358734495608" ignored="false" />
+    <file path="/a.dummy" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358833479388" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/src/java/com/shortvid/api/v1/resources/AccountResource.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357615631846" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/src/java/com/shortvid/web/filter/JSONPRequestFilter.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357612040103" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/ivy.xml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357613194832" ignored="false" />
@@ -147,7 +144,7 @@
     <file path="/package-info.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357620188372" ignored="false" />
     <file path="/fragment.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357620890956" ignored="false" />
     <file path="/ExceptionMapperProvider.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357620999473" ignored="false" />
-    <file path="/persistence.xml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358723088937" ignored="false" />
+    <file path="/persistence.xml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358834211067" ignored="false" />
     <file path="/configuration.xml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357965079662" ignored="false" />
     <file path="/beans.xml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357974653298" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../shortvid/server/video-capture/build.xml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358023199440" ignored="false" />
@@ -175,12 +172,35 @@
     <file path="/ViewMapping.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358746156391" ignored="false" />
     <file path="/home.xhtml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358746309609" ignored="false" />
     <file path="/index.xhtml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358756762481" ignored="false" />
-    <file path="/Account.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358747357364" ignored="false" />
+    <file path="/Account.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358833384781" ignored="false" />
     <file path="/restricted-layout.xhtml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358748118807" ignored="false" />
     <file path="/main.css" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358756812840" ignored="false" />
     <file path="/RegisterService.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358754780399" ignored="false" />
     <file path="/TimeTimeConstants.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358753055112" ignored="false" />
     <file path="/RegisterAccountValidator.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358755248090" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterBundle/Entity/Account.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358806774498" ignored="false" />
+    <file path="/Account.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358805853948" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterBundle/Entity/Comment.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358806084745" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterBundle/Entity/Tag.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358806774498" ignored="false" />
+    <file path="/Tag.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358806168220" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterBundle/Entity/File.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358806774498" ignored="false" />
+    <file path="/File.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358806213390" ignored="false" />
+    <file path="/dummy.txt" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358806805500" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterBundle/Entity/Note.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358806774498" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterApiBundle/Controller/AccountController.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358807115751" ignored="false" />
+    <file path="/AccountController.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358807116253" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterApiBundle/Controller/FileController.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358807585098" ignored="false" />
+    <file path="/FileController.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358807555369" ignored="false" />
+    <file path="$PROJECT_DIR$/../../bodge/bravo/svs/app/controllers/application_controller.rb" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358811169929" ignored="false" />
+    <file path="/application_controller.rb" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358809411743" ignored="false" />
+    <file path="$PROJECT_DIR$/../../bodge/bravo/svs/Gemfile" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358809537472" ignored="false" />
+    <file path="$PROJECT_DIR$/../../bodge/bravo/svs/public/js/main.js" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358811798860" ignored="false" />
+    <file path="/Company.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358831208126" ignored="false" />
+    <file path="/Task.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358834090374" ignored="false" />
+    <file path="/Project.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358833632052" ignored="false" />
+    <file path="/Client.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358831442129" ignored="false" />
+    <file path="/TimeSheet.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358832001143" ignored="false" />
+    <file path="/TimeSummary.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358832947786" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +215,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -230,6 +249,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -239,58 +259,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/timetime.war/resources/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="10" selection-start="540" selection-end="540" vertical-scroll-proportion="-17.192308">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/timetime.war/pages/auth/login.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="46" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.xhtml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.xhtml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/timetime.war/pages/index.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="49" selection-start="2572" selection-end="2572" vertical-scroll-proportion="1.2919708">
+            <state line="63" column="49" selection-start="2572" selection-end="2572" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/services/RegisterService.java">
+      <file leaf-file-name="Account.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="38" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+            <state line="97" column="5" selection-start="2498" selection-end="2498" vertical-scroll-proportion="-29.461538">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#setInputFullName#0;class#RegisterService#0" expanded="true" />
-                <element signature="method#getInputEmail#0;class#RegisterService#0" expanded="true" />
-                <element signature="method#setInputEmail#0;class#RegisterService#0" expanded="true" />
-                <element signature="method#getInputCompany#0;class#RegisterService#0" expanded="true" />
-                <element signature="method#setInputCompany#0;class#RegisterService#0" expanded="true" />
-                <element signature="method#getInputPassword#0;class#RegisterService#0" expanded="true" />
-                <element signature="method#setInputPassword#0;class#RegisterService#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterAccountValidator.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/web/validation/RegisterAccountValidator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="0" selection-start="1958" selection-end="1958" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#createError#0;class#RegisterAccountValidator#0" expanded="true" />
+                <element signature="e#2299#2308#0" expanded="true" />
+                <element signature="method#Account#0;class#Account#0" expanded="true" />
+                <element signature="method#getEmail#0;class#Account#0" expanded="true" />
+                <element signature="method#getUsername#0;class#Account#0" expanded="true" />
+                <element signature="method#getManager#0;class#Account#0" expanded="true" />
+                <element signature="method#setManager#0;class#Account#0" expanded="true" />
+                <element signature="method#getEmailVerificationCode#0;class#Account#0" expanded="true" />
+                <element signature="method#setEmailVerificationCode#0;class#Account#0" expanded="true" />
+                <element signature="method#getEmailVerified#0;class#Account#0" expanded="true" />
+                <element signature="method#setEmailVerified#0;class#Account#0" expanded="true" />
+                <element signature="method#getStaff#0;class#Account#0" expanded="true" />
+                <element signature="method#setStaff#0;class#Account#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -299,26 +293,188 @@
       <file leaf-file-name="StringUtils.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/util/StringUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="30" selection-start="3283" selection-end="3283" vertical-scroll-proportion="0.0">
+            <state line="63" column="25" selection-start="1742" selection-end="1742" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeTimeConstants.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/util/TimeTimeConstants.java">
+      <file leaf-file-name="TimeSummary.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSummary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="111" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0">
+            <state line="128" column="34" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getId#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#setId#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#getTask#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#setTask#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#getAccount#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#setAccount#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#getDate#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#setDate#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#getDateCreated#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#setDateCreated#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#getDateModified#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#setDateModified#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#getNotes#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#setNotes#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#setReviewer#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#getStatus#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#setStatus#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#getMinutesRecorded#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#setMinutesRecorded#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#getMinutesEntered#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#setMinutesEntered#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#getDateSubmitted#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#setDateSubmitted#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#getDateApproved#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#setDateApproved#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#getDateRejected#0;class#TimeSummary#0" expanded="true" />
+                <element signature="method#setDateRejected#0;class#TimeSummary#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Client.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="134" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1268#1277#0" expanded="true" />
+                <element signature="method#getId#0;class#Client#0" expanded="true" />
+                <element signature="method#setId#0;class#Client#0" expanded="true" />
+                <element signature="method#getName#0;class#Client#0" expanded="true" />
+                <element signature="method#setName#0;class#Client#0" expanded="true" />
+                <element signature="method#getDateCreated#0;class#Client#0" expanded="true" />
+                <element signature="method#setDateCreated#0;class#Client#0" expanded="true" />
+                <element signature="method#getDateModified#0;class#Client#0" expanded="true" />
+                <element signature="method#setDateModified#0;class#Client#0" expanded="true" />
+                <element signature="method#getProjects#0;class#Client#0" expanded="true" />
+                <element signature="method#setProjects#0;class#Client#0" expanded="true" />
+                <element signature="method#getCompany#0;class#Client#0" expanded="true" />
+                <element signature="method#setCompany#0;class#Client#0" expanded="true" />
+                <element signature="method#getDeleted#0;class#Client#0" expanded="true" />
+                <element signature="method#setDeleted#0;class#Client#0" expanded="true" />
+                <element signature="method#getTasks#0;class#Client#0" expanded="true" />
+                <element signature="method#setTasks#0;class#Client#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Project.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Project.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="0" selection-start="1211" selection-end="1414" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getId#0;class#Project#0" expanded="true" />
+                <element signature="method#setId#0;class#Project#0" expanded="true" />
+                <element signature="method#getName#0;class#Project#0" expanded="true" />
+                <element signature="method#setName#0;class#Project#0" expanded="true" />
+                <element signature="method#getDateCreated#0;class#Project#0" expanded="true" />
+                <element signature="method#setDateCreated#0;class#Project#0" expanded="true" />
+                <element signature="method#getDateModified#0;class#Project#0" expanded="true" />
+                <element signature="method#setDateModified#0;class#Project#0" expanded="true" />
+                <element signature="method#getTasks#0;class#Project#0" expanded="true" />
+                <element signature="method#setTasks#0;class#Project#0" expanded="true" />
+                <element signature="method#getClient#0;class#Project#0" expanded="true" />
+                <element signature="method#setClient#0;class#Project#0" expanded="true" />
+                <element signature="method#getCompany#0;class#Project#0" expanded="true" />
+                <element signature="method#setCompany#0;class#Project#0" expanded="true" />
+                <element signature="method#getDeleted#0;class#Project#0" expanded="true" />
+                <element signature="method#setDeleted#0;class#Project#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeSegment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSegment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="117" column="33" selection-start="2351" selection-end="2351" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="method#getProject#0;class#TimeSegment#0" expanded="true" />
+                <element signature="method#setProject#0;class#TimeSegment#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Task.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Task.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="180" column="38" selection-start="3974" selection-end="3974" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1894#1907#0" expanded="true" />
+                <element signature="e#2025#2038#0" expanded="true" />
+                <element signature="method#getId#0;class#Task#0" expanded="true" />
+                <element signature="method#setId#0;class#Task#0" expanded="true" />
+                <element signature="method#getName#0;class#Task#0" expanded="true" />
+                <element signature="method#setName#0;class#Task#0" expanded="true" />
+                <element signature="method#getPath#0;class#Task#0" expanded="true" />
+                <element signature="method#setPath#0;class#Task#0" expanded="true" />
+                <element signature="method#getDateCreated#0;class#Task#0" expanded="true" />
+                <element signature="method#setDateCreated#0;class#Task#0" expanded="true" />
+                <element signature="method#getDateModified#0;class#Task#0" expanded="true" />
+                <element signature="method#setDateModified#0;class#Task#0" expanded="true" />
+                <element signature="method#getCreatedAccount#0;class#Task#0" expanded="true" />
+                <element signature="method#setCreatedAccount#0;class#Task#0" expanded="true" />
+                <element signature="method#getModifiedAccount#0;class#Task#0" expanded="true" />
+                <element signature="method#setModifiedAccount#0;class#Task#0" expanded="true" />
+                <element signature="method#getDateLastEvent#0;class#Task#0" expanded="true" />
+                <element signature="method#setDateLastEvent#0;class#Task#0" expanded="true" />
+                <element signature="method#getTimeSummaries#0;class#Task#0" expanded="true" />
+                <element signature="method#setTimeSummaries#0;class#Task#0" expanded="true" />
+                <element signature="method#getTimeSegments#0;class#Task#0" expanded="true" />
+                <element signature="method#setTimeSegments#0;class#Task#0" expanded="true" />
+                <element signature="method#getProjects#0;class#Task#0" expanded="true" />
+                <element signature="method#setProjects#0;class#Task#0" expanded="true" />
+                <element signature="method#getCode#0;class#Task#0" expanded="true" />
+                <element signature="method#setCode#0;class#Task#0" expanded="true" />
+                <element signature="method#getDeleted#0;class#Task#0" expanded="true" />
+                <element signature="method#setDeleted#0;class#Task#0" expanded="true" />
+                <element signature="method#setClients#0;class#Task#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="persistence.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/java/META-INF/persistence.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="0" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.62032086">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="restricted-layout.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/timetime.war/WEB-INF/templates/restricted-layout.xhtml">
+      <file leaf-file-name="Company.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Company.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="39" selection-start="1289" selection-end="1300" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="22" column="13" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1082#1090#0" expanded="true" />
+                <element signature="e#1200#1209#0" expanded="true" />
+                <element signature="method#Company#1;class#Company#0" expanded="true" />
+                <element signature="method#getId#0;class#Company#0" expanded="true" />
+                <element signature="method#setId#0;class#Company#0" expanded="true" />
+                <element signature="method#getName#0;class#Company#0" expanded="true" />
+                <element signature="method#setName#0;class#Company#0" expanded="true" />
+                <element signature="method#getDateCreated#0;class#Company#0" expanded="true" />
+                <element signature="method#setDateCreated#0;class#Company#0" expanded="true" />
+                <element signature="method#getDateModified#0;class#Company#0" expanded="true" />
+                <element signature="method#setDateModified#0;class#Company#0" expanded="true" />
+                <element signature="method#getAccounts#0;class#Company#0" expanded="true" />
+                <element signature="method#setAccounts#0;class#Company#0" expanded="true" />
+                <element signature="method#getClients#0;class#Company#0" expanded="true" />
+                <element signature="method#setClients#0;class#Company#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -341,22 +497,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/security/AuthenticatorImpl.java" />
-        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/security/Restrictions.java" />
-        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/security/annotations/AuthenticatedUser.java" />
-        <option value="$PROJECT_DIR$/web/pages/secure/home.xhtml" />
-        <option value="$PROJECT_DIR$/web/pages/index.xhtml" />
-        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/view/ViewMapping.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/build.xml" />
-        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java" />
-        <option value="$PROJECT_DIR$/timetime.war/WEB-INF/templates/restricted-layout.xhtml" />
         <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/web/validation/AccountValidation.java" />
         <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/util/TimeTimeConstants.java" />
         <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/services/RegisterService.java" />
         <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/web/validation/RegisterAccountValidator.java" />
         <option value="$PROJECT_DIR$/timetime.war/resources/css/main.css" />
         <option value="$PROJECT_DIR$/timetime.war/pages/index.xhtml" />
+        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TaskSummary.java" />
+        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Company.java" />
+        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSheet.java" />
+        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSummary.java" />
+        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java" />
+        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSegment.java" />
+        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Project.java" />
+        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Client.java" />
+        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Task.java" />
+        <option value="$PROJECT_DIR$/src/java/META-INF/persistence.xml" />
       </list>
     </option>
   </component>
@@ -392,6 +548,20 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -900,6 +1070,78 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="approachingpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="approachingpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -974,20 +1216,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -999,7 +1227,7 @@
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.sourceCode.XML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Software/java/seam_3/security" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bodge/bravo/svs" />
     <property name="project.structure.side.proportion" value="0.15850815" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -1305,7 +1533,11 @@
       <created>1358747704241</created>
       <updated>1358747704241</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="registration and validation">
+      <created>1358756876129</created>
+      <updated>1358756876129</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1336,9 +1568,8 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24908201" sideWeight="0.6004184" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24908201" sideWeight="0.6537657" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39958158" sideWeight="0.497552" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39958158" sideWeight="0.49816403" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1347,11 +1578,11 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845187" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2735618" sideWeight="0.2583682" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2735618" sideWeight="0.39644352" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2735618" sideWeight="0.38807532" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2735618" sideWeight="0.6537657" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1360,6 +1591,7 @@
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294979" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1401,7 +1633,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed web to timetime.war so it can be deployed in place for dev." />
+    <option name="LAST_COMMIT_MESSAGE" value="registration and validation" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1430,6 +1662,7 @@
     <MESSAGE value="arquillian, rest representations." />
     <MESSAGE value="jsf view mapping, security annotations" />
     <MESSAGE value="changed web to timetime.war so it can be deployed in place for dev." />
+    <MESSAGE value="registration and validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1481,71 +1714,9 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="20" selection-start="700" selection-end="700" vertical-scroll-proportion="0.25646794">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="179" column="33" selection-start="3764" selection-end="3764" vertical-scroll-proportion="1.2564656">
-          <folding>
-            <element signature="method#setUsername#0;class#Account#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timetime.war/WEB-INF/templates/restricted-layout.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="39" selection-start="1289" selection-end="1300" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/util/TimeTimeConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="111" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timetime.war/pages/register.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="45" selection-start="532" selection-end="532" vertical-scroll-proportion="0.18563536">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timetime.war/pages/auth/login.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="46" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/ivy/compile/seam-security-3.1.0.Final.jar!/org/jboss/seam/security/BaseAuthenticator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../Software/java/seam_3/security/api/src/main/java/org/jboss/seam/security/Authenticator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="152" selection-end="152" vertical-scroll-proportion="0.119337015">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../Software/java/seam_3/security/impl/src/main/java/org/jboss/seam/security/BaseAuthenticator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="56" selection-start="240" selection-end="240" vertical-scroll-proportion="0.13259669">
-          <folding>
-            <element signature="method#getStatus#0;class#BaseAuthenticator#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="10" column="56" selection-start="240" selection-end="240" vertical-scroll-proportion="0.13259669" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/security/AuthenticatorImpl.java">
@@ -1560,30 +1731,12 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/ivy/compile/seam-security-3.1.0.Final.jar!/org/jboss/seam/security/IdentityImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="21" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="21" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/services/RegisterService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="38" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setInputFullName#0;class#RegisterService#0" expanded="true" />
-            <element signature="method#getInputEmail#0;class#RegisterService#0" expanded="true" />
-            <element signature="method#setInputEmail#0;class#RegisterService#0" expanded="true" />
-            <element signature="method#getInputCompany#0;class#RegisterService#0" expanded="true" />
-            <element signature="method#setInputCompany#0;class#RegisterService#0" expanded="true" />
-            <element signature="method#getInputPassword#0;class#RegisterService#0" expanded="true" />
-            <element signature="method#setInputPassword#0;class#RegisterService#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/util/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="30" selection-start="3283" selection-end="3283" vertical-scroll-proportion="0.0">
+        <state line="24" column="29" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1591,23 +1744,213 @@
     <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/web/validation/RegisterAccountValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="0" selection-start="1958" selection-end="1958" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createError#0;class#RegisterAccountValidator#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/timetime.war/resources/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="10" selection-start="540" selection-end="540" vertical-scroll-proportion="-17.192308">
+        <state line="39" column="10" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/timetime.war/pages/index.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="49" selection-start="2572" selection-end="2572" vertical-scroll-proportion="1.2919708">
+        <state line="63" column="49" selection-start="2572" selection-end="2572" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSummary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="34" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getId#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#setId#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#getTask#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#setTask#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#getAccount#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#setAccount#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#getDate#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#setDate#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#getDateCreated#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#setDateCreated#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#getDateModified#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#setDateModified#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#getNotes#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#setNotes#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#setReviewer#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#getStatus#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#setStatus#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#getMinutesRecorded#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#setMinutesRecorded#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#getMinutesEntered#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#setMinutesEntered#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#getDateSubmitted#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#setDateSubmitted#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#getDateApproved#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#setDateApproved#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#getDateRejected#0;class#TimeSummary#0" expanded="true" />
+            <element signature="method#setDateRejected#0;class#TimeSummary#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/util/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="25" selection-start="1742" selection-end="1742" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="5" selection-start="2498" selection-end="2498" vertical-scroll-proportion="-29.461538">
+          <folding>
+            <element signature="e#2299#2308#0" expanded="true" />
+            <element signature="method#Account#0;class#Account#0" expanded="true" />
+            <element signature="method#getEmail#0;class#Account#0" expanded="true" />
+            <element signature="method#getUsername#0;class#Account#0" expanded="true" />
+            <element signature="method#getManager#0;class#Account#0" expanded="true" />
+            <element signature="method#setManager#0;class#Account#0" expanded="true" />
+            <element signature="method#getEmailVerificationCode#0;class#Account#0" expanded="true" />
+            <element signature="method#setEmailVerificationCode#0;class#Account#0" expanded="true" />
+            <element signature="method#getEmailVerified#0;class#Account#0" expanded="true" />
+            <element signature="method#setEmailVerified#0;class#Account#0" expanded="true" />
+            <element signature="method#getStaff#0;class#Account#0" expanded="true" />
+            <element signature="method#setStaff#0;class#Account#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSegment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="33" selection-start="2351" selection-end="2351" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#getProject#0;class#TimeSegment#0" expanded="true" />
+            <element signature="method#setProject#0;class#TimeSegment#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Project.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="0" selection-start="1211" selection-end="1414" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getId#0;class#Project#0" expanded="true" />
+            <element signature="method#setId#0;class#Project#0" expanded="true" />
+            <element signature="method#getName#0;class#Project#0" expanded="true" />
+            <element signature="method#setName#0;class#Project#0" expanded="true" />
+            <element signature="method#getDateCreated#0;class#Project#0" expanded="true" />
+            <element signature="method#setDateCreated#0;class#Project#0" expanded="true" />
+            <element signature="method#getDateModified#0;class#Project#0" expanded="true" />
+            <element signature="method#setDateModified#0;class#Project#0" expanded="true" />
+            <element signature="method#getTasks#0;class#Project#0" expanded="true" />
+            <element signature="method#setTasks#0;class#Project#0" expanded="true" />
+            <element signature="method#getClient#0;class#Project#0" expanded="true" />
+            <element signature="method#setClient#0;class#Project#0" expanded="true" />
+            <element signature="method#getCompany#0;class#Project#0" expanded="true" />
+            <element signature="method#setCompany#0;class#Project#0" expanded="true" />
+            <element signature="method#getDeleted#0;class#Project#0" expanded="true" />
+            <element signature="method#setDeleted#0;class#Project#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="13" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1082#1090#0" expanded="true" />
+            <element signature="e#1200#1209#0" expanded="true" />
+            <element signature="method#Company#1;class#Company#0" expanded="true" />
+            <element signature="method#getId#0;class#Company#0" expanded="true" />
+            <element signature="method#setId#0;class#Company#0" expanded="true" />
+            <element signature="method#getName#0;class#Company#0" expanded="true" />
+            <element signature="method#setName#0;class#Company#0" expanded="true" />
+            <element signature="method#getDateCreated#0;class#Company#0" expanded="true" />
+            <element signature="method#setDateCreated#0;class#Company#0" expanded="true" />
+            <element signature="method#getDateModified#0;class#Company#0" expanded="true" />
+            <element signature="method#setDateModified#0;class#Company#0" expanded="true" />
+            <element signature="method#getAccounts#0;class#Company#0" expanded="true" />
+            <element signature="method#setAccounts#0;class#Company#0" expanded="true" />
+            <element signature="method#getClients#0;class#Company#0" expanded="true" />
+            <element signature="method#setClients#0;class#Company#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="134" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1268#1277#0" expanded="true" />
+            <element signature="method#getId#0;class#Client#0" expanded="true" />
+            <element signature="method#setId#0;class#Client#0" expanded="true" />
+            <element signature="method#getName#0;class#Client#0" expanded="true" />
+            <element signature="method#setName#0;class#Client#0" expanded="true" />
+            <element signature="method#getDateCreated#0;class#Client#0" expanded="true" />
+            <element signature="method#setDateCreated#0;class#Client#0" expanded="true" />
+            <element signature="method#getDateModified#0;class#Client#0" expanded="true" />
+            <element signature="method#setDateModified#0;class#Client#0" expanded="true" />
+            <element signature="method#getProjects#0;class#Client#0" expanded="true" />
+            <element signature="method#setProjects#0;class#Client#0" expanded="true" />
+            <element signature="method#getCompany#0;class#Client#0" expanded="true" />
+            <element signature="method#setCompany#0;class#Client#0" expanded="true" />
+            <element signature="method#getDeleted#0;class#Client#0" expanded="true" />
+            <element signature="method#setDeleted#0;class#Client#0" expanded="true" />
+            <element signature="method#getTasks#0;class#Client#0" expanded="true" />
+            <element signature="method#setTasks#0;class#Client#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="38" selection-start="3974" selection-end="3974" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1894#1907#0" expanded="true" />
+            <element signature="e#2025#2038#0" expanded="true" />
+            <element signature="method#getId#0;class#Task#0" expanded="true" />
+            <element signature="method#setId#0;class#Task#0" expanded="true" />
+            <element signature="method#getName#0;class#Task#0" expanded="true" />
+            <element signature="method#setName#0;class#Task#0" expanded="true" />
+            <element signature="method#getPath#0;class#Task#0" expanded="true" />
+            <element signature="method#setPath#0;class#Task#0" expanded="true" />
+            <element signature="method#getDateCreated#0;class#Task#0" expanded="true" />
+            <element signature="method#setDateCreated#0;class#Task#0" expanded="true" />
+            <element signature="method#getDateModified#0;class#Task#0" expanded="true" />
+            <element signature="method#setDateModified#0;class#Task#0" expanded="true" />
+            <element signature="method#getCreatedAccount#0;class#Task#0" expanded="true" />
+            <element signature="method#setCreatedAccount#0;class#Task#0" expanded="true" />
+            <element signature="method#getModifiedAccount#0;class#Task#0" expanded="true" />
+            <element signature="method#setModifiedAccount#0;class#Task#0" expanded="true" />
+            <element signature="method#getDateLastEvent#0;class#Task#0" expanded="true" />
+            <element signature="method#setDateLastEvent#0;class#Task#0" expanded="true" />
+            <element signature="method#getTimeSummaries#0;class#Task#0" expanded="true" />
+            <element signature="method#setTimeSummaries#0;class#Task#0" expanded="true" />
+            <element signature="method#getTimeSegments#0;class#Task#0" expanded="true" />
+            <element signature="method#setTimeSegments#0;class#Task#0" expanded="true" />
+            <element signature="method#getProjects#0;class#Task#0" expanded="true" />
+            <element signature="method#setProjects#0;class#Task#0" expanded="true" />
+            <element signature="method#getCode#0;class#Task#0" expanded="true" />
+            <element signature="method#setCode#0;class#Task#0" expanded="true" />
+            <element signature="method#getDeleted#0;class#Task#0" expanded="true" />
+            <element signature="method#setDeleted#0;class#Task#0" expanded="true" />
+            <element signature="method#setClients#0;class#Task#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.62032086">
           <folding />
         </state>
       </provider>

@@ -13,6 +13,7 @@
 		<class>com.approachingpi.timetime.data.model.Account</class>
 		<class>com.approachingpi.timetime.data.model.ApiApplication</class>
 		<class>com.approachingpi.timetime.data.model.Authorization</class>
+		<class>com.approachingpi.timetime.data.model.Client</class>
 		<class>com.approachingpi.timetime.data.model.Company</class>
 		<class>com.approachingpi.timetime.data.model.IdentityObject</class>
 		<class>com.approachingpi.timetime.data.model.IdentityObjectCredential</class>
@@ -22,9 +23,10 @@
 		<class>com.approachingpi.timetime.data.model.IdentityObjectType</class>
 		<class>com.approachingpi.timetime.data.model.IdentityPermission</class>
 		<class>com.approachingpi.timetime.data.model.IdentityRoleName</class>
+		<class>com.approachingpi.timetime.data.model.Project</class>
 		<class>com.approachingpi.timetime.data.model.Task</class>
-		<class>com.approachingpi.timetime.data.model.TaskSummary</class>
 		<class>com.approachingpi.timetime.data.model.TimeSegment</class>
+		<class>com.approachingpi.timetime.data.model.TimeSummary</class>
 
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 

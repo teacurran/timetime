@@ -17,7 +17,12 @@ import javax.persistence.TemporalType;
 @Entity
 @Access( AccessType.FIELD )
 @Cacheable
-public class TaskSummary implements java.io.Serializable {
+public class TimeSummary implements java.io.Serializable {
+
+	public static String STATUS_PENDING;
+	public static String STATUS_SUBMITTED;
+	public static String STATUS_REJECTED;
+	public static String STATUS_ACCEPTED;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,11 +34,20 @@ public class TaskSummary implements java.io.Serializable {
 	@ManyToOne
 	protected Account account;
 
+	@ManyToOne
+	protected Account reviewer;
+
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date date;
 
 	@Basic
-	protected int minutes;
+	protected String status;
+
+	@Basic
+	protected int minutesRecorded;
+
+	@Basic
+	protected int minutesEntered;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date dateCreated;
@@ -41,10 +55,19 @@ public class TaskSummary implements java.io.Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date dateModified;
 
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date dateSubmitted;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date dateApproved;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date dateRejected;
+
 	@Lob
 	protected String notes;
 
-	public TaskSummary() {
+	public TimeSummary() {
 	}
 
 	public Integer getId() {
@@ -79,14 +102,6 @@ public class TaskSummary implements java.io.Serializable {
 		this.date = date;
 	}
 
-	public int getMinutes() {
-		return minutes;
-	}
-
-	public void setMinutes(int minutes) {
-		this.minutes = minutes;
-	}
-
 	public Date getDateCreated() {
 		return dateCreated;
 	}
@@ -109,5 +124,61 @@ public class TaskSummary implements java.io.Serializable {
 
 	public void setNotes(String notes) {
 		this.notes = notes;
+	}
+
+	public Account getReviewer() {
+		return reviewer;
+	}
+
+	public void setReviewer(Account reviewer) {
+		this.reviewer = reviewer;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public int getMinutesRecorded() {
+		return minutesRecorded;
+	}
+
+	public void setMinutesRecorded(int minutesRecorded) {
+		this.minutesRecorded = minutesRecorded;
+	}
+
+	public int getMinutesEntered() {
+		return minutesEntered;
+	}
+
+	public void setMinutesEntered(int minutesEntered) {
+		this.minutesEntered = minutesEntered;
+	}
+
+	public Date getDateSubmitted() {
+		return dateSubmitted;
+	}
+
+	public void setDateSubmitted(Date dateSubmitted) {
+		this.dateSubmitted = dateSubmitted;
+	}
+
+	public Date getDateApproved() {
+		return dateApproved;
+	}
+
+	public void setDateApproved(Date dateApproved) {
+		this.dateApproved = dateApproved;
+	}
+
+	public Date getDateRejected() {
+		return dateRejected;
+	}
+
+	public void setDateRejected(Date dateRejected) {
+		this.dateRejected = dateRejected;
 	}
 }

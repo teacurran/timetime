@@ -2,7 +2,6 @@ package com.approachingpi.timetime.data.model;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
@@ -19,6 +18,8 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import com.approachingpi.timetime.util.StringUtils;
 
 @Entity
 @Access( AccessType.FIELD )
@@ -45,11 +46,20 @@ public class Account implements java.io.Serializable {
 	@ManyToOne
 	private Company company;
 
+	@ManyToOne
+	private Account manager;
+
 	@Basic
 	private String fullName;
 
 	@Basic
 	private String email;
+
+	@Basic
+	private String emailVerificationCode;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date emailVerified;
 
 	@Basic
 	private String password;
@@ -73,12 +83,18 @@ public class Account implements java.io.Serializable {
 	private List<TimeSegment> timeSegments = new ArrayList<TimeSegment>(0);
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "account")
-	private List<TaskSummary> taskSummaries = new ArrayList<TaskSummary>(0);
+	private List<TimeSummary> timeSummaries = new ArrayList<TimeSummary>(0);
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "manager")
+	private List<Account> staff = new ArrayList<Account>(0);
 
 	@Basic
 	private boolean enabled;
 
 	public Account() {
+		dateCreated = new Date();
+		dateModified = new Date();
+		emailVerificationCode = StringUtils.generateRandomString("******");
 	}
 
 	public Integer getId() {
@@ -145,12 +161,12 @@ public class Account implements java.io.Serializable {
 		this.timeSegments = timeSegments;
 	}
 
-	public List<TaskSummary> getTaskSummaries() {
-		return taskSummaries;
+	public List<TimeSummary> getTimeSummaries() {
+		return timeSummaries;
 	}
 
-	public void setTaskSummaries(List<TaskSummary> taskSummaries) {
-		this.taskSummaries = taskSummaries;
+	public void setTimeSummaries(List<TimeSummary> taskSummaries) {
+		this.timeSummaries = taskSummaries;
 	}
 
 	public boolean isEnabled() {
@@ -183,5 +199,37 @@ public class Account implements java.io.Serializable {
 
 	public void setUsername(String username) {
 		this.username = username;
+	}
+
+	public Account getManager() {
+		return manager;
+	}
+
+	public void setManager(Account manager) {
+		this.manager = manager;
+	}
+
+	public String getEmailVerificationCode() {
+		return emailVerificationCode;
+	}
+
+	public void setEmailVerificationCode(String emailVerificationCode) {
+		this.emailVerificationCode = emailVerificationCode;
+	}
+
+	public Date getEmailVerified() {
+		return emailVerified;
+	}
+
+	public void setEmailVerified(Date emailVerified) {
+		this.emailVerified = emailVerified;
+	}
+
+	public List<Account> getStaff() {
+		return staff;
+	}
+
+	public void setStaff(List<Account> staff) {
+		this.staff = staff;
 	}
 }

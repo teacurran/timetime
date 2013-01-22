@@ -2,7 +2,6 @@ package com.approachingpi.timetime.data.model;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
 import javax.persistence.Access;
 import javax.persistence.AccessType;
@@ -14,6 +13,9 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
@@ -28,20 +30,25 @@ public class Task implements java.io.Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected Integer id;
 
-	@ManyToOne
-	protected Company company;
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "projects_tasks", joinColumns = @JoinColumn(name = "project_id"), inverseJoinColumns = @JoinColumn(name = "task_id"))
+	protected List<Project> projects;
 
-	@Basic
-	protected Integer parentId;
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "clients_tasks", joinColumns = @JoinColumn(name = "client_id"), inverseJoinColumns = @JoinColumn(name = "task_id"))
+	protected List<Client> clients;
 
 	@Basic
 	protected String name;
 
 	@Column(length = 20)
-	protected String nameShort;
+	protected String code;
 
 	@Basic
 	protected String path;
+
+	@Basic
+	protected Boolean deleted = false;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date dateCreated;
@@ -59,16 +66,12 @@ public class Task implements java.io.Serializable {
 	protected Date dateLastEvent;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "task")
-	protected List<TaskSummary> taskSummaries = new ArrayList<TaskSummary>(0);
+	protected List<TimeSummary> timeSummaries = new ArrayList<TimeSummary>(0);
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "task")
 	protected List<TimeSegment> timeSegments = new ArrayList<TimeSegment>(0);
 
 	public Task() {
-	}
-
-	public Task(Company company) {
-		this.company = company;
 	}
 
 	public Integer getId() {
@@ -79,36 +82,12 @@ public class Task implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Company getCompany() {
-		return this.company;
-	}
-
-	public void setCompany(Company company) {
-		this.company = company;
-	}
-
-	public Integer getParentId() {
-		return this.parentId;
-	}
-
-	public void setParentId(Integer parentId) {
-		this.parentId = parentId;
-	}
-
 	public String getName() {
 		return this.name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getNameShort() {
-		return this.nameShort;
-	}
-
-	public void setNameShort(String nameShort) {
-		this.nameShort = nameShort;
 	}
 
 	public String getPath() {
@@ -159,12 +138,12 @@ public class Task implements java.io.Serializable {
 		this.dateLastEvent = dateLastEvent;
 	}
 
-	public List<TaskSummary> getTaskSummaries() {
-		return this.taskSummaries;
+	public List<TimeSummary> getTimeSummaries() {
+		return this.timeSummaries;
 	}
 
-	public void setTaskSummaries(List<TaskSummary> taskSummaries) {
-		this.taskSummaries = taskSummaries;
+	public void setTimeSummaries(List<TimeSummary> taskSummaries) {
+		this.timeSummaries = taskSummaries;
 	}
 
 	public List<TimeSegment> getTimeSegments() {
@@ -175,4 +154,35 @@ public class Task implements java.io.Serializable {
 		this.timeSegments = timeSegments;
 	}
 
+	public List<Project> getProjects() {
+		return projects;
+	}
+
+	public void setProjects(List<Project> projects) {
+		this.projects = projects;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public Boolean getDeleted() {
+		return deleted;
+	}
+
+	public void setDeleted(Boolean deleted) {
+		this.deleted = deleted;
+	}
+
+	public List<Client> getClients() {
+		return clients;
+	}
+
+	public void setClients(List<Client> clients) {
+		this.clients = clients;
+	}
 }

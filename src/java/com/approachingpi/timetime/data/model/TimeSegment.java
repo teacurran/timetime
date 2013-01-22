@@ -28,6 +28,9 @@ public class TimeSegment implements java.io.Serializable {
 	private Integer id;
 
 	@ManyToOne
+	private Project project;
+
+	@ManyToOne
 	private Task task;
 
 	@ManyToOne
@@ -106,4 +109,11 @@ public class TimeSegment implements java.io.Serializable {
 		this.dateEnd = dateEnd;
 	}
 
+	public Project getProject() {
+		return project;
+	}
+
+	public void setProject(Project project) {
+		this.project = project;
+	}
 }
