@@ -60,8 +60,8 @@ public class RestClientTestCase {
 
 	@Deployment(testable = false)
 	public static WebArchive create() {
-		WebArchive archive = ShrinkWrap.create(ZipImporter.class, "shortvid-test.war")
-				.importFrom(new File("dist/shortvid.war"))
+		WebArchive archive = ShrinkWrap.create(ZipImporter.class, "timetime-test.war")
+				.importFrom(new File("dist/timetime-test-1.0-DEV.war"))
 				.as(WebArchive.class)
 					.addPackage("test.com.shortvid.app.persistence");
 

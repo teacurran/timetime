@@ -68,7 +68,9 @@
 	<xmlproperty keepRoot="false"
 		file="${conf.dir}/application.properties.xml" />
 
+	<!--
 	<property name="dist.target" value="${app.name}" />
+	-->
 
 	<property name="app.version" value="${app.version.major}.${app.version.minor}" />
 
@@ -215,6 +217,8 @@
 		<!-- Set the default build mode (if no build mode has been set) -->
 		<property name="build.mode" value="development" />
 
+		<property name="build.number" value="DEV" />
+
 		<!-- Define the distribution properties -->
 		<property name="dist.context" value="${app.name}" />
 
@@ -322,6 +326,7 @@
 			<replacefilter token="@db.source.main.dialect@" value="${db.source.main.dialect}" />
 			<replacefilter token="@db.source.main.jta_data_source@" value="${db.source.main.jta_data_source}" />
 
+			<replacefilter token="@jboss.as7.home@" value="${jboss.as7.home}" />
 		</replace>
 
 		<!-- Populate the runtime libraries -->
@@ -414,7 +419,7 @@
 				>
 			<classpath refid="test.classpath" />
 			<formatter type="xml" />
-			<test name="test.com.shortvid.app.RestClientTestCase" outfile="${dist.target}.tests" todir="${dist.dir}" />
+			<test name="test.com.approachingpi.timetime.RestClientTestCase" outfile="${app.name}.tests" todir="${dist.dir}" />
 		</junit>
 
 	</target>

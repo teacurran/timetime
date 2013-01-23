@@ -1,0 +1,32 @@
+<root>
+	<db>
+		<!-- Data source(s) -->
+		<source>
+			<main>
+				<dialect>org.hibernate.dialect.MySQL5InnoDBDialect</dialect>
+				<driver>mysql</driver>
+				<driver_class>com.mysql.jdbc.Driver</driver_class>
+				<username>root</username>
+				<password>root</password>
+				<host>127.0.0.1</host>
+				<port>3306</port>
+				<schema>timetime</schema>
+				<url_base>jdbc:mysql://${db.source.main.host}:${db.source.main.port}</url_base>
+				<url>${db.source.main.url_base}/${db.source.main.schema}</url>
+				<jta_data_source>java:jboss/datasources/${db.source.main.schema}</jta_data_source>
+
+				<hibernate>
+					<!-- validate | update | create | create-drop -->
+					<hbm2ddl>update</hbm2ddl>
+					<show_sql>true</show_sql>
+					<format_sql>true</format_sql>
+					<generate_statistics>false</generate_statistics>
+					<use_sql_comments>true</use_sql_comments>
+				</hibernate>
+			</main>
+		</source>
+	</db>
+	<build>
+		<number>DEV</number>
+	</build>
+</root>

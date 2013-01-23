@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Client.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Project.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TaskSummary.java" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSummary.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Company.java" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Company.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Task.java" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Task.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSegment.java" afterPath="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSegment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/java/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/java/META-INF/persistence.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/test/classes/arquillian.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/test/configuration.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/conf/test/classes/settings.mode.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/java/test/com/approachingpi/timetime/RestClientTestCase.java" afterPath="$PROJECT_DIR$/test/java/test/com/approachingpi/timetime/RestClientTestCase.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="timetime.iws" />
@@ -111,7 +108,7 @@
     <ignored path="local.build.properties" />
     <ignored path=".idea/codeStyleSettings.xml" />
     <ignored path=".idea/libraries/compile.xml" />
-    <file path="/Dummy.txt" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358808976754" ignored="false" />
+    <file path="/Dummy.txt" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358924890528" ignored="false" />
     <file path="/a.xml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357964256350" ignored="false" />
     <file path="/a.dummy" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358833479388" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/src/java/com/shortvid/api/v1/resources/AccountResource.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357615631846" ignored="false" />
@@ -133,10 +130,10 @@
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/src/java/com/shortvid/api/v1/representations/ServiceListType.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357615491208" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/src/java/com/shortvid/api/v1/representations/ServiceType.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357615497179" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/src/java/com/shortvid/api/v1/representations/VideoType.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357615522155" ignored="false" />
-    <file path="/build.xml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358747105830" ignored="false" />
+    <file path="/build.xml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358976286144" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/src/java/com/shortvid/api/v1/resources/PasswordResetResource.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357618102318" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/src/java/com/shortvid/api/v1/resources/ServiceResource.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357618144391" ignored="false" />
-    <file path="/.gitignore" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357618364732" ignored="false" />
+    <file path="/.gitignore" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358835178171" ignored="false" />
     <file path="$PROJECT_DIR$/../../../../shortvid/server/shortvid.com/src/java/com/shortvid/services/BaseService.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357619021827" ignored="false" />
     <file path="/V1Application.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357619137159" ignored="false" />
     <file path="/Configuration.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1357619308422" ignored="false" />
@@ -178,16 +175,16 @@
     <file path="/RegisterService.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358754780399" ignored="false" />
     <file path="/TimeTimeConstants.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358753055112" ignored="false" />
     <file path="/RegisterAccountValidator.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358755248090" ignored="false" />
-    <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterBundle/Entity/Account.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358806774498" ignored="false" />
-    <file path="/Account.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358805853948" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterBundle/Entity/Account.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358924848532" ignored="false" />
+    <file path="/Account.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358923344849" ignored="false" />
     <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterBundle/Entity/Comment.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358806084745" ignored="false" />
     <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterBundle/Entity/Tag.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358806774498" ignored="false" />
     <file path="/Tag.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358806168220" ignored="false" />
     <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterBundle/Entity/File.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358806774498" ignored="false" />
     <file path="/File.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358806213390" ignored="false" />
-    <file path="/dummy.txt" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358806805500" ignored="false" />
+    <file path="/dummy.txt" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358923842687" ignored="false" />
     <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterBundle/Entity/Note.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358806774498" ignored="false" />
-    <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterApiBundle/Controller/AccountController.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358807115751" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterApiBundle/Controller/AccountController.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358922952135" ignored="false" />
     <file path="/AccountController.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358807116253" ignored="false" />
     <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterApiBundle/Controller/FileController.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358807585098" ignored="false" />
     <file path="/FileController.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358807555369" ignored="false" />
@@ -201,6 +198,24 @@
     <file path="/Client.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358831442129" ignored="false" />
     <file path="/TimeSheet.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358832001143" ignored="false" />
     <file path="/TimeSummary.java" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358832947786" ignored="false" />
+    <file path="$PROJECT_DIR$/../flex-image-crop/.gitignore" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358835182072" ignored="false" />
+    <file path="$PROJECT_DIR$/../flex-image-crop/src/main.mxml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358835257691" ignored="false" />
+    <file path="$PROJECT_DIR$/../flex-image-crop/src/com/wirelust/imagecrop/ImageCrop.as" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358835287634" ignored="false" />
+    <file path="/fragment.js2" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358835459381" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterBundle/Tests/Controller/ApiAccountControllerTest.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358874971535" ignored="false" />
+    <file path="/ApiAccountControllerTest.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358900856167" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/composer.json" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358923832974" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/vendor/autoload.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358924712820" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterApiBundle/Tests/Controller/ApiAccountControllerTest.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358923001930" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/app/config/config.yml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358924360152" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/app/config/config_test.yml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358898992265" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterApiBundle/Tests/Controller/BaseTestCase.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358900911055" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterBundle/Resources/config/validation.yml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358901853512" ignored="false" />
+    <file path="/validation.yml" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358901854280" ignored="false" />
+    <file path="/private/var/folders/tq/q15mx5qj6ydbfybj80tqqwvh0000gn/T/ide-phpunit.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358923585277" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/src/Wirelust/HexHunterBundle/Form/AccountType.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358921476549" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/app/AppKernel.php" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358924020808" ignored="false" />
+    <file path="$PROJECT_DIR$/../Hex-Hunter/app/bootstrap.php.cache" changelist="f53a17ad-62f9-4e0d-b7ce-7c7bf1e3b8dc" time="1358924712820" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,222 +274,97 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/timetime.war/pages/index.xhtml">
+      <file leaf-file-name="EntityManagerProducer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/java/test/com/approachingpi/timetime/persistence/EntityManagerProducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="49" selection-start="2572" selection-end="2572" vertical-scroll-proportion="0.0">
+            <state line="7" column="13" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Account.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java">
+      <file leaf-file-name="RestClientTestCase.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/java/test/com/approachingpi/timetime/RestClientTestCase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="5" selection-start="2498" selection-end="2498" vertical-scroll-proportion="-29.461538">
+            <state line="99" column="20" selection-start="3473" selection-end="3473" vertical-scroll-proportion="0.6480836">
               <folding>
-                <element signature="e#2299#2308#0" expanded="true" />
-                <element signature="method#Account#0;class#Account#0" expanded="true" />
-                <element signature="method#getEmail#0;class#Account#0" expanded="true" />
-                <element signature="method#getUsername#0;class#Account#0" expanded="true" />
-                <element signature="method#getManager#0;class#Account#0" expanded="true" />
-                <element signature="method#setManager#0;class#Account#0" expanded="true" />
-                <element signature="method#getEmailVerificationCode#0;class#Account#0" expanded="true" />
-                <element signature="method#setEmailVerificationCode#0;class#Account#0" expanded="true" />
-                <element signature="method#getEmailVerified#0;class#Account#0" expanded="true" />
-                <element signature="method#setEmailVerified#0;class#Account#0" expanded="true" />
-                <element signature="method#getStaff#0;class#Account#0" expanded="true" />
-                <element signature="method#setStaff#0;class#Account#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#create#0;class#RestClientTestCase#0" expanded="true" />
+                <element signature="method#shouldBeAbleToCreateAccount#0;class#RestClientTestCase#0" expanded="true" />
+                <element signature="method#shouldBeAbleToGetConcept#0;class#RestClientTestCase#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringUtils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/util/StringUtils.java">
+      <file leaf-file-name="build.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="25" selection-start="1742" selection-end="1742" vertical-scroll-proportion="0.0">
+            <state line="329" column="80" selection-start="12089" selection-end="12089" vertical-scroll-proportion="-22.692308">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeSummary.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSummary.java">
+      <file leaf-file-name="ivy.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ivy.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="34" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getId#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#setId#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#getTask#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#setTask#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#getAccount#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#setAccount#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#getDate#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#setDate#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#getDateCreated#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#setDateCreated#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#getDateModified#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#setDateModified#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#getNotes#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#setNotes#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#setReviewer#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#getStatus#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#setStatus#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#getMinutesRecorded#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#setMinutesRecorded#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#getMinutesEntered#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#setMinutesEntered#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#getDateSubmitted#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#setDateSubmitted#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#getDateApproved#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#setDateApproved#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#getDateRejected#0;class#TimeSummary#0" expanded="true" />
-                <element signature="method#setDateRejected#0;class#TimeSummary#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Client.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="134" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1268#1277#0" expanded="true" />
-                <element signature="method#getId#0;class#Client#0" expanded="true" />
-                <element signature="method#setId#0;class#Client#0" expanded="true" />
-                <element signature="method#getName#0;class#Client#0" expanded="true" />
-                <element signature="method#setName#0;class#Client#0" expanded="true" />
-                <element signature="method#getDateCreated#0;class#Client#0" expanded="true" />
-                <element signature="method#setDateCreated#0;class#Client#0" expanded="true" />
-                <element signature="method#getDateModified#0;class#Client#0" expanded="true" />
-                <element signature="method#setDateModified#0;class#Client#0" expanded="true" />
-                <element signature="method#getProjects#0;class#Client#0" expanded="true" />
-                <element signature="method#setProjects#0;class#Client#0" expanded="true" />
-                <element signature="method#getCompany#0;class#Client#0" expanded="true" />
-                <element signature="method#setCompany#0;class#Client#0" expanded="true" />
-                <element signature="method#getDeleted#0;class#Client#0" expanded="true" />
-                <element signature="method#setDeleted#0;class#Client#0" expanded="true" />
-                <element signature="method#getTasks#0;class#Client#0" expanded="true" />
-                <element signature="method#setTasks#0;class#Client#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Project.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Project.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="0" selection-start="1211" selection-end="1414" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getId#0;class#Project#0" expanded="true" />
-                <element signature="method#setId#0;class#Project#0" expanded="true" />
-                <element signature="method#getName#0;class#Project#0" expanded="true" />
-                <element signature="method#setName#0;class#Project#0" expanded="true" />
-                <element signature="method#getDateCreated#0;class#Project#0" expanded="true" />
-                <element signature="method#setDateCreated#0;class#Project#0" expanded="true" />
-                <element signature="method#getDateModified#0;class#Project#0" expanded="true" />
-                <element signature="method#setDateModified#0;class#Project#0" expanded="true" />
-                <element signature="method#getTasks#0;class#Project#0" expanded="true" />
-                <element signature="method#setTasks#0;class#Project#0" expanded="true" />
-                <element signature="method#getClient#0;class#Project#0" expanded="true" />
-                <element signature="method#setClient#0;class#Project#0" expanded="true" />
-                <element signature="method#getCompany#0;class#Project#0" expanded="true" />
-                <element signature="method#setCompany#0;class#Project#0" expanded="true" />
-                <element signature="method#getDeleted#0;class#Project#0" expanded="true" />
-                <element signature="method#setDeleted#0;class#Project#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeSegment.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSegment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="117" column="33" selection-start="2351" selection-end="2351" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="method#getProject#0;class#TimeSegment#0" expanded="true" />
-                <element signature="method#setProject#0;class#TimeSegment#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Task.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Task.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="180" column="38" selection-start="3974" selection-end="3974" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1894#1907#0" expanded="true" />
-                <element signature="e#2025#2038#0" expanded="true" />
-                <element signature="method#getId#0;class#Task#0" expanded="true" />
-                <element signature="method#setId#0;class#Task#0" expanded="true" />
-                <element signature="method#getName#0;class#Task#0" expanded="true" />
-                <element signature="method#setName#0;class#Task#0" expanded="true" />
-                <element signature="method#getPath#0;class#Task#0" expanded="true" />
-                <element signature="method#setPath#0;class#Task#0" expanded="true" />
-                <element signature="method#getDateCreated#0;class#Task#0" expanded="true" />
-                <element signature="method#setDateCreated#0;class#Task#0" expanded="true" />
-                <element signature="method#getDateModified#0;class#Task#0" expanded="true" />
-                <element signature="method#setDateModified#0;class#Task#0" expanded="true" />
-                <element signature="method#getCreatedAccount#0;class#Task#0" expanded="true" />
-                <element signature="method#setCreatedAccount#0;class#Task#0" expanded="true" />
-                <element signature="method#getModifiedAccount#0;class#Task#0" expanded="true" />
-                <element signature="method#setModifiedAccount#0;class#Task#0" expanded="true" />
-                <element signature="method#getDateLastEvent#0;class#Task#0" expanded="true" />
-                <element signature="method#setDateLastEvent#0;class#Task#0" expanded="true" />
-                <element signature="method#getTimeSummaries#0;class#Task#0" expanded="true" />
-                <element signature="method#setTimeSummaries#0;class#Task#0" expanded="true" />
-                <element signature="method#getTimeSegments#0;class#Task#0" expanded="true" />
-                <element signature="method#setTimeSegments#0;class#Task#0" expanded="true" />
-                <element signature="method#getProjects#0;class#Task#0" expanded="true" />
-                <element signature="method#setProjects#0;class#Task#0" expanded="true" />
-                <element signature="method#getCode#0;class#Task#0" expanded="true" />
-                <element signature="method#setCode#0;class#Task#0" expanded="true" />
-                <element signature="method#getDeleted#0;class#Task#0" expanded="true" />
-                <element signature="method#setDeleted#0;class#Task#0" expanded="true" />
-                <element signature="method#setClients#0;class#Task#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="persistence.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/java/META-INF/persistence.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.62032086">
+            <state line="319" column="82" selection-start="13853" selection-end="13890" vertical-scroll-proportion="-15.192307">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Company.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Company.java">
+      <file leaf-file-name="local.build.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/local.build.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="13" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1082#1090#0" expanded="true" />
-                <element signature="e#1200#1209#0" expanded="true" />
-                <element signature="method#Company#1;class#Company#0" expanded="true" />
-                <element signature="method#getId#0;class#Company#0" expanded="true" />
-                <element signature="method#setId#0;class#Company#0" expanded="true" />
-                <element signature="method#getName#0;class#Company#0" expanded="true" />
-                <element signature="method#setName#0;class#Company#0" expanded="true" />
-                <element signature="method#getDateCreated#0;class#Company#0" expanded="true" />
-                <element signature="method#setDateCreated#0;class#Company#0" expanded="true" />
-                <element signature="method#getDateModified#0;class#Company#0" expanded="true" />
-                <element signature="method#setDateModified#0;class#Company#0" expanded="true" />
-                <element signature="method#getAccounts#0;class#Company#0" expanded="true" />
-                <element signature="method#setAccounts#0;class#Company#0" expanded="true" />
-                <element signature="method#getClients#0;class#Company#0" expanded="true" />
-                <element signature="method#setClients#0;class#Company#0" expanded="true" />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="14" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="arquillian.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/test/classes/arquillian.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="39" selection-start="369" selection-end="385" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rebel.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/development/classes/rebel.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="configuration.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/test/configuration.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="44" selection-start="951" selection-end="951" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.mode.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/test/classes/settings.mode.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.mode.properties" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/development/classes/settings.mode.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -497,10 +387,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/web/validation/AccountValidation.java" />
-        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/util/TimeTimeConstants.java" />
-        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/services/RegisterService.java" />
-        <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/web/validation/RegisterAccountValidator.java" />
         <option value="$PROJECT_DIR$/timetime.war/resources/css/main.css" />
         <option value="$PROJECT_DIR$/timetime.war/pages/index.xhtml" />
         <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TaskSummary.java" />
@@ -513,6 +399,10 @@
         <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Client.java" />
         <option value="$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Task.java" />
         <option value="$PROJECT_DIR$/src/java/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/test/java/test/com/approachingpi/timetime/RestClientTestCase.java" />
+        <option value="$PROJECT_DIR$/test/java/arquillian.xml" />
+        <option value="$PROJECT_DIR$/conf/test/classes/arquillian.xml" />
+        <option value="$PROJECT_DIR$/build.xml" />
       </list>
     </option>
   </component>
@@ -548,6 +438,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -558,16 +458,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -600,163 +490,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="timetime.war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime.war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime.war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime.war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime.war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime.war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime.war" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auth" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -764,287 +498,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approachingpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="validation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approachingpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approachingpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approachingpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tags" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approachingpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approachingpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approachingpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approachingpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="security" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="annotations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1075,60 +529,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approachingpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="approachingpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1143,20 +543,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="timetime" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1171,6 +557,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="conf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timetime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1234,19 +660,24 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.approachingpi.timetime.api.v1.exceptions" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/conf/test/classes" />
+      <recent name="$PROJECT_DIR$/conf/test" />
       <recent name="$PROJECT_DIR$/web/pages" />
       <recent name="$PROJECT_DIR$/web/pages/secure" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/conf/test/classes" />
     </key>
   </component>
   <component name="RunManager" selected="JBoss Server.JBoss 7.1.0.Final">
@@ -1537,7 +968,11 @@
       <created>1358756876129</created>
       <updated>1358756876129</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="changed the database around a little bit to match new requirements.">
+      <created>1358834257519</created>
+      <updated>1358834257519</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1569,7 +1004,7 @@
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24908201" sideWeight="0.6537657" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24908201" sideWeight="0.6715481" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39958158" sideWeight="0.497552" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39958158" sideWeight="0.49816403" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1633,7 +1068,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="registration and validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the database around a little bit to match new requirements." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1663,6 +1098,7 @@
     <MESSAGE value="jsf view mapping, security annotations" />
     <MESSAGE value="changed web to timetime.war so it can be deployed in place for dev." />
     <MESSAGE value="registration and validation" />
+    <MESSAGE value="changed the database around a little bit to match new requirements." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1674,8 +1110,8 @@
       <antCommandLine value="" />
       <runInBackground value="true" />
       <targetFilters />
-      <treeView value="true" />
-      <verbose value="true" />
+      <treeView value="false" />
+      <verbose value="false" />
       <viewClosedWhenNoErrors value="false" />
       <expanded value="true" />
     </buildFile>
@@ -1714,244 +1150,120 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../Software/java/seam_3/security/impl/src/main/java/org/jboss/seam/security/BaseAuthenticator.java">
+    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="56" selection-start="240" selection-end="240" vertical-scroll-proportion="0.13259669" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/security/AuthenticatorImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="46" selection-start="406" selection-end="406" vertical-scroll-proportion="0.2">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#authenticate#0;class#AuthenticatorImpl#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/ivy/compile/seam-security-3.1.0.Final.jar!/org/jboss/seam/security/IdentityImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="21" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/services/RegisterService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="29" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+        <state line="59" column="134" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.012931035">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/web/validation/RegisterAccountValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="1958" selection-end="1958" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timetime.war/resources/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="10" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/timetime.war/pages/index.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="49" selection-start="2572" selection-end="2572" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSummary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="34" selection-start="2385" selection-end="2385" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getId#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#setId#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#getTask#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#setTask#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#getAccount#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#setAccount#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#getDate#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#setDate#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#getDateCreated#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#setDateCreated#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#getDateModified#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#setDateModified#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#getNotes#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#setNotes#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#setReviewer#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#getStatus#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#setStatus#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#getMinutesRecorded#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#setMinutesRecorded#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#getMinutesEntered#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#setMinutesEntered#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#getDateSubmitted#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#setDateSubmitted#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#getDateApproved#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#setDateApproved#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#getDateRejected#0;class#TimeSummary#0" expanded="true" />
-            <element signature="method#setDateRejected#0;class#TimeSummary#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/util/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="25" selection-start="1742" selection-end="1742" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="5" selection-start="2498" selection-end="2498" vertical-scroll-proportion="-29.461538">
-          <folding>
-            <element signature="e#2299#2308#0" expanded="true" />
-            <element signature="method#Account#0;class#Account#0" expanded="true" />
-            <element signature="method#getEmail#0;class#Account#0" expanded="true" />
-            <element signature="method#getUsername#0;class#Account#0" expanded="true" />
-            <element signature="method#getManager#0;class#Account#0" expanded="true" />
-            <element signature="method#setManager#0;class#Account#0" expanded="true" />
-            <element signature="method#getEmailVerificationCode#0;class#Account#0" expanded="true" />
-            <element signature="method#setEmailVerificationCode#0;class#Account#0" expanded="true" />
-            <element signature="method#getEmailVerified#0;class#Account#0" expanded="true" />
-            <element signature="method#setEmailVerified#0;class#Account#0" expanded="true" />
-            <element signature="method#getStaff#0;class#Account#0" expanded="true" />
-            <element signature="method#setStaff#0;class#Account#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSegment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="33" selection-start="2351" selection-end="2351" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="method#getProject#0;class#TimeSegment#0" expanded="true" />
-            <element signature="method#setProject#0;class#TimeSegment#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Project.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="1211" selection-end="1414" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getId#0;class#Project#0" expanded="true" />
-            <element signature="method#setId#0;class#Project#0" expanded="true" />
-            <element signature="method#getName#0;class#Project#0" expanded="true" />
-            <element signature="method#setName#0;class#Project#0" expanded="true" />
-            <element signature="method#getDateCreated#0;class#Project#0" expanded="true" />
-            <element signature="method#setDateCreated#0;class#Project#0" expanded="true" />
-            <element signature="method#getDateModified#0;class#Project#0" expanded="true" />
-            <element signature="method#setDateModified#0;class#Project#0" expanded="true" />
-            <element signature="method#getTasks#0;class#Project#0" expanded="true" />
-            <element signature="method#setTasks#0;class#Project#0" expanded="true" />
-            <element signature="method#getClient#0;class#Project#0" expanded="true" />
-            <element signature="method#setClient#0;class#Project#0" expanded="true" />
-            <element signature="method#getCompany#0;class#Project#0" expanded="true" />
-            <element signature="method#setCompany#0;class#Project#0" expanded="true" />
-            <element signature="method#getDeleted#0;class#Project#0" expanded="true" />
-            <element signature="method#setDeleted#0;class#Project#0" expanded="true" />
-          </folding>
+        <state line="55" column="0" selection-start="1211" selection-end="1414" vertical-scroll-proportion="0.012931035">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Company.java">
+    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/TimeSegment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1082#1090#0" expanded="true" />
-            <element signature="e#1200#1209#0" expanded="true" />
-            <element signature="method#Company#1;class#Company#0" expanded="true" />
-            <element signature="method#getId#0;class#Company#0" expanded="true" />
-            <element signature="method#setId#0;class#Company#0" expanded="true" />
-            <element signature="method#getName#0;class#Company#0" expanded="true" />
-            <element signature="method#setName#0;class#Company#0" expanded="true" />
-            <element signature="method#getDateCreated#0;class#Company#0" expanded="true" />
-            <element signature="method#setDateCreated#0;class#Company#0" expanded="true" />
-            <element signature="method#getDateModified#0;class#Company#0" expanded="true" />
-            <element signature="method#setDateModified#0;class#Company#0" expanded="true" />
-            <element signature="method#getAccounts#0;class#Company#0" expanded="true" />
-            <element signature="method#setAccounts#0;class#Company#0" expanded="true" />
-            <element signature="method#getClients#0;class#Company#0" expanded="true" />
-            <element signature="method#setClients#0;class#Company#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="134" selection-start="1535" selection-end="1535" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1268#1277#0" expanded="true" />
-            <element signature="method#getId#0;class#Client#0" expanded="true" />
-            <element signature="method#setId#0;class#Client#0" expanded="true" />
-            <element signature="method#getName#0;class#Client#0" expanded="true" />
-            <element signature="method#setName#0;class#Client#0" expanded="true" />
-            <element signature="method#getDateCreated#0;class#Client#0" expanded="true" />
-            <element signature="method#setDateCreated#0;class#Client#0" expanded="true" />
-            <element signature="method#getDateModified#0;class#Client#0" expanded="true" />
-            <element signature="method#setDateModified#0;class#Client#0" expanded="true" />
-            <element signature="method#getProjects#0;class#Client#0" expanded="true" />
-            <element signature="method#setProjects#0;class#Client#0" expanded="true" />
-            <element signature="method#getCompany#0;class#Client#0" expanded="true" />
-            <element signature="method#setCompany#0;class#Client#0" expanded="true" />
-            <element signature="method#getDeleted#0;class#Client#0" expanded="true" />
-            <element signature="method#setDeleted#0;class#Client#0" expanded="true" />
-            <element signature="method#getTasks#0;class#Client#0" expanded="true" />
-            <element signature="method#setTasks#0;class#Client#0" expanded="true" />
-          </folding>
+        <state line="117" column="33" selection-start="2351" selection-end="2351" vertical-scroll-proportion="0.6271552">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Task.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="38" selection-start="3974" selection-end="3974" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1894#1907#0" expanded="true" />
-            <element signature="e#2025#2038#0" expanded="true" />
-            <element signature="method#getId#0;class#Task#0" expanded="true" />
-            <element signature="method#setId#0;class#Task#0" expanded="true" />
-            <element signature="method#getName#0;class#Task#0" expanded="true" />
-            <element signature="method#setName#0;class#Task#0" expanded="true" />
-            <element signature="method#getPath#0;class#Task#0" expanded="true" />
-            <element signature="method#setPath#0;class#Task#0" expanded="true" />
-            <element signature="method#getDateCreated#0;class#Task#0" expanded="true" />
-            <element signature="method#setDateCreated#0;class#Task#0" expanded="true" />
-            <element signature="method#getDateModified#0;class#Task#0" expanded="true" />
-            <element signature="method#setDateModified#0;class#Task#0" expanded="true" />
-            <element signature="method#getCreatedAccount#0;class#Task#0" expanded="true" />
-            <element signature="method#setCreatedAccount#0;class#Task#0" expanded="true" />
-            <element signature="method#getModifiedAccount#0;class#Task#0" expanded="true" />
-            <element signature="method#setModifiedAccount#0;class#Task#0" expanded="true" />
-            <element signature="method#getDateLastEvent#0;class#Task#0" expanded="true" />
-            <element signature="method#setDateLastEvent#0;class#Task#0" expanded="true" />
-            <element signature="method#getTimeSummaries#0;class#Task#0" expanded="true" />
-            <element signature="method#setTimeSummaries#0;class#Task#0" expanded="true" />
-            <element signature="method#getTimeSegments#0;class#Task#0" expanded="true" />
-            <element signature="method#setTimeSegments#0;class#Task#0" expanded="true" />
-            <element signature="method#getProjects#0;class#Task#0" expanded="true" />
-            <element signature="method#setProjects#0;class#Task#0" expanded="true" />
-            <element signature="method#getCode#0;class#Task#0" expanded="true" />
-            <element signature="method#setCode#0;class#Task#0" expanded="true" />
-            <element signature="method#getDeleted#0;class#Task#0" expanded="true" />
-            <element signature="method#setDeleted#0;class#Task#0" expanded="true" />
-            <element signature="method#setClients#0;class#Task#0" expanded="true" />
-          </folding>
+        <state line="180" column="38" selection-start="3974" selection-end="3974" vertical-scroll-proportion="0.54956895">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="1736" selection-end="1736" vertical-scroll-proportion="0.62032086">
+        <state line="42" column="111" selection-start="2368" selection-end="2368" vertical-scroll-proportion="0.54310346">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/approachingpi/timetime/data/model/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="13" selection-start="641" selection-end="641" vertical-scroll-proportion="0.012931035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/java/test/com/approachingpi/timetime/persistence/EntityManagerProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/development/classes/settings.mode.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/test/configuration.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="44" selection-start="951" selection-end="951" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ivy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="319" column="82" selection-start="13853" selection-end="13890" vertical-scroll-proportion="-15.192307">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/local.build.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="14" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/development/classes/rebel.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/test/classes/arquillian.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="39" selection-start="369" selection-end="385" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/test/classes/settings.mode.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="329" column="80" selection-start="12089" selection-end="12089" vertical-scroll-proportion="-22.692308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/java/test/com/approachingpi/timetime/RestClientTestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="20" selection-start="3473" selection-end="3473" vertical-scroll-proportion="0.6480836">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#create#0;class#RestClientTestCase#0" expanded="true" />
+            <element signature="method#shouldBeAbleToCreateAccount#0;class#RestClientTestCase#0" expanded="true" />
+            <element signature="method#shouldBeAbleToGetConcept#0;class#RestClientTestCase#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
