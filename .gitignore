@@ -1,5 +1,4 @@
-./.idea/workspace.xml
-./.idea/codeStyleSettings.xml
+.idea
 
 lib/ivy/*
 atlassian-ide-plugin.xml
