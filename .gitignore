@@ -1,7 +1,8 @@
-lib/ivy/*
-atlassian-ide-plugin.xml
 ./.idea/workspace.xml
 ./.idea/codeStyleSettings.xml
+
+lib/ivy/*
+atlassian-ide-plugin.xml
 dist/*
 timetime.war/WEB-INF/classes/*
 timetime.war/WEB-INF/lib/*
