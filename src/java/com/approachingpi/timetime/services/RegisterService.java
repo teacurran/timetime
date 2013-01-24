@@ -1,12 +1,20 @@
 package com.approachingpi.timetime.services;
 
 import java.io.Serializable;
+import java.security.Identity;
+import java.util.Collection;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 import com.approachingpi.timetime.data.model.Account;
 import com.approachingpi.timetime.data.model.Company;
+import org.picketlink.idm.api.Group;
+import org.picketlink.idm.api.IdentitySession;
+import org.picketlink.idm.api.PersistenceManager;
+import org.picketlink.idm.api.RelationshipManager;
+import org.picketlink.idm.api.User;
+import org.picketlink.idm.common.exception.IdentityException;
 
 /**
  * Date: 1/21/13
@@ -22,6 +30,9 @@ public class RegisterService extends BaseService implements Serializable {
 	@Inject
 	AccountService accountService;
 
+	@Inject
+	IdentitySession identitySession;
+
 	String inputFullName;
 	String inputEmail;
 	String inputCompany;
@@ -29,16 +40,43 @@ public class RegisterService extends BaseService implements Serializable {
 
 	public void registerAccount() {
 
-		Account account = new Account();
-		account.setFullName(inputFullName);
+		PersistenceManager pm = identitySession.getPersistenceManager();
 
-		Company company = new Company(inputCompany);
-		em.persist(company);
-		account.setCompany(company);
+		try {
+			User user = pm.createUser(inputEmail);
 
-		accountService.setPassword(account, inputPassword);
+			Group group = null;
+			Collection<Group> groups = pm.findGroup("user");
+			if (groups != null && groups.size() > 0) {
+				for (Group thisGroup : groups) {
+					group = thisGroup;
+					break;
+				}
+			} else {
+				group = pm.createGroup("user", "user");
+			}
 
-		em.persist(account);
+			if (group != null) {
+				RelationshipManager rm = identitySession.getRelationshipManager();
+				rm.associateUser(group, user);
+			}
+
+
+		} catch (IdentityException ie) {
+
+		}
+
+//		Account account =new Account();
+//		account.setFullName(inputFullName);
+//
+//		Company company = new Company(inputCompany);
+//		em.persist(company);
+//		account.setCompany(company);
+//
+//		accountService.setPassword(account, inputPassword);
+//
+//		em.persist(account);
+
 	}
 
 	public String getInputFullName() {

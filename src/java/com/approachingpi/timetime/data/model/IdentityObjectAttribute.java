@@ -11,14 +11,14 @@ import org.jboss.seam.security.annotations.management.IdentityProperty;
 import org.jboss.seam.security.annotations.management.PropertyType;
 
 /**
- * Date: 1/12/13
+ * Date: 1/24/13
  *
  * @author T. Curran
  */
 @Entity
-public class IdentityObjectCredential implements Serializable {
+public class IdentityObjectAttribute implements Serializable {
 
-	private static final long serialVersionUID = 2053854747612095391L;
+	private static final long serialVersionUID = -1846423703184923605L;
 
 	@Id
 	@GeneratedValue
@@ -27,9 +27,8 @@ public class IdentityObjectCredential implements Serializable {
 	@ManyToOne
 	private IdentityObject identityObject;
 
-	@ManyToOne
-	@IdentityProperty(PropertyType.TYPE)
-	private IdentityObjectCredentialType type;
+	@IdentityProperty(PropertyType.NAME)
+	private String name;
 
 	@IdentityProperty(PropertyType.VALUE)
 	private String value;
@@ -50,12 +49,12 @@ public class IdentityObjectCredential implements Serializable {
 		this.identityObject = identityObject;
 	}
 
-	public IdentityObjectCredentialType getType() {
-		return type;
+	public String getName() {
+		return name;
 	}
 
-	public void setType(IdentityObjectCredentialType type) {
-		this.type = type;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getValue() {

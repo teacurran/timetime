@@ -28,17 +28,14 @@ public class IdentityObjectRelationship implements Serializable {
 
 	@ManyToOne
 	@IdentityProperty(PropertyType.TYPE)
-	@JoinColumn(name = "relationship_type_id")
 	private IdentityObjectRelationshipType relationshipType;
 
 	@ManyToOne
 	@IdentityProperty(PropertyType.RELATIONSHIP_FROM)
-	@JoinColumn(name = "from_identity_id")
 	private IdentityObject from;
 
 	@ManyToOne
 	@IdentityProperty(PropertyType.RELATIONSHIP_TO)
-	@JoinColumn(name = "to_identity_id")
 	private IdentityObject to;
 
 	public Long getId() {

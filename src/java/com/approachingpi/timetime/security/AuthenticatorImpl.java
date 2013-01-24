@@ -1,6 +1,7 @@
 package com.approachingpi.timetime.security;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import org.jboss.seam.security.Authenticator;
 import org.jboss.seam.security.BaseAuthenticator;
@@ -14,6 +15,7 @@ import org.picketlink.idm.impl.api.model.SimpleUser;
  *
  * @author T. Curran
  */
+@Named
 public class AuthenticatorImpl extends BaseAuthenticator implements Authenticator {
 
 	@Inject

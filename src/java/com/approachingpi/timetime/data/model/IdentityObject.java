@@ -16,9 +16,7 @@ import org.jboss.seam.security.annotations.management.PropertyType;
  * @author T. Curran
  */
 @Entity
-
 public class IdentityObject implements Serializable {
-
 
 	private static final long serialVersionUID = -8615976442954753614L;
 
@@ -26,16 +24,12 @@ public class IdentityObject implements Serializable {
 	@GeneratedValue
 	private Long id;
 
-
 	@IdentityProperty(PropertyType.NAME)
 	private String name;
 
-
 	@ManyToOne
 	@IdentityProperty(PropertyType.TYPE)
-	@JoinColumn(name = "identity_object_type_id")
 	private IdentityObjectType type;
-
 
 	public Long getId() {
 		return id;
