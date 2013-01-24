@@ -1,8 +1,12 @@
 package com.approachingpi.timetime.services;
 
+import java.io.Serializable;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
 
 import com.approachingpi.timetime.data.model.Account;
+import com.approachingpi.timetime.data.model.Company;
 
 /**
  * Date: 1/21/13
@@ -10,7 +14,13 @@ import com.approachingpi.timetime.data.model.Account;
  * @author T. Curran
  */
 @Named
-public class RegisterService {
+@SessionScoped
+public class RegisterService extends BaseService implements Serializable {
+
+	private static final long serialVersionUID = -5441655456142315364L;
+
+	@Inject
+	AccountService accountService;
 
 	String inputFullName;
 	String inputEmail;
@@ -19,6 +29,16 @@ public class RegisterService {
 
 	public void registerAccount() {
 
+		Account account = new Account();
+		account.setFullName(inputFullName);
+
+		Company company = new Company(inputCompany);
+		em.persist(company);
+		account.setCompany(company);
+
+		accountService.setPassword(account, inputPassword);
+
+		em.persist(account);
 	}
 
 	public String getInputFullName() {

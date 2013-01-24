@@ -44,12 +44,14 @@ public class Company implements java.io.Serializable {
 	protected Set<Account> accounts = new HashSet<Account>(0);
 
 	public Company() {
+		this.dateCreated = new Date();
+		this.dateModified = new Date();
 	}
 
-	public Company(String name, Date dateCreated, Date dateModified) {
+	public Company(String name) {
 		this.name = name;
-		this.dateCreated = dateCreated;
-		this.dateModified = dateModified;
+		this.dateCreated = new Date();
+		this.dateModified = new Date();
 	}
 
 	public Integer getId() {

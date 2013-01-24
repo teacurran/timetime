@@ -1,4 +1,4 @@
-package com.shortvid.exceptions;
+package com.approachingpi.timetime.exceptions;
 
 /**
  * Date: 7/12/12

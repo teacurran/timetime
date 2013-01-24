@@ -8,6 +8,8 @@ import javax.faces.validator.FacesValidator;
 import javax.faces.validator.Validator;
 import javax.faces.validator.ValidatorException;
 import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 import com.approachingpi.timetime.util.StringUtils;
 import com.approachingpi.timetime.util.TimeTimeConstants;
@@ -24,6 +26,9 @@ import org.jboss.seam.international.status.builder.BundleKey;
 public class RegisterAccountValidator implements Validator {
 
 	Pattern emailPattern = Pattern.compile( TimeTimeConstants.REGEX_EMAIL );
+
+	@PersistenceContext
+	protected EntityManager em;
 
 	@Inject
 	private InputElement< String > registerFullnameField;
@@ -52,7 +57,7 @@ public class RegisterAccountValidator implements Validator {
 		// see if they entered an email address and if it is valid
 		if ( StringUtils.isEmpty(this.registerFullnameField.getValue())) {
 			this.registerFullnameField.getComponent().setValid(false);
-			messages.error( "First Name required" );
+			messages.error( "Full Name is required" );
 		}
 
 		// see if they entered an email address and if it is valid
