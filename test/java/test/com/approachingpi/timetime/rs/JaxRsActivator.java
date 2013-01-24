@@ -1,4 +1,4 @@
-package test.com.shortvid.app.rs;
+package test.com.approachingpi.timetime.rs;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

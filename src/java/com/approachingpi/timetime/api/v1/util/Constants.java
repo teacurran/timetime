@@ -1,4 +1,4 @@
-package com.shortvid.api.v1.util;
+package com.approachingpi.timetime.api.v1.util;
 
 /**
  * Date: 7/18/12

@@ -464,7 +464,7 @@
 
 		<generatewadl wadlFile="${build.dir}/classes/wadl/api_v1.wadl"
 					  formatWadlFile="true"
-					  baseUri="http://shortvid.com/api/v1"
+					  baseUri="http://timetime.org/api/v1"
 				>
 			<classpath>
 				<!-- have to add the path to your compiled resources as well! -->
@@ -472,7 +472,7 @@
 				<path refid="wadl.compile.classpath" />
 			</classpath>
 			<packages>
-				<package name="com.shortvid" />
+				<package name="com.approachingpi.timetime" />
 			</packages>
 			<wadlGenerators>
 				<wadlGeneratorDescription name="com.sun.jersey.server.wadl.generators.resourcedoc.WadlGeneratorResourceDocSupport">
@@ -534,7 +534,7 @@
 				   destdir="${doc.dir}/api"
 				   includes="**/representations/*.java"
 				   >
-			<schema namespace="http://shortvid.com/api/v1" file="api_v1_entities.xsd" />
+			<schema namespace="http://timetime.org/api/v1" file="api_v1_entities.xsd" />
 		</schemagen>
 
 		<move tofile="${doc.dir}/api/api_v1.xsd" file="${doc.dir}/api/api_v1_entities.xsd" />

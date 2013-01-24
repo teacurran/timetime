@@ -1,4 +1,4 @@
-package test.com.shortvid.app.persistence;
+package test.com.approachingpi.timetime.persistence;
 
 import javax.enterprise.inject.Produces;
 import javax.enterprise.inject.Disposes;

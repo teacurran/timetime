@@ -63,7 +63,7 @@ public class RestClientTestCase {
 		WebArchive archive = ShrinkWrap.create(ZipImporter.class, "timetime-test.war")
 				.importFrom(new File("dist/timetime-test-1.0-DEV.war"))
 				.as(WebArchive.class)
-					.addPackage("test.com.shortvid.app.persistence");
+					.addPackage("test.approachingpi.timetime.persistence");
 
 		archive.delete("WEB-INF/jboss-web.xml");
 

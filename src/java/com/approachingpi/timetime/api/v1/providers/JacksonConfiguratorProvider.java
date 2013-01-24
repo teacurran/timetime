@@ -23,7 +23,7 @@ public class JacksonConfiguratorProvider extends ResteasyJacksonProvider {
 	public JacksonConfiguratorProvider() {
 		super();
 
-		LOGGER.info("loading shortvid jackson configurator");
+		LOGGER.info("loading timetime jackson configurator");
 
 		//_mapperConfig.getConfiguredMapper();
 		//ObjectMapper mapper = _mapperConfig.getConfiguredMapper();

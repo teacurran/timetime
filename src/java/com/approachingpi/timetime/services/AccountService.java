@@ -100,7 +100,7 @@ public class AccountService extends BaseService implements Serializable {
 				inAccount.getEmail(),
 				configuration.getMessage(
 						"email.passwordreset.subject",
-						"Shortvid - password reset"));
+						"TimeTime - password reset"));
 	}
 
 	public boolean checkPassword(Account inAccount, String inPassword) throws ServiceException {
