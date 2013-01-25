@@ -109,11 +109,11 @@
 					transitive="false"/>
 		<dependency org="org.jboss.seam.faces" name="seam-faces-api" rev="3.1.0.Final" conf="compile->default"
 					transitive="true"/>
-		<dependency org="org.jboss.solder" name="solder-api" rev="3.1.0.Final" conf="compile->default"
+		<dependency org="org.jboss.solder" name="solder-api" rev="3.2.0.Final" conf="compile->default"
 					transitive="true"/>
-		<dependency org="org.jboss.solder" name="solder-impl" rev="3.1.0.Final" conf="compile->default"
+		<dependency org="org.jboss.solder" name="solder-impl" rev="3.2.0.Final" conf="compile->default"
 					transitive="true"/>
-		<dependency org="org.jboss.solder" name="solder-logging" rev="3.1.0.Final" conf="compile->default"
+		<dependency org="org.jboss.solder" name="solder-logging" rev="3.2.0.Final" conf="compile->default"
 					transitive="true"/>
 		<dependency org="org.jboss.seam.international" name="seam-international" rev="3.1.0.Final"
 					conf="compile->default" transitive="false"/>
@@ -126,8 +126,8 @@
 		<!-- seam security required by faces -->
 
 		<dependency org="org.jboss.seam.security" name="seam-security"
-		rev="3.1.0.Final" conf="compile->compile(*),master(*),optional(*)" transitive="true" />
-		<dependency org="org.jboss.seam.security" name="seam-security-api" rev="3.1.0.Final"
+		rev="3.2.0.Final" conf="compile->compile(*),master(*),optional(*)" transitive="true" />
+		<dependency org="org.jboss.seam.security" name="seam-security-api" rev="3.2.0.Final"
 					conf="compile->compile(*),master(*),optional(*)" transitive="true"/>
 
 		<dependency org="org.jboss.seam.rest" name="seam-rest"

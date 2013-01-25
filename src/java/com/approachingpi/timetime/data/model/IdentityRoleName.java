@@ -5,12 +5,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+import org.jboss.seam.security.annotations.management.EntityType;
+import org.jboss.seam.security.annotations.management.IdentityEntity;
+
 /**
  * Date: 1/12/13
  *
  * @author T. Curran
  */
 @Entity
+@IdentityEntity(EntityType.IDENTITY_ROLE_NAME)
 public class IdentityRoleName implements Serializable {
 
 	private static final long serialVersionUID = -419893700810364565L;
