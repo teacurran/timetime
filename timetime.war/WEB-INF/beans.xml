@@ -27,7 +27,7 @@
 
 	<security:IdentityImpl>
 		<s:modifies/>
-		<security:authenticatorName>authenticatorImpl</security:authenticatorName>
+		<security:authenticatorClass>com.approachingpi.timetime.security.AuthenticatorImpl</security:authenticatorClass>
 	</security:IdentityImpl>
 
 	<weld:scan>
