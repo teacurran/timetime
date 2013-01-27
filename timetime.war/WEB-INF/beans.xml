@@ -2,7 +2,7 @@
 	   xmlns:s="urn:java:ee"
 	   xmlns:plidm="urn:java:org.jboss.seam.security.management.picketlink"
 	   xmlns:rest="urn:java:org.jboss.seam.rest:org.jboss.seam.rest.exceptions"
-	   xmlns:security="urn:java:org.jboss.seam.security" xmlns:weld="http://jboss.org/schema/weld/beans" xsi:schemaLocation="
+	   xmlns:weld="http://jboss.org/schema/weld/beans" xsi:schemaLocation="
       http://java.sun.com/xml/ns/javaee
       http://java.sun.com/xml/ns/javaee/beans_1_0.xsd
       http://jboss.org/schema/weld/beans
@@ -18,17 +18,11 @@
 	<interceptors>
 		<class>org.jboss.seam.faces.context.conversation.ConversationBoundaryInterceptor</class>
 		<class>org.jboss.seam.transaction.TransactionInterceptor</class>
-		<class>org.jboss.seam.security.SecurityInterceptor</class>
 		<class>com.approachingpi.timetime.interceptor.TimestampableInterceptor</class>
 	</interceptors>
 
 	<rest:SeamRestConfiguration
 			preferedTemplatingProvider="org.jboss.seam.rest.templating.freemarker.FreeMarkerProvider"/>
-
-	<security:IdentityImpl>
-		<s:modifies/>
-		<security:authenticatorClass>com.approachingpi.timetime.security.AuthenticatorImpl</security:authenticatorClass>
-	</security:IdentityImpl>
 
 	<weld:scan>
 		<!-- https://issues.jboss.org/browse/RESTEASY-555 -->
