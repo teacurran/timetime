@@ -16,7 +16,6 @@ import org.jboss.seam.security.annotations.management.PropertyType;
  * @author T. Curran
  */
 @Entity
-@IdentityEntity(EntityType.IDENTITY_ROLE_NAME)
 public class IdentityObjectType implements Serializable {
 
 	private static final long serialVersionUID = 4310474293960109663L;

@@ -10,6 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 import org.jboss.seam.security.annotations.permission.PermissionProperty;
+import org.jboss.seam.security.annotations.permission.PermissionPropertyType;
 
 /**
  * Date: 1/12/13
@@ -26,20 +27,21 @@ public class IdentityPermission implements Serializable {
 	private Long id;
 
 	@NotNull
-	@ManyToOne //@PermissionProperty(IDENTITY)
+	@ManyToOne
+	@PermissionProperty(PermissionPropertyType.IDENTITY)
 	private IdentityObject identityObject;
 
 	@ManyToOne
-	//@PermissionProperty(RELATIONSHIP_TYPE)
+	@PermissionProperty(PermissionPropertyType.RELATIONSHIP_TYPE)
 	private IdentityObjectRelationshipType relationshipType;
 
-	//@PermissionProperty(RELATIONSHIP_NAME)
+	@PermissionProperty(PermissionPropertyType.RELATIONSHIP_NAME)
 	private String relationshipName;
 
-	//@PermissionProperty(RESOURCE)
+	@PermissionProperty(PermissionPropertyType.RESOURCE)
 	private String resource;
 
-	//@PermissionProperty(PERMISSION)
+	@PermissionProperty(PermissionPropertyType.PERMISSION)
 	private String permission;
 
 	public Long getId() {

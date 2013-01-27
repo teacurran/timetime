@@ -15,6 +15,8 @@ import org.picketlink.idm.api.PersistenceManager;
 import org.picketlink.idm.api.RelationshipManager;
 import org.picketlink.idm.api.User;
 import org.picketlink.idm.common.exception.IdentityException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Date: 1/21/13
@@ -26,6 +28,8 @@ import org.picketlink.idm.common.exception.IdentityException;
 public class RegisterService extends BaseService implements Serializable {
 
 	private static final long serialVersionUID = -5441655456142315364L;
+
+	private static final Logger LOGGER = LoggerFactory.getLogger(RegisterService.class);
 
 	@Inject
 	AccountService accountService;
@@ -63,6 +67,7 @@ public class RegisterService extends BaseService implements Serializable {
 
 
 		} catch (IdentityException ie) {
+			LOGGER.error("error creating account", ie);
 
 		}
 
