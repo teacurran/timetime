@@ -3,10 +3,14 @@ package com.approachingpi.timetime.services;
 import java.io.Serializable;
 import java.security.Identity;
 import java.util.Collection;
+import java.util.List;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.persistence.TypedQuery;
 
+import com.approachingpi.timetime.data.model.Account;
+import com.approachingpi.timetime.data.model.Company;
 import org.apache.shiro.SecurityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,8 +37,26 @@ public class RegisterService extends BaseService implements Serializable {
 	String inputPassword;
 
 	public void registerAccount() {
-		
 
+		TypedQuery<Account> emailCheckQuery = em.createQuery("SELECT a FROM Account a WHERE a.email=:email", Account.class);
+		emailCheckQuery.setParameter("email", inputEmail);
+		List<Account> emailCheckResults = emailCheckQuery.getResultList();
+		if (emailCheckResults != null && emailCheckResults.size() > 0) {
+			// TODO: send an error to the user
+			return;
+		}
+
+		Account account = new Account();
+		account.setEmail(inputEmail);
+		account.setUsername(inputEmail);
+		accountService.setPassword(account, inputPassword);
+
+		Company company = new Company();
+		company.setName(inputCompany);
+		em.persist(company);
+
+		account.setCompany(company);
+		em.persist(account);
 	}
 
 	public String getInputFullName() {
