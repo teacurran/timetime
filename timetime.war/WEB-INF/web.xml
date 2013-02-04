@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://java.sun.com/xml/ns/javaee"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-      version="3.0">
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+		 version="3.0">
 
 	<display-name>Admin Portal</display-name>
 
@@ -42,8 +41,8 @@
 	</context-param>
 
 	<context-param>
-	    <param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>
-	    <param-value>true</param-value>
+		<param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>
+		<param-value>true</param-value>
 	</context-param>
 
 	<!-- Activate the JSF 2.0 servlet -->
@@ -66,6 +65,11 @@
 		<filter-class>com.ocpsoft.pretty.PrettyFilter</filter-class>
 	</filter>
 
+	<filter>
+		<filter-name>ShiroFilter</filter-name>
+		<filter-class>org.apache.shiro.web.servlet.ShiroFilter</filter-class>
+	</filter>
+
 	<!-- URLs to process with JSF -->
 	<servlet-mapping>
 		<servlet-name>Faces Servlet</servlet-name>
@@ -85,6 +89,14 @@
 		<dispatcher>ERROR</dispatcher>
 	</filter-mapping>
 
+	<filter-mapping>
+		<filter-name>ShiroFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+	</filter-mapping>
 
 	<session-config>
 		<session-timeout>60</session-timeout>

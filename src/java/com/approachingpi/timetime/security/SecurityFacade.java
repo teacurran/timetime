@@ -30,12 +30,12 @@ public class SecurityFacade {
 
 		LOGGER.info("Initializing Shiro SecurityManager using ");
 
-		AuthorizingRealm authorizingRealm = new TimeTimeAuthorizingRealm();
-
-		SecurityManager securityManager = new DefaultSecurityManager(authorizingRealm);
+//		AuthorizingRealm authorizingRealm = new TimeTimeAuthorizingRealm();
+//
+//		SecurityManager securityManager = new DefaultSecurityManager(authorizingRealm);
 		
 		//Make the SecurityManager instance available to the entire application via static memory:
-		SecurityUtils.setSecurityManager(securityManager);
+//		SecurityUtils.setSecurityManager(securityManager);
 		
 	}
 

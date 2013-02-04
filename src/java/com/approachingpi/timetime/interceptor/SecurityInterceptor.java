@@ -59,6 +59,7 @@ public class SecurityInterceptor {
 			action = "view";
 		if (ctx.getMethod().getName().matches("set[A-Z].*"))
 			action = "edit";
+
 		String permission = String.format("%s:%s", action, entityName);
 		LOGGER.info("Checking permission '{}' for user '{}'", permission, subject.getPrincipal());
 		try {
