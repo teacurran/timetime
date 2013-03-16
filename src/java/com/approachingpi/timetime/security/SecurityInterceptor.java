@@ -17,9 +17,11 @@ import org.slf4j.LoggerFactory;
 public class SecurityInterceptor {
 
 	@Inject
-	Subject subject;
+	transient Subject subject;
+
 	@Inject
 	SecurityManager securityManager;
+
 	Logger logger = LoggerFactory.getLogger(SecurityInterceptor.class);
 
 //	public SecurityInterceptor() {

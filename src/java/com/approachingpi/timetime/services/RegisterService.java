@@ -7,11 +7,15 @@ import java.util.List;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.naming.AuthenticationException;
 import javax.persistence.TypedQuery;
 
 import com.approachingpi.timetime.data.model.Account;
 import com.approachingpi.timetime.data.model.Company;
+import com.approachingpi.timetime.qualifiers.ApplicationInstance;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,6 +34,9 @@ public class RegisterService extends BaseService implements Serializable {
 
 	@Inject
 	AccountService accountService;
+
+	@Inject
+	transient Subject subject;
 
 	String inputFullName;
 	String inputEmail;
@@ -57,6 +64,9 @@ public class RegisterService extends BaseService implements Serializable {
 
 		account.setCompany(company);
 		em.persist(account);
+
+		// Authenticate
+		subject.login( new UsernamePasswordToken(inputEmail, inputPassword));
 	}
 
 	public String getInputFullName() {

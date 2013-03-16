@@ -58,6 +58,12 @@
 		<param-value>true</param-value>
 	</context-param>
 
+	<listener>
+		<listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>
+	</listener>
+	
+	
+
 	<!-- Filters -->
 
 	<filter>

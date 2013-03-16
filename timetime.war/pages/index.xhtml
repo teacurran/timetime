@@ -12,7 +12,7 @@
 
 		<p:panel id="register-panel" header="Register">
 			<h:form id="registerForm" prependId="false">
-				<p:outputPanel rendered="#{not identity.loggedIn}">
+				<p:outputPanel rendered="#{not subject.authenticated}">
 					<p:inputText id="registerFullNameField" value="#{registerService.inputFullName}"
 								 required="true" label="Your Full Name"/>
 					<p:watermark value="Your Full Name" for="registerFullNameField"/>
@@ -47,7 +47,7 @@
 
 		<p:panel id="login-panel" header="Log In">
 			<h:form id="loginForm" prependId="false">
-				<p:outputPanel rendered="#{not identity.loggedIn}">
+				<p:outputPanel rendered="#{not subject.authenticated}">
 					<p:inputText id="loginUsernameField" value="#{credentials.username}"
 								 required="true" label="username"/>
 					<p:watermark for="loginUsernameField" value="username"/>

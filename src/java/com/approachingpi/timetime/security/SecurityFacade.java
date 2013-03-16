@@ -5,6 +5,7 @@ import javax.enterprise.inject.Produces;
 import javax.inject.Named;
 import javax.inject.Singleton;
 
+import com.approachingpi.timetime.qualifiers.ApplicationInstance;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.config.IniSecurityManagerFactory;
 import org.apache.shiro.mgt.DefaultSecurityManager;
@@ -30,12 +31,12 @@ public class SecurityFacade {
 
 		LOGGER.info("Initializing Shiro SecurityManager using ");
 
-//		AuthorizingRealm authorizingRealm = new TimeTimeAuthorizingRealm();
-//
-//		SecurityManager securityManager = new DefaultSecurityManager(authorizingRealm);
+		AuthorizingRealm authorizingRealm = new TimeTimeAuthorizingRealm();
+
+		SecurityManager securityManager = new DefaultSecurityManager(authorizingRealm);
 		
 		//Make the SecurityManager instance available to the entire application via static memory:
-//		SecurityUtils.setSecurityManager(securityManager);
+		SecurityUtils.setSecurityManager(securityManager);
 		
 	}
 
@@ -44,7 +45,7 @@ public class SecurityFacade {
 		return securityManager;
 	}
 
-	@Produces
+	@Produces @Named
 	public Subject getSubject() {
 		return SecurityUtils.getSubject();
 	}
