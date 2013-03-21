@@ -35,18 +35,11 @@ public class SecurityFacade {
 
 		SecurityManager securityManager = new DefaultSecurityManager(authorizingRealm);
 		
+		authorizingRealm.setCredentialsMatcher(new TimeTimePasswordMatcher());
+		
 		//Make the SecurityManager instance available to the entire application via static memory:
 		SecurityUtils.setSecurityManager(securityManager);
 		
 	}
 
-	@Produces @Named("securityManager")
-	public SecurityManager getSecurityManager() {
-		return securityManager;
-	}
-
-	@Produces @Named
-	public Subject getSubject() {
-		return SecurityUtils.getSubject();
-	}
 }

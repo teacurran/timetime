@@ -13,9 +13,11 @@ public class PasswordHash {
 	// The higher the number of iterations the more
 	// expensive computing the hash is for us
 	// and also for a brute force attack.
-	private static final int iterations = 10 * 1024;
-	private static final int saltLen = 16;
-	private static final int desiredKeyLen = 256;
+	public static final int ITERATIONS = 10 * 1024;
+	public static final int SALT_LEN = 16;
+	public static final int DESIRED_KEY_LEN = 256;
+
+	public static final String ALGORITHM = "SHA1PRNG";
 
 	protected String salt;
 	protected String hash;
@@ -28,7 +30,7 @@ public class PasswordHash {
 	public PasswordHash(
 			final String inPassword) throws NoSuchAlgorithmException, InvalidKeySpecException {
 
-		byte[] salt = SecureRandom.getInstance("SHA1PRNG").generateSeed(saltLen);
+		byte[] salt = SecureRandom.getInstance(ALGORITHM).generateSeed(SALT_LEN);
 
 		// generate and store the hash
 		this.hash = hash(inPassword, salt);
@@ -67,7 +69,7 @@ public class PasswordHash {
 
 		SecretKeyFactory f = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
 		SecretKey key = f.generateSecret(new PBEKeySpec(
-				password.toCharArray(), salt, iterations, desiredKeyLen)
+				password.toCharArray(), salt, ITERATIONS, DESIRED_KEY_LEN)
 		);
 		return Base64.encodeBase64String(key.getEncoded());
 	}

@@ -1,7 +1,6 @@
 package com.approachingpi.timetime.services;
 
 import java.io.Serializable;
-import java.security.Identity;
 import java.util.Collection;
 import java.util.List;
 import javax.enterprise.context.SessionScoped;
@@ -36,7 +35,7 @@ public class RegisterService extends BaseService implements Serializable {
 	AccountService accountService;
 
 	@Inject
-	transient Subject subject;
+	protected transient Subject subject;
 
 	String inputFullName;
 	String inputEmail;

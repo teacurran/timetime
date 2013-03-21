@@ -16,6 +16,7 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.util.ByteSource;
 
 /**
  * Date: 1/31/13
@@ -72,7 +73,10 @@ public class TimeTimeAuthorizingRealm extends AuthorizingRealm {
 
 		// Create / initialize authentication / authorization "account"
 		final SimpleAccount simpleAccount =
-				new SimpleAccount(account.getEmail(), account.getPassword(), this.getName());
+				new SimpleAccount(account.getEmail(),
+						account.getPassword(),
+						ByteSource.Util.bytes(account.getPasswordSalt()),
+						this.getName());
 
 		if (simpleAccount != null) {
 

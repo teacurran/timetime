@@ -33,19 +33,20 @@ public class AccountService extends BaseService implements Serializable {
 	@Inject
 	private Configuration configuration;
 
-	public Account find(final String inAccountId) {
+	public Account find(final String inUsernameOrEmail) {
 
 		try {
-			Long accountId = Long.parseLong(inAccountId);
+			Long accountId = Long.parseLong(inUsernameOrEmail);
 
 			return em.find(Account.class, accountId);
 		} catch (NumberFormatException nfe) {
 			// do nothing, perhaps they passed in a username;
 		}
 
-		String usernameNormalized = StringUtils.normalizeUsername(inAccountId);
-		TypedQuery<Account> query = em.createNamedQuery(Account.QUERY_BY_USERNAME_NORMALIZED, Account.class);
+		String usernameNormalized = StringUtils.normalizeUsername(inUsernameOrEmail);
+		TypedQuery<Account> query = em.createNamedQuery(Account.QUERY_BY_USERNAME_NORMALIZED_OR_EMAIL, Account.class);
 		query.setParameter("username", usernameNormalized);
+		query.setParameter("email", inUsernameOrEmail);
 
 		List<Account> results = query.getResultList();
 		if (results != null && results.size() > 0) {

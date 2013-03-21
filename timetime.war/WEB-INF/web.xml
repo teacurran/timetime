@@ -58,11 +58,11 @@
 		<param-value>true</param-value>
 	</context-param>
 
+	<!--
 	<listener>
-		<listener-class>org.apache.shiro.web.env.EnvironmentLoaderListener</listener-class>
+		<listener-class>com.approachingpi.timetime.security.CdiEnvironmentLoaderListener</listener-class>
 	</listener>
-	
-	
+	-->
 
 	<!-- Filters -->
 
@@ -71,10 +71,12 @@
 		<filter-class>com.ocpsoft.pretty.PrettyFilter</filter-class>
 	</filter>
 
+	<!--
 	<filter>
 		<filter-name>ShiroFilter</filter-name>
 		<filter-class>org.apache.shiro.web.servlet.ShiroFilter</filter-class>
 	</filter>
+	-->
 
 	<!-- URLs to process with JSF -->
 	<servlet-mapping>
@@ -95,6 +97,7 @@
 		<dispatcher>ERROR</dispatcher>
 	</filter-mapping>
 
+	<!--
 	<filter-mapping>
 		<filter-name>ShiroFilter</filter-name>
 		<url-pattern>/*</url-pattern>
@@ -103,6 +106,7 @@
 		<dispatcher>INCLUDE</dispatcher>
 		<dispatcher>ERROR</dispatcher>
 	</filter-mapping>
+	-->
 
 	<session-config>
 		<session-timeout>60</session-timeout>

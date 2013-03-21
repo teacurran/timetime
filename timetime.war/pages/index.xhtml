@@ -48,20 +48,20 @@
 		<p:panel id="login-panel" header="Log In">
 			<h:form id="loginForm" prependId="false">
 				<p:outputPanel rendered="#{not subject.authenticated}">
-					<p:inputText id="loginUsernameField" value="#{credentials.username}"
+					<p:inputText id="loginUsernameField" value="#{securityService.username}"
 								 required="true" label="username"/>
 					<p:watermark for="loginUsernameField" value="username"/>
 					<p:message for="loginUsernameField"/>
 
 					<p:password id="loginPasswordField"
-								value="#{credentials.password}" required="true"
+								value="#{securityService.password}" required="true"
 								minLength="3" feedback="false" label="password"/>
 					<p:watermark for="loginPasswordField" value="username"/>
 					<p:message for="loginPasswordField"/>
 
 					<div class="actionRow">
 						<p:commandButton id="loginButton" value="Log In"
-										 action="#{identity.login}"
+										 action="#{securityService.login}"
 										 update="loginForm"
 								/>
 					</div>
