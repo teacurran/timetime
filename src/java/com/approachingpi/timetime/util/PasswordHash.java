@@ -17,7 +17,9 @@ public class PasswordHash {
 	public static final int SALT_LEN = 16;
 	public static final int DESIRED_KEY_LEN = 256;
 
-	public static final String ALGORITHM = "SHA1PRNG";
+	public static final String SALT_ALGORITHM = "SHA1PRNG";
+
+	public static final String ALGORITHM = "PBKDF2WithHmacSHA1";
 
 	protected String salt;
 	protected String hash;
@@ -30,7 +32,7 @@ public class PasswordHash {
 	public PasswordHash(
 			final String inPassword) throws NoSuchAlgorithmException, InvalidKeySpecException {
 
-		byte[] salt = SecureRandom.getInstance(ALGORITHM).generateSeed(SALT_LEN);
+		byte[] salt = SecureRandom.getInstance(SALT_ALGORITHM).generateSeed(SALT_LEN);
 
 		// generate and store the hash
 		this.hash = hash(inPassword, salt);
@@ -67,7 +69,7 @@ public class PasswordHash {
 			final String password,
 			byte[] salt) throws NoSuchAlgorithmException, InvalidKeySpecException {
 
-		SecretKeyFactory f = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA1");
+		SecretKeyFactory f = SecretKeyFactory.getInstance(ALGORITHM);
 		SecretKey key = f.generateSecret(new PBEKeySpec(
 				password.toCharArray(), salt, ITERATIONS, DESIRED_KEY_LEN)
 		);

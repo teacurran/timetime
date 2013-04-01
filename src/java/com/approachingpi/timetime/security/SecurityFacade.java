@@ -31,7 +31,7 @@ public class SecurityFacade {
 
 		LOGGER.info("Initializing Shiro SecurityManager using ");
 
-		AuthorizingRealm authorizingRealm = new TimeTimeAuthorizingRealm();
+		AuthorizingRealm authorizingRealm = new TimeTimeAuthorizingRealm(new TimeTimePasswordMatcher());
 
 		SecurityManager securityManager = new DefaultSecurityManager(authorizingRealm);
 		

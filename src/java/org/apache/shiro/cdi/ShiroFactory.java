@@ -18,6 +18,7 @@
 package org.apache.shiro.cdi;
 
 import com.approachingpi.timetime.security.TimeTimeAuthorizingRealm;
+import com.approachingpi.timetime.security.TimeTimePasswordMatcher;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.mgt.DefaultSecurityManager;
 import org.apache.shiro.mgt.SecurityManager;
@@ -54,6 +55,8 @@ public class ShiroFactory {
 		LOGGER.info("Initializing Shiro SecurityManager using ");
 
 		SecurityManager securityManager = new DefaultSecurityManager(timeTimeAuthorizingRealm);
+
+		timeTimeAuthorizingRealm.setCredentialsMatcher(new TimeTimePasswordMatcher());
 		
 		//Make the SecurityManager instance available to the entire application via static memory:
 		SecurityUtils.setSecurityManager(securityManager);

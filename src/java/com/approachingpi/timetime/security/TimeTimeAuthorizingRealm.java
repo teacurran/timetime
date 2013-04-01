@@ -13,6 +13,7 @@ import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.LockedAccountException;
 import org.apache.shiro.authc.SimpleAccount;
 import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.authc.credential.CredentialsMatcher;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
@@ -29,6 +30,15 @@ public class TimeTimeAuthorizingRealm extends AuthorizingRealm {
 	@Inject
 	AccountService accountService;
 
+	public TimeTimeAuthorizingRealm() {
+		
+	}
+
+	public TimeTimeAuthorizingRealm(CredentialsMatcher matcher) {
+		super(null, matcher);
+	}
+	
+	
 	private SimpleAccount getAccount(
 			final String inPrincipal) {
 
